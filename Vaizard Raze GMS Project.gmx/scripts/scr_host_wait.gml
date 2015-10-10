@@ -13,8 +13,7 @@ tempid=get_next_playerid();
 
 setnagle(client,true);
 
-ii=instance_create(0,0,obj_client)
-ii.client=client;
+ii=instance_create(0,0,obj_otherplayer)
 ii.playerid=tempid;
 ii.client_ip=client_ipp;
 }

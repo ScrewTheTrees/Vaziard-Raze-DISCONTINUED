@@ -1,8 +1,8 @@
 var messageid=argument0;
     switch(messageid)
   {
-    case MSG_ENTER: msg_recive_enter(); break;
-  
+    case MSG_EXIT: msg_recive_exit(); break;
+    case MSG_MOVE: msg_recive_move(); break;
     
     
     
