@@ -1,0 +1,13 @@
+dllinit(0,true,true);
+
+global.port=17654;
+global.host=false;
+
+global.playerid=0;
+global.playername="Faggot";
+
+global.idget=1;
+global.onlineversion="0.1"
+
+
+
