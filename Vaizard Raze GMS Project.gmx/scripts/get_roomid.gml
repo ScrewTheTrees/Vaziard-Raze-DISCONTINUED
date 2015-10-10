@@ -7,12 +7,12 @@ selid=0;
 if (argument1==0) {
        switch (argument0)
        {
-       case rm: selid=1; break;
+       case rm_test:  selid=1; break;
        }}
 else {
        switch (argument0)
        {
-       case 1: selid=rm; break;
+       case 1:  selid=rm_test; break;
        }}
 
 

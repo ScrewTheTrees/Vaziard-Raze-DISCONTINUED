@@ -1,0 +1,35 @@
+﻿Glorious 1080P Resolution /w downscale
+Fully online, with a player based host system...
+No shortcuts, complicated netcode
+Different main weapons, can carry 2 weapons and switch between
+96x96 Base Res ^_^
+
+Player animation must be 120 Frames at 60 FPS
+
+
+
+Movement System the is fast and fluent
+Wall jumping is more noncontrollable and better
+
+Functional dashing system
+Meaty movement system that is very fast paced
+Ducking is thing (Cannot fire or move while ducking)
+
+
+	[General enemies]
+Enemies can move in slopes.
+Enemies fire in intervalls, that reduce in accordance to maximum amount of players to ramp up difficulty
+Enemies Firing frames are 120 frames till they fire, then 120 frames till they start walking again (4S in total)
+
+
+
+	[Weapons]
+*Revolver, 6 shots then reload
+*Buster, 3 shots and charging ability
+*Mortar, Fires a mortar shot in an ARC
+*Sword, Slice 3 times and allows blocking on spacebar
+
+	[Abilities]
+*Flash Step, Teleports X blocks in facing direction.
+*Spring Trap, Throws a spring forward that can be used to jump to great heights.
+*

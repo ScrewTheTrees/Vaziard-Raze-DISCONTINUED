@@ -22,7 +22,10 @@
       <filename>39dll.dll</filename>
     </datafile>
   </datafiles>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\GMFileSystem</extension>
+    <extension index="1">extensions\39dylib</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites"/>
   <backgrounds name="background"/>
@@ -116,23 +119,58 @@
         <script>scripts\scr_send_server_udp.gml</script>
         <script>scripts\scr_send_client.gml</script>
         <script>scripts\scr_send_client_udp.gml</script>
-        <script>scripts\msg_recive_move_xyz.gml</script>
-        <script>scripts\msg_recive_exit.gml</script>
-        <script>scripts\msg_player_join.gml</script>
-        <script>scripts\scr_messages.gml</script>
         <script>scripts\scr_newplayer.gml</script>
+        <script>scripts\scr_recive_packets_udp_server.gml</script>
       </scripts>
+      <scripts name="Sending Messages">
+        <script>scripts\msg_send_player_leave.gml</script>
+        <script>scripts\msg_send_playerid.gml</script>
+        <script>scripts\msg_send_exit.gml</script>
+        <script>scripts\msg_send_move.gml</script>
+        <script>scripts\msg_send_deadpacket.gml</script>
+      </scripts>
+      <scripts name="Reciving Messages">
+        <script>scripts\msg_recive_move.gml</script>
+        <script>scripts\msg_recive_exit.gml</script>
+      </scripts>
+      <script>scripts\scr_messages.gml</script>
     </scripts>
-    <scripts name="Sending Messages">
-      <script>scripts\msg_send_player_leave.gml</script>
-      <script>scripts\msg_send_playerid.gml</script>
-      <script>scripts\msg_send_exit.gml</script>
-      <script>scripts\msg_send_move_xyz.gml</script>
-      <script>scripts\msg_send_deadpacket.gml</script>
-    </scripts>
-    <script>scripts\scr_recive_packets_udp_server.gml</script>
     <script>scripts\get_roomid.gml</script>
+    <scripts name="Players">
+      <script>scripts\player_create.gml</script>
+    </scripts>
+    <script>scripts\game_init.gml</script>
+    <script>scripts\camera_scripts.gml</script>
+    <scripts name="Utility movement">
+      <script>scripts\slide_to_point.gml</script>
+      <script>scripts\rotate_to_point_hard.gml</script>
+      <script>scripts\rotate_to_point_smooth.gml</script>
+    </scripts>
   </scripts>
+  <objects name="objects">
+    <objects name="Parents">
+      <object>objects\obj_solidparent</object>
+      <object>objects\obj_playerparent</object>
+    </objects>
+    <object>objects\obj_otherplayer</object>
+    <object>objects\obj_player</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room_preset</room>
+    <room>rooms\rm_test</room>
+  </rooms>
+  <constants number="10">
+    <constant name="KEY_SPECIAL">9</constant>
+    <constant name="KEY_ABILITY3">8</constant>
+    <constant name="KEY_ABILITY2">7</constant>
+    <constant name="KEY_ABILITY1">6</constant>
+    <constant name="KEY_SHOOT">5</constant>
+    <constant name="KEY_JUMP">4</constant>
+    <constant name="KEY_DOWN">3</constant>
+    <constant name="KEY_UP">2</constant>
+    <constant name="KEY_LEFT">1</constant>
+    <constant name="KEY_RIGHT">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
