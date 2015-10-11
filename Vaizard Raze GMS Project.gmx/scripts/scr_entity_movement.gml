@@ -1,13 +1,14 @@
-///scr_sidemovement(Movespeed, Facedir ,Height to scan for slopes, Height for slow)
+///scr_sidemovement(Movespeed, Facedir ,Height to scan for slopes, Height for slow, movescanintervall)
 var i, j, gg, movespeed, facedir, movescanheight, movespeed_run;
 
 movespeed=argument0;
 facedir=argument1;
 movescanheight=argument2;
 movescanslow=argument3;
+movescanintervall=argument4;
 
 gg=true;
-movespeed_run=0;
+movespeed_run=movespeed*facedir;
 
 //Move in X direction depending on key layout
 if (movespeed!=0)
@@ -15,7 +16,7 @@ if (movespeed!=0)
 gg=false;
 
 //Check in intervalls of 2 to preserve performance and skip it alltogether if you are moving up/down to quickly
-if (vspeed>-2 && vspeed<2)  for(i=movescanheight; i>=-movescanheight; i-=2)
+if (vspeed>-2 && vspeed<2)  for(i=movescanheight; i>=-movescanheight; i-=movescanintervall)
     {
     
     //Check the movescanslow to check if the entity should move slower.
@@ -29,7 +30,7 @@ if (vspeed>-2 && vspeed<2)  for(i=movescanheight; i>=-movescanheight; i-=2)
     && place_meeting(x+movespeed_run,y+i+2,obj_solidparent)
        { 
        y+=i; 
-       x+=movespeed; 
+       x+=movespeed_run; 
        gg=true; 
        facedir=-1
        vspeed=0;
@@ -42,5 +43,5 @@ if (vspeed>-2 && vspeed<2)  for(i=movescanheight; i>=-movescanheight; i-=2)
 
      //We did not move according to slope movement
 movespeed_run=movespeed*facedir; //Turn the movement direction towards facedir
-if gg=false && !place_meeting(x+movespeed,y,obj_solidparent) {x+=movespeed facedir=-1};
+if gg=false && !place_meeting(x+movespeed_run,y,obj_solidparent) {x+=movespeed_run};
 }//if movespeed

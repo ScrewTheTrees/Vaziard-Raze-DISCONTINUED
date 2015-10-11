@@ -2,6 +2,9 @@
 //Check the other scripts for camera functions and modification of cameras
 
 #define scr_camera_create
+//The amount of pixels left/right of players to check
+global.padding=256;
+
 curr_w=view_wview;
 curr_h=view_hview;
 
@@ -16,7 +19,7 @@ hh=1080;
 kk=ww/hh;
 
 minimum_width=500;
-maximum_width=((room_height/room_width)*room_width)-100;
+maximum_width=((room_height/room_width)*room_width)-200;
 
 #define scr_normalcamera
 kk=0;
@@ -183,8 +186,7 @@ global.top_y=player_parent.y;
 global.right_x=player_parent.x;
 global.bottom_y=player_parent.y;
 
-//The amount of pixels left/right of players to check
-global.padding=128;
+
 
 global.sel=0.0001;
 

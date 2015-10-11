@@ -20,7 +20,7 @@ if object_index==obj_player
    }
 
 //Move regardless of anything... wont move if movespeed is 0 anyway
-scr_entity_movement(movespeed,movescanheight,movescanslow);
+scr_entity_movement(movespeed,facedir,movescanheight,movescanslow,movescanintervall);
 
    
    
