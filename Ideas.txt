@@ -10,10 +10,9 @@ Player animation must be 120 Frames at 60 FPS
 
 Movement System the is fast and fluent
 Wall jumping is more noncontrollable and better
-
 Functional dashing system
 Meaty movement system that is very fast paced
-Ducking is thing (Cannot fire or move while ducking)
+Ducking is thing (Cannot fire/move/jump while ducking)
 
 
 	[General enemies]

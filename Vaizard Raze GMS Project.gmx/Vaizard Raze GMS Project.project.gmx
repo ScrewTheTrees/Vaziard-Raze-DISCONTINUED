@@ -27,10 +27,14 @@
     <extension index="1">extensions\39dylib</extension>
   </NewExtensions>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\mask_solid</sprite>
+    <sprite>sprites\obj_playermask</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\game_init.gml</script>
     <scripts name="Online Functionality">
       <scripts name="39dll Core Functions">
         <script>scripts\dllinit.gml</script>
@@ -137,23 +141,24 @@
     </scripts>
     <script>scripts\get_roomid.gml</script>
     <scripts name="Players">
-      <script>scripts\player_create.gml</script>
+      <script>scripts\scr_player_create.gml</script>
+      <script>scripts\scr_player_move.gml</script>
     </scripts>
-    <script>scripts\game_init.gml</script>
-    <script>scripts\camera_scripts.gml</script>
     <scripts name="Utility movement">
       <script>scripts\slide_to_point.gml</script>
       <script>scripts\rotate_to_point_hard.gml</script>
       <script>scripts\rotate_to_point_smooth.gml</script>
     </scripts>
+    <script>scripts\camera_scripts.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
     </objects>
-    <object>objects\obj_otherplayer</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_otherplayer</object>
+    <object>objects\obj_solid_block</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_preset</room>

@@ -1,5 +1,5 @@
 #define camera_scripts
-
+//Check the other scripts for camera functions and modification of cameras
 
 #define scr_camera_create
 curr_w=view_wview;
@@ -10,22 +10,22 @@ basic_h=view_hview;
 
 
 //Tweak to standard resolution
-ww=640;
-hh=480;
+ww=1920;
+hh=1080;
 
 kk=ww/hh;
 
-minimum_width=300;
+minimum_width=500;
 maximum_width=((room_height/room_width)*room_width)-100;
 
 #define scr_normalcamera
 kk=0;
 dd=0
 
-if keyboard_check(global.keybind[3])
+if keyboard_check(global.keybind[KEY_UP])
 kk=400
 
-if keyboard_check(global.keybind[1])
+if keyboard_check(global.keybind[KEY_DOWN])
 dd=400
 
 
@@ -38,16 +38,16 @@ else slide_to_point(obj_player.x-500+kk+dd ,obj_player.y+kk-dd ,30)
 if global.is_dead=true
 {
 if keyboard_check(global.keybind[1])
-y-=12;
+y-=24;
 
 if keyboard_check(global.keybind[3])
-y+=12;
+y+=24;
 
 if keyboard_check(global.keybind[0])
-x+=12;
+x+=24;
 
 if keyboard_check(global.keybind[2])
-x-=12;
+x-=24;
 
 
 //Clamp so it cant go outside room borders

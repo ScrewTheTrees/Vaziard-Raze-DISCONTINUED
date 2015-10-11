@@ -1,6 +1,7 @@
+dllinit("39dll.dll",true,true);
 
-
-
+global.is_dead=true
+global.cutscene=false;
 
 
 global.keybind[KEY_RIGHT]=vk_right;
