@@ -10,7 +10,8 @@ scr_reset_player_input();
 scr_reset_player_vars();
 
 //Maximum speed of any vspeed/hspeed/speed things
-max_speed=40;
+max_speed=50;
+max_fallspeed=20;
 facedir=1;
 
 //Gravitational things
@@ -18,7 +19,7 @@ max_gravity=1;
 gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
 jumpspeed=20;
 jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=12;
+walljumpspeed=14;
 walljumpupspeed=14;
 
 //Movement speed things

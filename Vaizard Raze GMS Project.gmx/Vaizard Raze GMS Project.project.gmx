@@ -24,7 +24,6 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMFileSystem</extension>
-    <extension index="1">extensions\39dylib</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">

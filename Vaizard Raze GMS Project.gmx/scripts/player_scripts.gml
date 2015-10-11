@@ -129,7 +129,7 @@ else movespeed=0;
 
 #define scr_player_physics
 //Clamping speed before the gravity calculation
-if vspeed>max_speed vspeed=max_speed;
+if vspeed>max_fallspeed vspeed=max_fallspeed;
 if vspeed<-max_speed vspeed=-max_speed;
 if hspeed>max_speed hspeed=max_speed;
 if hspeed<-max_speed hspeed=-max_speed;

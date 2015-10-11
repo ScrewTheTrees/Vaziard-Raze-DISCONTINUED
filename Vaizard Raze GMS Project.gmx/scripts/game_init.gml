@@ -1,7 +1,8 @@
 netcode_start();
 
-global.is_dead=false;
-global.cutscene=false;
+global.is_dead=false;   //Are you dead?
+global.cutscene=false;  //In a cutscene?
+global.draw_intervall=0.5;     //Drawing rate
 
 
 
