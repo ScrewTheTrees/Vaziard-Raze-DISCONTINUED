@@ -1,5 +1,5 @@
-playeridd=readushort();
-clearbuffer();
+playeridd=readushort(0);
+clearbuffer(0);
 
 
 

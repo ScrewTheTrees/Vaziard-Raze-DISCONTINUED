@@ -23,7 +23,14 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
       {
       do_jump=true;
       }
-   else if place_meeting(x-max_movespeed
+   else if place_meeting(x-max_movespeed,y,obj_solidparent) //Walljump to the right
+      {
+      do_walljump_right=true;
+      }
+   else if place_meeting(x+max_movespeed,y,obj_solidparent) // Walljump to the left
+      {
+      do_walljump_left=true;
+      }
    }
 
 #define scr_reset_playermove_input

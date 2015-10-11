@@ -1,5 +1,4 @@
-writebyte(MSG_EXIT);
-writeushort(global.myid);
-scr_send_client(SEND_ALL);
-clearbuffer();
-
+writebyte(MSG_EXIT,0);
+writeushort(global.myid,0);
+scr_send_client(SEND_ALL,0);
+clearbuffer(0);

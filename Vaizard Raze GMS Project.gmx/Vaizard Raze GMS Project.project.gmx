@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
+  <datafiles number="3" name="datafiles">
     <datafile>
       <name>39dll.dll</name>
       <exists>-1</exists>
@@ -29,7 +29,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\mask_solid</sprite>
-    <sprite>sprites\obj_playermask</sprite>
+    <sprite>sprites\mask_slope_l</sprite>
+    <sprite>sprites\mask_slope_r</sprite>
+    <sprite>sprites\mask_player</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -139,17 +141,20 @@
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
-    <script>scripts\get_roomid.gml</script>
+    <scripts name="Secondhand Functions">
+      <scripts name="Utility movement">
+        <script>scripts\slide_to_point.gml</script>
+        <script>scripts\rotate_to_point_hard.gml</script>
+        <script>scripts\rotate_to_point_smooth.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
-      <script>scripts\scr_player_move.gml</script>
-    </scripts>
-    <scripts name="Utility movement">
-      <script>scripts\slide_to_point.gml</script>
-      <script>scripts\rotate_to_point_hard.gml</script>
-      <script>scripts\rotate_to_point_smooth.gml</script>
+      <script>scripts\player_scripts.gml</script>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
+    <script>scripts\get_roomid.gml</script>
+    <script>scripts\scr_entity_movement.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Parents">
@@ -159,10 +164,14 @@
     <object>objects\obj_player</object>
     <object>objects\obj_otherplayer</object>
     <object>objects\obj_solid_block</object>
+    <object>objects\obj_solid_slope_r</object>
+    <object>objects\obj_solid_slope_l</object>
+    <object>objects\game_controller</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_preset</room>
+    <room>rooms\room_loading</room>
     <room>rooms\rm_test</room>
+    <room>rooms\room_preset</room>
   </rooms>
   <constants number="10">
     <constant name="KEY_SPECIAL">9</constant>

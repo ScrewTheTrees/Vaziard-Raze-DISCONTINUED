@@ -18,13 +18,13 @@ with(obj_client)
 {
 if tempid=playerid{}
 else {
-sendmessage(client)
+sendmessage(client,0,0,0)
      }
 }
 break;
 
 case 1:
-sendmessage(client);
+sendmessage(client,0,0,0);
 break;
 
 case 2:
@@ -33,7 +33,7 @@ with(obj_otherplayer)
 {
 if playerid=tempid
 {
-sendmessage(client)
+sendmessage(client,0,0,0)
 }
 }
 
