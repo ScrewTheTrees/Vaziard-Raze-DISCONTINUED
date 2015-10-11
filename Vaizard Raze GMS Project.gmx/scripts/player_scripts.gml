@@ -3,7 +3,7 @@
 
 #define scr_player_move
 //Reset that shit
-scr_reset_player_input();
+
 
 
 
@@ -15,17 +15,18 @@ scr_player_physics();
 //If this is the player it needs to accept the input
 if object_index==obj_player
    {
+   scr_reset_player_input();
    scr_player_inputcontroller();
    scr_player_movespeed();
    }
 
 //Move regardless of anything... wont move if movespeed is 0 anyway
-scr_entity_movement(movespeed,facedir,movescanheight,movescanslow,movescanintervall);
-
+scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
+scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
    
    
    
-
+scr_reset_player_vars(); //Reset vars that should be reset
 
 #define scr_player_inputcontroller
 //Basic movement
@@ -52,15 +53,15 @@ if keyboard_check(global.keybind[KEY_JUMP])
 if keyboard_check_pressed(global.keybind[KEY_JUMP]) 
    {
    
-   if place_meeting(x,y+4,obj_solidparent)
+   if place_meeting(x,y+4,obj_solidparent) && !place_meeting(x,y-(jumpspeed+jumpspeed_mod),obj_solidparent)
       {
       do_jump=true;
       }
-   else if place_meeting(x-max_movespeed,y,obj_solidparent) //Walljump to the right
+   else if place_meeting(x-max_movespeed,y,obj_solidparent) && !place_meeting(x,y-(walljumpupspeed+(jumpspeed_mod/2)),obj_solidparent) //Walljump to the right
       {
       do_walljump_right=true;
       }
-   else if place_meeting(x+max_movespeed,y,obj_solidparent) // Walljump to the left
+   else if place_meeting(x+max_movespeed,y,obj_solidparent) && !place_meeting(x,y-(walljumpupspeed+(jumpspeed_mod/2)),obj_solidparent)  // Walljump to the left
       {
       do_walljump_left=true;
       }
@@ -85,7 +86,8 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_SPECIAL])
    {
-   alarm[0]=0; //Send the movement update NOW
+   msg_send_move();
+   alarm[0]=10; //Send the movement update NOW
    
    }
 
@@ -95,30 +97,23 @@ press_left=false;
 press_up=false;
 press_down=false;
 
-press_ability1=false;
-press_ability2=false;
-press_ability3=false;
-
-press_special=false;
 
 press_jump=false;
-do_jump=false;
 
 
 do_sidedash_right=false;
 do_sidedash_left=false;
 
-do_walljump_right=false;
-do_walljump_left=false;
 
 
-movespeed=0;
+
+
 
 #define scr_player_movespeed
 //If you are pressing left/right at the same time
 if (press_right==true && press_left==true) movespeed=0;
 
-else if (do_walljump_right==true || do_walljump_left==true) movespeed=2;  //Cant move quick while walljumping
+else if (hspeed!=0) movespeed=2;  //Cant move quick while moving this way
 
 else if (do_sidedash_right==true || do_sidedash_left==true) movespeed=0; //Cant move at all while dashing
 
@@ -135,7 +130,7 @@ else if press_left==true
      movespeed = (max_movespeed+movespeed_mod);
      facedir=-1;
      }
-     
+else movespeed=0;
      
 
 #define scr_player_physics
@@ -153,12 +148,34 @@ if place_meeting(x,y+4,obj_solidparent)
    }
 else gravity = max_gravity+gravity_mod;
 
+
+
+if place_meeting(x,y,obj_solidparent)
+{
+if !place_meeting(x+4,y,obj_solidparent) x+=4;
+if !place_meeting(x-4,y,obj_solidparent) x-=4;
+
+if !place_meeting(x,y+4,obj_solidparent) y+=4;
+if !place_meeting(x,y-4,obj_solidparent) y-=4;
+}
+
 #define scr_player_collision
+
 //Move contact with wall
-move_contact_solid(direction,max_speed);
+if vspeed!=0 move_contact_solid(direction,max_speed);
 
 //Always reset horizontal speed
 hspeed=0;
 
 //Only if meeting below/above stop vertical speed
-if (place_meeting(x,y+4,obj_solidparent) || place_meeting(x,y-4,obj_solidparent)) vspeed=0;
+if (place_meeting(x,y+vspeed,obj_solidparent) || place_meeting(x,y-vspeed,obj_solidparent)) vspeed=0;
+
+#define scr_reset_player_vars
+press_ability1=false;
+press_ability2=false;
+press_ability3=false;
+
+press_special=false;
+do_jump=false;
+do_walljump_right=false;
+do_walljump_left=false;

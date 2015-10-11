@@ -154,9 +154,11 @@
     </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_roomid.gml</script>
+    <script>scripts\scr_entity_jump.gml</script>
     <script>scripts\scr_entity_movement.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\game_controller</object>
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
@@ -166,7 +168,6 @@
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_slope_l</object>
-    <object>objects\game_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>

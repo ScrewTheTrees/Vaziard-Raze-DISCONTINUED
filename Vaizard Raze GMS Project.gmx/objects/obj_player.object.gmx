@@ -49,9 +49,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//msg_send_move();
+            <string>msg_send_move();
 
-alarm[0]=10;
+alarm[0]=20;
 </string>
           </argument>
         </arguments>

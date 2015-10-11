@@ -1,5 +1,11 @@
 #define camera_scripts
+
 //Check the other scripts for camera functions and modification of cameras
+
+
+
+
+
 
 #define scr_camera_create
 //The amount of pixels left/right of players to check

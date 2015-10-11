@@ -1,3 +1,4 @@
+/*
 clearbuffer(0)
 writebyte(MSG_MOVE,0)
 writeushort(global.playerid,0)
