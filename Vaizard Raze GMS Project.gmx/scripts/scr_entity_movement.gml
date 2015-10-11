@@ -14,7 +14,6 @@ if (movespeed!=0)
 {
 gg=false;
 
-//Check in intervalls of 2 to preserve performance and skip it alltogether if you are moving up/down to quickly
 if (place_meeting(x,y+4,obj_solidparent)==true)  for(i=movescanheight; i>=-movescanheight; i-=movescanintervall)
     {
     
@@ -23,7 +22,7 @@ if (place_meeting(x,y+4,obj_solidparent)==true)  for(i=movescanheight; i>=-moves
     
     //If the position above the relative I position is free, whilst the position i+2 underneath is occupied
     if !place_meeting(x+movespeed_run,y+i,obj_solidparent)
-    && place_meeting(x+movespeed_run,y+i+2,obj_solidparent)
+    && place_meeting(x+movespeed_run,y+i+movescanintervall,obj_solidparent)
        { 
        y+=i; 
        x+=movespeed_run; 

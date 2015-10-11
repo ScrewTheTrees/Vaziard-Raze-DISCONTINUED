@@ -3,8 +3,8 @@
   <spriteName>mask_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
-  <persistent>0</persistent>
+  <depth>-10</depth>
+  <persistent>-1</persistent>
   <parentName>obj_playerparent</parentName>
   <maskName>mask_player</maskName>
   <events>
@@ -54,7 +54,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>

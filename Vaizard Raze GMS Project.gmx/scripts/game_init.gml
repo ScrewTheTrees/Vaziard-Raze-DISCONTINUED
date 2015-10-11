@@ -1,4 +1,4 @@
-dllinit(0,true,true);
+netcode_start();
 
 global.is_dead=true
 global.cutscene=false;

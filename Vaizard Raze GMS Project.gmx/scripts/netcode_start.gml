@@ -10,4 +10,7 @@ global.idget=1;
 global.onlineversion="0.1"
 
 
+global.udpport_server=17654;
+global.udpport_client=17655;
+
 

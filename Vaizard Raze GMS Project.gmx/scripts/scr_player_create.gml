@@ -12,19 +12,19 @@ max_speed=40;
 facedir=1;
 
 //Gravitational things
-max_gravity=2;
+max_gravity=1;
 gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
-jumpspeed=30;
+jumpspeed=20;
 jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=24;
-walljumpupspeed=20;
+walljumpspeed=12;
+walljumpupspeed=14;
 
 //Movement speed things
 movespeed=0;
 movespeed_mod=0;   //Set to positive or negative to increase/decrease movement speed
-max_movespeed=16;
-movescanheight=32; //The height it scans up/down when checking for slope movement
-movescanintervall=2; // Height checking per step (lower values is more precies but take more processing)
+max_movespeed=8;
+movescanheight=16; //The height it scans up/down when checking for slope movement
+movescanintervall=1; // Height checking per step (lower values is more precies but take more processing)
 
 
 

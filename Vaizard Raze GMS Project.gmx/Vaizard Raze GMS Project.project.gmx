@@ -174,7 +174,8 @@
     <room>rooms\rm_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="10">
+  <constants number="12">
+    <constant name="MSG_DEADPACKET">0</constant>
     <constant name="KEY_SPECIAL">9</constant>
     <constant name="KEY_ABILITY3">8</constant>
     <constant name="KEY_ABILITY2">7</constant>
