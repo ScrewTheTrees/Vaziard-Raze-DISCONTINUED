@@ -1,6 +1,6 @@
 netcode_start();
 
-global.is_dead=true
+global.is_dead=false;
 global.cutscene=false;
 
 

@@ -24,38 +24,40 @@ hh=1080;
 
 kk=ww/hh;
 
-minimum_width=500;
+minimum_width=960;
 maximum_width=((room_height/room_width)*room_width)-200;
 
 #define scr_normalcamera
-kk=0;
-dd=0
+var look_up,look_down;
 
-if keyboard_check(global.keybind[KEY_UP])
-kk=400
+look_up=0;
+look_down=0
 
 if keyboard_check(global.keybind[KEY_DOWN])
-dd=400
+look_up=300
+
+if keyboard_check(global.keybind[KEY_UP])
+look_down=300
 
 
 if global.is_dead=false
 {
-if obj_player.facedir=1 slide_to_point(obj_player.x+500-kk-dd ,obj_player.y+kk-dd ,30)
-else slide_to_point(obj_player.x-500+kk+dd ,obj_player.y+kk-dd ,30)
+if obj_player.facedir=1 slide_to_point(obj_player.x+400-look_up-look_down ,obj_player.y+look_up-look_down ,20)
+else slide_to_point(obj_player.x-400+look_up+look_down ,obj_player.y+look_up-look_down ,20)
 }
 
 if global.is_dead=true
 {
-if keyboard_check(global.keybind[1])
+if keyboard_check(global.keybind[KEY_UP])
 y-=24;
 
-if keyboard_check(global.keybind[3])
+if keyboard_check(global.keybind[KEY_DOWN])
 y+=24;
 
-if keyboard_check(global.keybind[0])
+if keyboard_check(global.keybind[KEY_RIGHT])
 x+=24;
 
-if keyboard_check(global.keybind[2])
+if keyboard_check(global.keybind[KEY_LEFT])
 x-=24;
 
 
@@ -96,19 +98,19 @@ global.camerax=0;
 global.cameray=0;
 
 //Variables for scaling
-global.left_x=player_parent.x;
-global.top_y=player_parent.y;
-global.right_x=player_parent.x;
-global.bottom_y=player_parent.y;
+global.left_x=obj_playerparent.x;
+global.top_y=obj_playerparent.y;
+global.right_x=obj_playerparent.x;
+global.bottom_y=obj_playerparent.y;
 
 //The amount of pixels left/right of players to check
 global.padding=128;
 
 
 //Obj_otherplayer is the player parent
-if instance_exists(player_parent)
+if instance_exists(obj_playerparent)
 {
-      with (player_parent)
+      with (obj_playerparent)
       {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
@@ -126,8 +128,8 @@ if instance_exists(player_parent)
 }//Exists
 
 //Fix the X and Y to the center point;
-global.camerax=global.camerax/instance_number(player_parent);
-global.cameray=global.cameray/instance_number(player_parent);
+global.camerax=global.camerax/instance_number(obj_playerparent);
+global.cameray=global.cameray/instance_number(obj_playerparent);
 
 //Get the widths
 widthx=global.right_x-global.left_x;
@@ -187,10 +189,10 @@ global.camerax=0;
 global.cameray=0;
 
 //Variables for scaling
-global.left_x=player_parent.x;
-global.top_y=player_parent.y;
-global.right_x=player_parent.x;
-global.bottom_y=player_parent.y;
+global.left_x=obj_playerparent.x;
+global.top_y=obj_playerparent.y;
+global.right_x=obj_playerparent.x;
+global.bottom_y=obj_playerparent.y;
 
 
 
@@ -220,9 +222,9 @@ if instance_exists(obj_player)
       }//WIth
 }//Exists
 //Obj_otherplayer is the player parent
-if instance_exists(boss_parent)
+if instance_exists(obj_bossparent)
 {
-      with (boss_parent)
+      with (obj_bossparent)
       {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
@@ -241,9 +243,9 @@ if instance_exists(boss_parent)
       global.sel+=1;
       }//WIth
 }//Exists
-if instance_exists(enemy_parent)
+if instance_exists(obj_enemyparent)
 {
-      with (instance_nearest(obj_player.x,obj_player.y,enemy_parent))
+      with (instance_nearest(obj_player.x,obj_player.y,obj_enemyparent))
       {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;

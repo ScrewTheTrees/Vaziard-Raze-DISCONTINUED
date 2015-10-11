@@ -18,4 +18,3 @@ instance_create(0,0,obj_chatbox)
 
 //scr_changeroom(ROOM_FRONTYARD,0,0);
 }
-

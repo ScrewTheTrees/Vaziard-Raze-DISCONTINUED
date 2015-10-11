@@ -29,6 +29,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\mask_solid</sprite>
+    <sprite>sprites\mask_oddbumps</sprite>
     <sprite>sprites\mask_slope_l</sprite>
     <sprite>sprites\mask_slope_r</sprite>
     <sprite>sprites\mask_player</sprite>
@@ -162,12 +163,16 @@
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
+      <object>objects\obj_bossparent</object>
+      <object>objects\obj_enemyparent</object>
     </objects>
     <object>objects\obj_player</object>
     <object>objects\obj_otherplayer</object>
+    <object>objects\obj_camera</object>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_slope_l</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -176,6 +181,7 @@
   </rooms>
   <constants number="12">
     <constant name="MSG_DEADPACKET">0</constant>
+    <constant name="IiIiI">IiIiI</constant>
     <constant name="KEY_SPECIAL">9</constant>
     <constant name="KEY_ABILITY3">8</constant>
     <constant name="KEY_ABILITY2">7</constant>

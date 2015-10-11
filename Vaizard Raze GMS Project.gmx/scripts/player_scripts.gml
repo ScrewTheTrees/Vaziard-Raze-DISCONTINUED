@@ -14,10 +14,9 @@ if object_index==obj_player
    scr_player_movespeed();
    }
 
-//Move regardless of anything... wont move if movespeed is 0 anyway
+//
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
-
 
  
 
@@ -81,9 +80,9 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_SPECIAL])
    {
+   //Send the movement update NOW
    msg_send_move();
-   alarm[0]=10; //Send the movement update NOW
-   
+   alarm[0]=10; 
    }
 
 #define scr_reset_player_input

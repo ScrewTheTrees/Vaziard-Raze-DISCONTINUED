@@ -21,4 +21,3 @@ writebyte(MSG_ENTER,0);
 writebyte(playerid,0);
 scr_send_client(SEND_OTHER,tempid)
 clearbuffer(0);
-

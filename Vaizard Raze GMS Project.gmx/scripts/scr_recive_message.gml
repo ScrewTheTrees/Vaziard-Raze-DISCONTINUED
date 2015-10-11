@@ -15,4 +15,3 @@ repeat (100)
   clearbuffer(0);
 }
 clearbuffer(0);
-

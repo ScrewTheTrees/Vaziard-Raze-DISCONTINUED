@@ -6,4 +6,3 @@ if global.playerid!=0
     clearbuffer(0);
 }
 
-
