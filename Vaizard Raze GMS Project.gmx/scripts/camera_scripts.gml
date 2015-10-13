@@ -11,6 +11,7 @@
 //The amount of pixels left/right of players to check
 global.padding=256;
 
+//The W/H of the view for the actual screen
 curr_w=view_wview;
 curr_h=view_hview;
 
@@ -22,8 +23,9 @@ basic_h=view_hview;
 ww=1920;
 hh=1080;
 
-kk=ww/hh;
+kk=ww/hh; //Mathematical camera stuff
 
+//Dont want those expanding cameras expanding too muh ehh? XD
 minimum_width=960;
 maximum_width=((room_height/room_width)*room_width)-200;
 

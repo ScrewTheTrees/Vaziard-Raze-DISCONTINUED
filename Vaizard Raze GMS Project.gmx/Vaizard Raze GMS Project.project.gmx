@@ -147,15 +147,26 @@
         <script>scripts\rotate_to_point_hard.gml</script>
         <script>scripts\rotate_to_point_smooth.gml</script>
       </scripts>
+      <script>scripts\get_mouse_in.gml</script>
     </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
       <script>scripts\player_scripts.gml</script>
     </scripts>
+    <scripts name="Save/Load">
+      <script>scripts\scr_save_data.gml</script>
+      <script>scripts\scr_load_data.gml</script>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_roomid.gml</script>
     <script>scripts\scr_entity_jump.gml</script>
     <script>scripts\scr_entity_movement.gml</script>
+    <script>scripts\get_keypress_name.gml</script>
+    <script>scripts\Resolution_Handler.gml</script>
+    <script>scripts\script666.gml</script>
+    <script>scripts\scr_create_dropdown_menus_create.gml</script>
+    <script>scripts\DropDown_Handler.gml</script>
+    <script>scripts\scr_resolution_from_string.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\game_controller</object>
@@ -172,13 +183,20 @@
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_slope_l</object>
     <object>objects\obj_test</object>
+    <object>objects\obj_select_resolution</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
     <room>rooms\rm_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="12">
+  <constants number="18">
+    <constant name="INPUT_ID_NAME">2</constant>
+    <constant name="INPUT_ID_GM">1</constant>
+    <constant name="INPUT_ID_NUM">0</constant>
+    <constant name="RETURN_ID_NAME">2</constant>
+    <constant name="RETURN_ID_GM">1</constant>
+    <constant name="RETURN_ID_NUM">0</constant>
     <constant name="MSG_DEADPACKET">0</constant>
     <constant name="IiIiI">IiIiI</constant>
     <constant name="KEY_SPECIAL">9</constant>
