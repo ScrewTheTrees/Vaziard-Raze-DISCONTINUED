@@ -11,10 +11,9 @@ if(server <= 0)
 else
 {
 global.server = server;
-setnagle(global.server,true);
 
 instance_create(0,0,obj_recive_packet)
-instance_create(0,0,obj_chatbox)
+//instance_create(0,0,obj_chatbox)
 
-//scr_changeroom(ROOM_FRONTYARD,0,0);
+scr_changeroom(room_test,0,"Starting");
 }

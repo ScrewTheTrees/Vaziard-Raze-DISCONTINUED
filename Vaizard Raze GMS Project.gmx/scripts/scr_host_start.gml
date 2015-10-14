@@ -8,7 +8,7 @@ if (global.listen <= 0)
 global.playerid=0;
 
 instance_create(0,0,obj_wait)
-instance_create(0,0,obj_chatbox)
+//instance_create(0,0,obj_chatbox)
 instance_create(0,0,obj_recive_packet)
 
-//scr_changeroom(ROOM_FRONTYARD,0,0);
+scr_changeroom(room_test,0,"Starting");
