@@ -3,6 +3,7 @@ scr_dropdown_init();
 
 global.is_dead=false;   //Are you dead?
 global.cutscene=false;  //In a cutscene?
+global.enter=0;         //Entrance point in a room
 
 global.difficult=3;
 
@@ -24,6 +25,5 @@ global.keybind[KEY_ABILITY1]=ord("C");
 global.keybind[KEY_ABILITY2]=ord("A");
 global.keybind[KEY_ABILITY3]=ord("S");
 global.keybind[KEY_SPECIAL]=vk_space;
-
 
 

@@ -2,6 +2,11 @@
 //Player input and functions are handled from here
 
 #define scr_player_move
+//First of all, retrieve packets from all other players
+if (object_index==obj_otherplayer && global.host==true)
+   {
+   scr_recive_message();
+   }
 //Reset that shit
 scr_player_physics();  
 

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-  <vsnap>96</vsnap>
-  <hsnap>96</hsnap>
+  <vsnap>48</vsnap>
+  <hsnap>48</hsnap>
   <isometric>0</isometric>
   <speed>120</speed>
   <persistent>0</persistent>
@@ -17,7 +17,7 @@
   <makerSettings>
     <isSet>-1</isSet>
     <w>870</w>
-    <h>810</h>
+    <h>843</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
     <showTiles>-1</showTiles>
@@ -26,7 +26,7 @@
     <showViews>0</showViews>
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
-    <page>1</page>
+    <page>5</page>
     <xoffset>233</xoffset>
     <yoffset>-120</yoffset>
   </makerSettings>
@@ -51,7 +51,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="game_controller" x="288" y="0" name="inst_18A6C4A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menu_join" x="0" y="816" name="inst_294D4D86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_menu_host" x="0" y="672" name="inst_04185FC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

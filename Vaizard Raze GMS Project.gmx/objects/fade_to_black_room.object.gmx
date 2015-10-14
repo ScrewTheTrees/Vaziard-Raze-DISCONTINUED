@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10000</depth>
-  <persistent>-1</persistent>
+  <depth>0</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,14 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_init();
-
-gamedraw=0;
-
-
-
-
-room_goto_next();
+            <string>alpha=0;
+nroom=0;
+mytext="";
 </string>
           </argument>
         </arguments>
@@ -55,34 +50,22 @@ room_goto_next();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Screen Refresh Intervall Script
-//Clamp the intervall so it's not too fast or too slow for the engine rendering
-if global.draw_intervall&lt;0.05 global.draw_intervall=0.05;
-if global.draw_intervall&gt;1 global.draw_intervall=1;
-
-gamedraw+=global.draw_intervall;
-
-if gamedraw&gt;1
-   {
-   draw_enable_drawevent(true);
-   gamedraw-=1;
-   }
-else 
-   {
-   draw_enable_drawevent(false);
-   }
-   
-   
-if keyboard_check_pressed(ord("Y")) global.draw_intervall-=0.05;
-if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;
+            <string>scr_player_freeze();
 
 
+alpha+=0.005;
+
+if alpha&gt;1
+{
+room=nroom;
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -99,37 +82,14 @@ if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>draw_set_blend_mode(0)
+draw_set_color(c_black);
+draw_set_alpha(alpha);
+draw_rectangle(0,0,window_get_width(),window_get_height(),false);
+draw_text_center(window_get_width()/2,window_get_height()/2,mytext,c_blue,font20c,0)
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw Debug Information
 draw_set_color(c_white);
-draw_text(view_xview+100,view_yview+100,"Engine fps="+string(fps)+" - Drawing FPS="+string(fps*global.draw_intervall));
-draw_text(view_xview+100,view_yview+120,"playerid="+string(global.playerid));
-draw_text(view_xview+100,view_yview+140,"Update Rate="+string(global.draw_intervall)+" // Press Y&amp;U to change");
-
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
