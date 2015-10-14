@@ -32,6 +32,8 @@
     <sprite>sprites\mask_slope_l</sprite>
     <sprite>sprites\mask_slope_r</sprite>
     <sprite>sprites\mask_player</sprite>
+    <sprite>sprites\spr_menu_host</sprite>
+    <sprite>sprites\spr_menu_join</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -164,20 +166,40 @@
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
     <script>scripts\script666.gml</script>
-    <script>scripts\scr_create_dropdown_menus_create.gml</script>
+    <script>scripts\scr_dropdown_menus_create.gml</script>
     <script>scripts\DropDown_Handler.gml</script>
     <script>scripts\scr_resolution_from_string.gml</script>
+    <script>scripts\scr_player_freeze.gml</script>
+    <script>scripts\draw_text_center.gml</script>
+    <script>scripts\scr_changeroom.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font12a</font>
+    <font>fonts\font20c</font>
+  </fonts>
   <objects name="objects">
     <object>objects\game_controller</object>
+    <object>objects\obj_player</object>
+    <object>objects\obj_otherplayer</object>
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
       <object>objects\obj_bossparent</object>
       <object>objects\obj_enemyparent</object>
+      <object>objects\obj_menuparent</object>
     </objects>
-    <object>objects\obj_player</object>
-    <object>objects\obj_otherplayer</object>
+    <objects name="Menu">
+      <object>objects\obj_menu_host</object>
+      <object>objects\obj_menu_join</object>
+    </objects>
+    <objects name="GFX">
+      <object>objects\fade_to_black_room</object>
+      <object>objects\fade_from_black</object>
+    </objects>
+    <objects name="Online">
+      <object>objects\obj_recive_packet</object>
+      <object>objects\obj_wait</object>
+    </objects>
     <object>objects\obj_camera</object>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_slope_r</object>
@@ -187,13 +209,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
+    <room>rooms\room4</room>
     <room>rooms\rm_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="18">
-    <constant name="INPUT_ID_NAME">2</constant>
-    <constant name="INPUT_ID_GM">1</constant>
-    <constant name="INPUT_ID_NUM">0</constant>
+  <constants number="15">
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
