@@ -209,8 +209,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
-    <room>rooms\room4</room>
-    <room>rooms\rm_test</room>
+    <room>rooms\room_menu</room>
+    <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
   <constants number="15">
