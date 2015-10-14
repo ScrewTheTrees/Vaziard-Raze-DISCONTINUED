@@ -26,4 +26,3 @@ global.keybind[KEY_ABILITY2]=ord("A");
 global.keybind[KEY_ABILITY3]=ord("S");
 global.keybind[KEY_SPECIAL]=vk_space;
 
-

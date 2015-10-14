@@ -71,7 +71,7 @@ else
    {
    draw_enable_drawevent(false);
    }
-   
+
    
 if keyboard_check_pressed(ord("Y")) global.draw_intervall-=0.05;
 if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;

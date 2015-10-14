@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>1545</w>
+    <w>1357</w>
     <h>815</h>
     <showGrid>-1</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>1</page>
-    <xoffset>-63</xoffset>
-    <yoffset>-235</yoffset>
+    <xoffset>-258</xoffset>
+    <yoffset>-297</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -164,7 +164,7 @@
     <instance objName="obj_solid_block" x="2208" y="1248" name="inst_C754EBA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_block" x="2304" y="1248" name="inst_A6E21092" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_block" x="2400" y="1248" name="inst_1A111F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-	<instance objName="obj_solid_block" x="7584" y="960" name="inst_60D3D150" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_block" x="7584" y="960" name="inst_60D3D150" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_block" x="7584" y="864" name="inst_848C05F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_block" x="7584" y="768" name="inst_61E87066" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_block" x="7584" y="672" name="inst_2B3FDC99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
