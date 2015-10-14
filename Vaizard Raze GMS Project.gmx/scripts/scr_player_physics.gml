@@ -3,8 +3,14 @@
 
 #define scr_player_move
 //Reset that shit
-scr_player_physics();  
 
+
+
+
+
+
+//gravitational needs
+scr_player_physics();
 
 //If this is the player it needs to accept the input
 if object_index==obj_player
@@ -14,12 +20,12 @@ if object_index==obj_player
    scr_player_movespeed();
    }
 
-//
+//Move regardless of anything... wont move if movespeed is 0 anyway
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
-
- 
-
+   
+   
+   
 scr_reset_player_vars(); //Reset vars that should be reset
 
 #define scr_player_inputcontroller
@@ -80,9 +86,9 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_JUMP])
    or keyboard_check_released(global.keybind[KEY_SPECIAL])
    {
-   //Send the movement update NOW
    msg_send_move();
-   alarm[0]=10; 
+   alarm[0]=10; //Send the movement update NOW
+   
    }
 
 #define scr_reset_player_input
@@ -129,40 +135,40 @@ else movespeed=0;
 
 #define scr_player_physics
 //Clamping speed before the gravity calculation
-if vspeed>max_fallspeed vspeed=max_fallspeed;
+if vspeed>max_speed vspeed=max_speed;
 if vspeed<-max_speed vspeed=-max_speed;
 if hspeed>max_speed hspeed=max_speed;
 if hspeed<-max_speed hspeed=-max_speed;
 
 
-if place_meeting(x,y+4,obj_solidparent)
+if place_meeting(x,y+5,obj_solidparent)
    {
    gravity=0;
    vspeed=0;
-   hspeed=0;
    }
-else if place_meeting(x,y+real(vspeed),obj_solidparent) {gravity=0}
 else gravity = max_gravity+gravity_mod;
 
 
 
 if place_meeting(x,y,obj_solidparent)
 {
-if !place_meeting(x+4,y,obj_solidparent) x+=1;
-if !place_meeting(x-4,y,obj_solidparent) x-=1;
+if !place_meeting(x+4,y,obj_solidparent) x+=4;
+if !place_meeting(x-4,y,obj_solidparent) x-=4;
 
-if !place_meeting(x,y+4,obj_solidparent) y+=1;
-if !place_meeting(x,y-4,obj_solidparent) y-=1;
+if !place_meeting(x,y+4,obj_solidparent) y+=4;
+if !place_meeting(x,y-4,obj_solidparent) y-=4;
 }
 
 #define scr_player_collision
-move_contact_solid(direction,16);
-vspeed=0;
-hspeed=0;
-gravity=0;
 
-x=round(x);
-y=round(y);
+//Move contact with wall
+if vspeed!=0 move_contact_solid(direction,max_speed);
+
+//Always reset horizontal speed
+hspeed=0;
+
+//Only if meeting below/above stop vertical speed
+if (place_meeting(x,y+vspeed,obj_solidparent) || place_meeting(x,y-vspeed,obj_solidparent)) vspeed=0;
 
 #define scr_reset_player_vars
 press_ability1=false;

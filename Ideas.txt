@@ -9,8 +9,6 @@ DO NOT put any mathematics or vital stuff in the draw events
 Player animation must be 120 Frames at 120 FPS
 
 
-!!!Remeber!!!
-Room Start Event works for persistent objects
 
 Movement System the is fast and fluent
 Wall jumping is more noncontrollable and better

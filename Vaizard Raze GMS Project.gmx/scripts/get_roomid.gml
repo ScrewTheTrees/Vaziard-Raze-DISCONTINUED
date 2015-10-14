@@ -1,6 +1,6 @@
 ///get_roomid(Room / ID / NAME ,  RETURN_ID_  )
 
-//Note to self, always use negative numbers for ROOM id's due to how GMroom id's work
+//Note to self, always use negative numbers for ROOM id's due to how rooms work
 
 var returnid,numid,nameid,gmid;
 
@@ -12,8 +12,8 @@ gmid=room_preset;
 
        switch (argument0)
        {
-       case room_test:     case "test":      case -1:
-       gmid=room_test;     nameid="test";    numid=-1;
+       case rm_test:     case "test":      case -1:
+       gmid=rm_test;     nameid="test";    numid=-1;
        break;
        }
 
@@ -21,3 +21,4 @@ gmid=room_preset;
 if returnid=RETURN_ID_NUM return numid;
 else if returnid=RETURN_ID_GM return gmid;
 else if returnid=RETURN_ID_NAME return nameid;
+
