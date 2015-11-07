@@ -12,4 +12,3 @@ repeat (100)
     scr_messages(messageid);
 }
 clearbuffer(0);
-

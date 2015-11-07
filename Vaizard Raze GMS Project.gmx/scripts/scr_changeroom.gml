@@ -8,4 +8,3 @@ if !instance_exists(fade_to_black_room)
  ii.nroom=argument0;
  ii.mytext=argument2;
  }
-

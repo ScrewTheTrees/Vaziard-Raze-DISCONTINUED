@@ -37,11 +37,10 @@ sendmessage(client,0,0,0)
 }
 }
 
-/*case 3:
+case 3:
 with(obj_otherplayer)
  {
  sendmessage(client)
  }
 break;
-*/
       }

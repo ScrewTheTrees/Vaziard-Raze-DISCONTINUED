@@ -131,15 +131,19 @@
         <script>scripts\scr_recive_packets_udp_server.gml</script>
       </scripts>
       <scripts name="Sending Messages">
-        <script>scripts\msg_send_player_leave.gml</script>
+        <script>scripts\msg_send_leavegame.gml</script>
         <script>scripts\msg_send_playerid.gml</script>
-        <script>scripts\msg_send_exit.gml</script>
         <script>scripts\msg_send_move.gml</script>
         <script>scripts\msg_send_deadpacket.gml</script>
+        <script>scripts\msg_send_update_myroom.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
+        <script>scripts\msg_recive_leavegame.gml</script>
+        <script>scripts\msg_recive_joingame.gml</script>
+        <script>scripts\msg_recive_playerid.gml</script>
         <script>scripts\msg_recive_move.gml</script>
-        <script>scripts\msg_recive_exit.gml</script>
+        <script>scripts\msg_recive_deadpacket.gml</script>
+        <script>scripts\msg_recive_update_myroom.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -213,12 +217,21 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="15">
+  <constants number="24">
+    <constant name="SEND_ALL">3</constant>
+    <constant name="SEND_PLAYER">2</constant>
+    <constant name="SEND_SELF">1</constant>
+    <constant name="SEND_OTHER">0</constant>
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_UPDATE_MYROOM">5</constant>
+    <constant name="MSG_MOVE">4</constant>
+    <constant name="MSG_PLAYERID">3</constant>
+    <constant name="MSG_LEAVEGAME">2</constant>
+    <constant name="MSG_JOINGAME">1</constant>
     <constant name="MSG_DEADPACKET">0</constant>
-    <constant name="IiIiI">IiIiI</constant>
+    <constant name="KEY_SWAP">10</constant>
     <constant name="KEY_SPECIAL">9</constant>
     <constant name="KEY_ABILITY3">8</constant>
     <constant name="KEY_ABILITY2">7</constant>

@@ -1,3 +1,4 @@
+///buildbyte(0,1,2,3,4,5,6,7)
 /*
   returns a byte based on true/false arguments
   argument0-argument7 = bit values

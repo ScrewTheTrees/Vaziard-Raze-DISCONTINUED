@@ -1,6 +1,8 @@
 //Online stuff
 playerid=-1;//No ID
 client_ip="127.0.0.1"; //Placeholder IP
+playername="Error?";
+myroom=room_menu;
 
 //Create Company objects
 instance_create(x,y,obj_camera);
@@ -28,6 +30,8 @@ movespeed_mod=0;   //Set to positive or negative to increase/decrease movement s
 max_movespeed=6;
 movescanheight=20; //The height it scans up/down when checking for slope movement
 movescanintervall=2; // Height checking per step (how precise the checking is)
+
+
 
 
 

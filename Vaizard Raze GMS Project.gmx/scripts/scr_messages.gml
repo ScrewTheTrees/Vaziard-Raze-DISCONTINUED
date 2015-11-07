@@ -1,18 +1,13 @@
 var messageid=argument0;
-    switch(messageid)
+  switch(messageid)
   {
-    case MSG_EXIT: msg_recive_exit(); break;
+    case MSG_LEAVEGAME: msg_recive_leavegame(); break;
+    case MSG_JOINGAME: msg_recive_joingame(); break;
     case MSG_MOVE: msg_recive_move(); break;
-    
-    
-    
-    case MSG_DEADPACKET: 
-         clearbuffer(0);
-         writebyte(MSG_DEADPACKET,0)
-         if global.playerid=0
-         scr_send_client_udp(SEND_SELF,0)
-         else scr_send_server_udp();
-         clearbuffer(0);
-         break;
+    case MSG_UPDATE_MYROOM: msg_recive_update_myroom(); break;
+
+    //Special packets
+    case MSG_DEADPACKET: msg_recive_deadpacket(); break;
+    case MSG_PLAYERID: msg_recive_playerid(); break;
   }
   clearbuffer(0);
