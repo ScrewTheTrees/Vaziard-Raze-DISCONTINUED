@@ -4,8 +4,11 @@ scr_dropdown_init();
 global.is_dead=false;   //Are you dead?
 global.cutscene=false;  //In a cutscene?
 global.enter=0;         //Entrance point in a room
+global.playername="Faggot";
+global.myroom=room_menu;
 
-global.difficult=3;
+
+global.difficult=3;     //How hard!
 
 
 global.draw_intervall=0.5;     //Drawing rate
@@ -25,4 +28,4 @@ global.keybind[KEY_ABILITY1]=ord("C");
 global.keybind[KEY_ABILITY2]=ord("A");
 global.keybind[KEY_ABILITY3]=ord("S");
 global.keybind[KEY_SPECIAL]=vk_space;
-
+global.keybind[KEY_SWAP]=vk_shift;
