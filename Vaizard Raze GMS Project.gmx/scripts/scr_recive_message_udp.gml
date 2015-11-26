@@ -1,6 +1,6 @@
 //--------********************----------
 //UDP
-repeat (100)
+repeat (1)
 {
 
     size = receivemessage(global.udp,0,0);
@@ -10,5 +10,6 @@ repeat (100)
   messageid = readbyte(0);
   
     scr_messages(messageid);
+    clearbuffer(0);
 }
 clearbuffer(0);

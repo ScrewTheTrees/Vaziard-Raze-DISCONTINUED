@@ -1,12 +1,12 @@
 //Recive Code
 var tempid,xx,yy,movement1,vvspeed,hhspeed;
 
-tempid=readushort();
-xx=readshort();
-yy=readshort();
-movement1=readbyte();
-vvspeed=readfloat();
-hhspeed=readfloat();
+tempid=readushort(0);
+xx=readshort(0);
+yy=readshort(0);
+movement1=readbyte(0);
+vvspeed=readfloat(0);
+hhspeed=readfloat(0);
 
 clearbuffer(0);
 
@@ -20,11 +20,12 @@ writebyte(movement1,0)
 writefloat(vvspeed,0)
 writefloat(hhspeed,0)
 
-scr_send_client_udp(SEND_OTHER,0)
+scr_send_client_udp(SEND_ALL,0)
 clearbuffer(0);
 }
 
 
+    if instance_exists(obj_otherplayer) {
 obj_otherplayer.tempid=tempid;
 obj_otherplayer.xx=xx;
 obj_otherplayer.yy=yy;
@@ -49,3 +50,5 @@ do_sidedash_right=readbit(movement1,5);
 do_sidedash_left=readbit(movement1,6);
 }
 }
+
+    }

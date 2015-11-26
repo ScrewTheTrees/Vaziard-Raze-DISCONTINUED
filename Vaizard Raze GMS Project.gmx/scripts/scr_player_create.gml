@@ -1,6 +1,7 @@
 //Online stuff
 playerid=-1;//No ID
 client_ip="127.0.0.1"; //Placeholder IP
+client=-1; //No client
 playername="Error?";
 myroom=room_menu;
 

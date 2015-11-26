@@ -12,6 +12,9 @@ else
 {
 global.server = server;
 
+
+global.playerid=-1;
+
 instance_create(0,0,obj_recive_packet)
 //instance_create(0,0,obj_chatbox)
 

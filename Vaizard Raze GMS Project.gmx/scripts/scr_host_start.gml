@@ -3,7 +3,7 @@ global.udp=udpconnect(global.udpport_server,2);
 if (global.listen <= 0)
 {
   show_message("Failed to listen on port: "+string(global.port));
-  game_end();
+  game_restart();
 }
 global.playerid=0;
 

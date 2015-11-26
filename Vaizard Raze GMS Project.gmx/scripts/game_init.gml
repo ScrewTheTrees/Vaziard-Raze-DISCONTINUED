@@ -1,6 +1,9 @@
 netcode_start();
 scr_dropdown_init();
 
+
+display_set_gui_size(1920,1080);
+
 global.is_dead=false;   //Are you dead?
 global.cutscene=false;  //In a cutscene?
 global.enter=0;         //Entrance point in a room
@@ -15,6 +18,9 @@ global.draw_intervall=0.5;     //Drawing rate
 global.fullscreen=false;
 global.gamewidth=1920;
 global.gameheight=1080;
+
+global.gamewidth=1280 ;
+global.gameheight=720;
 
 
 global.keybinds=9; //How many keybinds to write to save

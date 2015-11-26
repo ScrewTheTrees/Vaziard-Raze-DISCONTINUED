@@ -13,10 +13,10 @@ send_client(Player/s)
 switch(argument0)
      {
 case 0:
-if instance_exists(obj_client)
+if instance_exists(obj_otherplayer)
 {
-obj_client.tempid=playerid
-with(obj_client)
+obj_otherplayer.tempid=playerid
+with(obj_otherplayer)
 {
 if tempid=playerid{}
 else {
@@ -27,14 +27,14 @@ sendmessage(global.udp,client_ip,global.udpport_client,0)
 break;
 
 case 1:
-if object_index=obj_client
+if object_index=obj_otherplayer
 sendmessage(global.udp,client_ip,global.udpport_client,0)
 else sendmessage(global.udp,lastinIP(),global.udpport_client,0)
 break;
 
 case 2:
-obj_client.tempid=argument1
-with(obj_client)
+obj_otherplayer.tempid=argument1
+with(obj_otherplayer)
 {
 if playerid=tempid
 {
@@ -44,12 +44,15 @@ sendmessage(global.udp,client_ip,global.udpport_client,0)
 break;
 
 case 3:
-if instance_exists(obj_client)
+if instance_exists(obj_otherplayer)
 {
-with(obj_client)
+with(obj_otherplayer)
  {
  sendmessage(global.udp,client_ip,global.udpport_client,0)
  }
 }
 break;
       }
+      
+      
+      clearbuffer(0);
