@@ -12,14 +12,16 @@ scr_player_physics();
 
 
 //If this is the player it needs to accept the input
-if object_index==obj_player
+if (object_index==obj_player)
    {
    scr_reset_player_input();
    scr_player_inputcontroller();
-   scr_player_movespeed();
+   
+   scr_player_moveupdateonline();
    }
 
 //
+scr_player_movespeed();
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
 
@@ -38,7 +40,7 @@ if keyboard_check(global.keybind[KEY_DOWN])     press_down=true;
 if place_meeting(x,y+4,obj_solidparent)
 {
 do_walljump_right=false;
-do_walljump_right=false;
+do_walljump_left=false;
 }
 
 
@@ -71,24 +73,7 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    
    
    
-   //If you press any of the keys you need to send this update to the other players
-   if keyboard_check_pressed(global.keybind[KEY_RIGHT])
-   or keyboard_check_pressed(global.keybind[KEY_LEFT])
-   or keyboard_check_pressed(global.keybind[KEY_UP])
-   or keyboard_check_pressed(global.keybind[KEY_DOWN])
-   or keyboard_check_pressed(global.keybind[KEY_JUMP])
-   or keyboard_check_pressed(global.keybind[KEY_SPECIAL])
-   or keyboard_check_released(global.keybind[KEY_RIGHT])
-   or keyboard_check_released(global.keybind[KEY_LEFT])
-   or keyboard_check_released(global.keybind[KEY_UP])
-   or keyboard_check_released(global.keybind[KEY_DOWN])
-   or keyboard_check_released(global.keybind[KEY_JUMP])
-   or keyboard_check_released(global.keybind[KEY_SPECIAL])
-   {
-   //Send the movement update NOW
-   msg_send_move();
-   alarm[0]=10; 
-   }
+
 
 #define scr_reset_player_input
 press_right=false;
@@ -178,3 +163,25 @@ press_special=false;
 do_jump=false;
 do_walljump_right=false;
 do_walljump_left=false;
+#define scr_player_moveupdateonline
+
+
+
+   //If you press any of the keys you need to send this update to the other players
+   if keyboard_check_pressed(global.keybind[KEY_RIGHT])
+   or keyboard_check_pressed(global.keybind[KEY_LEFT])
+   or keyboard_check_pressed(global.keybind[KEY_UP])
+   or keyboard_check_pressed(global.keybind[KEY_DOWN])
+   or keyboard_check_pressed(global.keybind[KEY_JUMP])
+   or keyboard_check_pressed(global.keybind[KEY_SPECIAL])
+   or keyboard_check_released(global.keybind[KEY_RIGHT])
+   or keyboard_check_released(global.keybind[KEY_LEFT])
+   or keyboard_check_released(global.keybind[KEY_UP])
+   or keyboard_check_released(global.keybind[KEY_DOWN])
+   or keyboard_check_released(global.keybind[KEY_JUMP])
+   or keyboard_check_released(global.keybind[KEY_SPECIAL])
+   {
+   //Send the movement update NOW
+   msg_send_move();
+   alarm[0]=1; 
+   }

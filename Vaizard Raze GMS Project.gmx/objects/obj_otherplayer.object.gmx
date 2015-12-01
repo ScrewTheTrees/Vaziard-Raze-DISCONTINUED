@@ -29,7 +29,7 @@
 
 
 
-alarm[8]=2;
+alarm[8]=10;
 </string>
           </argument>
         </arguments>
@@ -154,9 +154,22 @@ scr_recive_message();
             <kind>1</kind>
             <string>draw_self();
 
-draw_text(x-16,y-78,"Client"+string(client));
-draw_text(x-16,y-64,"Playerid"+string(playerid));
-draw_text(x-16,y-48,"Player IP"+string(client_ip));
+draw_text(x-16,y-78,"Client: "+string(client));
+draw_text(x-16,y-64,"Playerid: "+string(playerid));
+draw_text(x-16,y-48,"Player IP: "+string(client_ip));
+
+
+
+draw_set_colour(c_red);
+draw_text(x-32,y-256,"press_right: "+string(press_right));
+draw_text(x-32,y-244,"press_left: "+string(press_left));
+draw_text(x-32,y-232,"press_up: "+string(press_up));
+draw_text(x-32,y-220,"press_down: "+string(press_down));
+draw_text(x-32,y-208,"press_jump: "+string(press_jump));
+draw_text(x-32,y-196,"do_sidedash_right: "+string(do_sidedash_right));
+draw_text(x-32,y-184,"do_sidedash_right: "+string(do_sidedash_left));
+
+draw_set_colour(c_white);
 </string>
           </argument>
         </arguments>

@@ -29,25 +29,27 @@ clearbuffer(0);
 obj_otherplayer.tempid=tempid;
 obj_otherplayer.xx=xx;
 obj_otherplayer.yy=yy;
-obj_otherplayer.movement1=movement1;
 obj_otherplayer.vvspeed=vvspeed;
 obj_otherplayer.hhspeed=hhspeed;
 
+obj_otherplayer.movement1=movement1;
+
+
 with(obj_otherplayer)
 {
-if playerid=tempid
+if playerid==tempid
 {
 x=xx;
 y=yy;
 vspeed=vvspeed;
 hspeed=hhspeed;
-press_right=readbit(movement1,0);
-press_left=readbit(movement1,1);
-press_up=readbit(movement1,2);
-press_down=readbit(movement1,3);
-press_jump=readbit(movement1,4);
-do_sidedash_right=readbit(movement1,5);
-do_sidedash_left=readbit(movement1,6);
+press_right=readbit(movement1,7);
+press_left=readbit(movement1,6);
+press_up=readbit(movement1,5);
+press_down=readbit(movement1,4);
+press_jump=readbit(movement1,3);
+do_sidedash_right=readbit(movement1,2);
+do_sidedash_left=readbit(movement1,1);
 }
 }
 
