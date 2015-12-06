@@ -20,7 +20,7 @@ writebyte(movement1,0)
 writefloat(vvspeed,0)
 writefloat(hhspeed,0)
 
-scr_send_client(SEND_ALL,0)
+scr_send_client_udp(SEND_ALL,0)
 clearbuffer(0);
 }
 

@@ -1,5 +1,5 @@
 //Must be placed in the otherplayer object
-    
+
             //Send Host player
 clearbuffer(0);
 writebyte(MSG_JOINGAME,0)
@@ -27,3 +27,4 @@ global.tempidd=playerid;
        clearbuffer(0);
        }
       }
+

@@ -26,15 +26,15 @@ sendmessage(client,0,0,0);
 break;
 
 case 2:
-obj_otherplayer.tempid=argument1
+obj_otherplayer.tempid=argument1;
 with(obj_otherplayer)
 {
-if playerid=tempid
+if playerid==tempid
 {
 sendmessage(client,0,0,0)
 }
 }
-
+break;
 case 3:
 with(obj_otherplayer)
  {
