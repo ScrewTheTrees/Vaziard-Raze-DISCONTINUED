@@ -130,10 +130,15 @@ msg_send_update_myroom();
             <kind>1</kind>
             <string>///Draw Debug Information
 draw_set_color(c_white);
-draw_text(view_xview+100,view_yview+100,"Engine fps="+string(fps)+" - Drawing FPS="+string(fps*global.draw_intervall));
-draw_text(view_xview+100,view_yview+120,"playerid="+string(global.playerid));
-draw_text(view_xview+100,view_yview+140,"Update Rate="+string(global.draw_intervall)+" // Press Y&amp;U to change");
+draw_text(view_xview+100,view_yview+100,"Engine fps = "+string(fps)+" - Drawing FPS="+string(fps*global.draw_intervall));
+draw_text(view_xview+100,view_yview+120,"playerid = "+string(global.playerid));
+draw_text(view_xview+100,view_yview+140,"Update Rate = "+string(global.draw_intervall)+" // Press Y&amp;U to change");
 
+
+if instance_exists(obj_playerparent)
+   {
+   draw_text(view_xview+100,view_yview+160,"Total Players = "+string(instance_number(obj_playerparent)));
+   }
 </string>
           </argument>
         </arguments>

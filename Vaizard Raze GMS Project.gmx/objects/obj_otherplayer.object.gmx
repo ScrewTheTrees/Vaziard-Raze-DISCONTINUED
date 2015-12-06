@@ -52,10 +52,12 @@ alarm[8]=10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_newplayer();
+            <string>if global.playerid==0
+{
+scr_newplayer();
 
 msg_send_playerid(playerid);
-
+}
 
 </string>
           </argument>

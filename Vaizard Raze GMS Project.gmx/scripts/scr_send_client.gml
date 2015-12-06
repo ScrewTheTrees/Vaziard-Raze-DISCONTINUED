@@ -14,10 +14,10 @@ case 0:
 obj_otherplayer.tempid=playerid
 with(obj_otherplayer)
 {
-if tempid=playerid{}
-else {
-sendmessage(client,0,0,0)
-     }
+if tempid!=playerid
+   {
+   sendmessage(client,0,0,0)
+   }
 }
 break;
 

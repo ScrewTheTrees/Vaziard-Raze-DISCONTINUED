@@ -51,7 +51,7 @@
             <kind>1</kind>
             <string>msg_send_move();
 
-alarm[0]=30;
+alarm[0]=60;
 </string>
           </argument>
         </arguments>
