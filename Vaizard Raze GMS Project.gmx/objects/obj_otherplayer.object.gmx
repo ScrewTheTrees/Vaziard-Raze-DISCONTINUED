@@ -154,12 +154,17 @@ scr_recive_message();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
+            <string>if myroom==global.myroom
+{
+draw_self();
+}
 
-draw_text(x-16,y-78,"Client: "+string(client));
+draw_set_colour(c_white);
+
+draw_text(x-16,y-84,"My Room: "+string(myroom));
 draw_text(x-16,y-64,"Playerid: "+string(playerid));
 draw_text(x-16,y-48,"Player IP: "+string(client_ip));
-
+draw_text(x-16,y-34,"Player PORT: "+string(client_port));
 
 
 draw_set_colour(c_red);
@@ -170,6 +175,8 @@ draw_text(x-32,y-220,"press_down: "+string(press_down));
 draw_text(x-32,y-208,"press_jump: "+string(press_jump));
 draw_text(x-32,y-196,"do_sidedash_right: "+string(do_sidedash_right));
 draw_text(x-32,y-184,"do_sidedash_right: "+string(do_sidedash_left));
+
+
 
 draw_set_colour(c_white);
 </string>

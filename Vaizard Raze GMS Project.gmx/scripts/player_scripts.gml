@@ -18,6 +18,8 @@ if (object_index==obj_player)
    scr_player_inputcontroller();
    
    scr_player_moveupdateonline();
+   
+   stuck=false;//Stop being stuck
    }
 
 //
@@ -25,6 +27,8 @@ scr_player_movespeed();
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
 
+
+if stuck==true {scr_entity_freeze();}
  
 
 scr_reset_player_vars(); //Reset vars that should be reset

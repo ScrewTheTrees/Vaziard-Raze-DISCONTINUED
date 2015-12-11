@@ -20,7 +20,7 @@ with(obj_otherplayer)
 {
 if tempid=playerid{}
 else {
-sendmessage(global.udp,client_ip,global.udpport_client,0)
+sendmessage(global.udp,client_ip,client_port,0)
      }
 }
 }
@@ -28,8 +28,8 @@ break;
 
 case 1:
 if object_index=obj_otherplayer
-sendmessage(global.udp,client_ip,global.udpport_client,0)
-else sendmessage(global.udp,lastinIP(),global.udpport_client,0)
+sendmessage(global.udp,client_ip,client_port,0)
+else sendmessage(global.udp,lastinIP(),client_port,0)
 break;
 
 case 2:
@@ -38,7 +38,7 @@ with(obj_otherplayer)
 {
 if playerid=tempid
 {
-sendmessage(global.udp,client_ip,global.udpport_client,0)
+sendmessage(global.udp,client_ip,client_port,0)
 }
 }
 break;
@@ -48,7 +48,7 @@ if instance_exists(obj_otherplayer)
 {
 with(obj_otherplayer)
  {
- sendmessage(global.udp,client_ip,global.udpport_client,0)
+ sendmessage(global.udp,client_ip,client_port,0)
  }
 }
 break;

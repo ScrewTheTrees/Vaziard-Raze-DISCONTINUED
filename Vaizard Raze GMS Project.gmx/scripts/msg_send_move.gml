@@ -1,6 +1,6 @@
 var movement1;
 
-movement1=buildbyte(press_right,press_left,press_up,press_down,press_jump,do_sidedash_right,do_sidedash_left,0);
+movement1=buildbyte(press_right,press_left,press_up,press_down,press_jump,do_sidedash_right,do_sidedash_left,stuck);
 
 
 clearbuffer(0)

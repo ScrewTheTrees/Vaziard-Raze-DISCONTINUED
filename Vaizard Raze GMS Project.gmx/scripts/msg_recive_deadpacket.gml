@@ -1,7 +1,20 @@
-if global.playerid=0
+pid=readushort(0);
+clearbuffer(0);
+
+obj_otherplayer.tempid=pid;
+
+with(obj_otherplayer)
 {
-clearbuffer(0);
-writebyte(MSG_DEADPACKET,0)
-scr_send_client_udp(SEND_SELF,0)
-clearbuffer(0);
+if playerid==tempid
+   {
+
+    if global.playerid=0
+       {
+       clearbuffer(0);
+       writebyte(MSG_DEADPACKET,0)
+       writeushort(tempid,0);
+       scr_send_client_udp(SEND_SELF,0)
+       clearbuffer(0);
+       }
+    }
 }

@@ -50,6 +50,7 @@ press_down=readbit(movement1,4);
 press_jump=readbit(movement1,3);
 do_sidedash_right=readbit(movement1,2);
 do_sidedash_left=readbit(movement1,1);
+stuck=readbit(movement1,0);
 }
 }
 

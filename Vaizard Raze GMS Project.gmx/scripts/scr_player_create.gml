@@ -1,9 +1,10 @@
 //Online stuff
 playerid=-1;//No ID
-client_ip="127.0.0.1"; //Placeholder IP
+client_ip="127.0.0.1"; //UDP IP adress
+client_port=global.udpport_client;   //UDP Port number
 client=-1; //No client
 playername="Error?";
-myroom=room_menu;
+myroom=room_loading;
 
 //Create Company objects
 instance_create(x,y,obj_camera);
@@ -33,7 +34,7 @@ movescanheight=20; //The height it scans up/down when checking for slope movemen
 movescanintervall=2; // Height checking per step (how precise the checking is)
 
 
-
+stuck=false;         //If you are stuck
 
 
 

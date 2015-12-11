@@ -121,6 +121,7 @@
         <script>scripts\get_next_playerid.gml</script>
       </scripts>
       <scripts name="39DLL Online Base">
+        <script>scripts\scr_changeudp.gml</script>
         <script>scripts\scr_recive_message.gml</script>
         <script>scripts\scr_recive_message_udp.gml</script>
         <script>scripts\scr_send_server.gml</script>
@@ -136,6 +137,7 @@
         <script>scripts\msg_send_move.gml</script>
         <script>scripts\msg_send_deadpacket.gml</script>
         <script>scripts\msg_send_update_myroom.gml</script>
+        <script>scripts\msg_send_connectinfo.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
         <script>scripts\msg_recive_leavegame.gml</script>
@@ -144,6 +146,7 @@
         <script>scripts\msg_recive_move.gml</script>
         <script>scripts\msg_recive_deadpacket.gml</script>
         <script>scripts\msg_recive_update_myroom.gml</script>
+        <script>scripts\msg_recive_connectinfo.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -158,6 +161,7 @@
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
       <script>scripts\player_scripts.gml</script>
+      <script>scripts\scr_player_freeze.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
@@ -167,13 +171,13 @@
     <script>scripts\get_roomid.gml</script>
     <script>scripts\scr_entity_jump.gml</script>
     <script>scripts\scr_entity_movement.gml</script>
+    <script>scripts\scr_entity_freeze.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
     <script>scripts\script666.gml</script>
     <script>scripts\scr_dropdown_menus_create.gml</script>
     <script>scripts\DropDown_Handler.gml</script>
     <script>scripts\scr_resolution_from_string.gml</script>
-    <script>scripts\scr_player_freeze.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
   </scripts>
@@ -217,7 +221,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="24">
+  <constants number="25">
     <constant name="SEND_ALL">3</constant>
     <constant name="SEND_PLAYER">2</constant>
     <constant name="SEND_SELF">1</constant>
@@ -225,6 +229,7 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_CONNECTINFO">6</constant>
     <constant name="MSG_UPDATE_MYROOM">5</constant>
     <constant name="MSG_MOVE">4</constant>
     <constant name="MSG_PLAYERID">3</constant>
