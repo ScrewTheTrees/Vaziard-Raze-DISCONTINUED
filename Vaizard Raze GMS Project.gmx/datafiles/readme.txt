@@ -1,0 +1,22 @@
+﻿TCP ports for hosting: 17651
+UDP ports for hosting: 17651
+UDP ports for joining: 17652-1669
+
+
+
+
+
+
+
+
+RED = 255
+GREEN = 32768
+ORANGE = 4235519
+BLUE = 16711680
+LIME = 65280
+BLACK = 0
+YELLOW = 65535
+PURPLE = 8388736
+WHITE = 16777215
+MAROON/BROWN = 128
+TEAL = 8421376

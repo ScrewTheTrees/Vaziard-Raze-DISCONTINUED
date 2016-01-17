@@ -16,13 +16,13 @@ with(obj_otherplayer)
 {
 if tempid!=playerid
    {
-   sendmessage(client,0,0,0)
+   sendmessage(client,"",0,0)
    }
 }
 break;
 
 case 1:
-sendmessage(client,0,0,0);
+sendmessage(client,"",0,0);
 break;
 
 case 2:
@@ -31,14 +31,14 @@ with(obj_otherplayer)
 {
 if playerid==tempid
 {
-sendmessage(client,0,0,0)
+sendmessage(client,"",0,0)
 }
 }
 break;
 case 3:
 with(obj_otherplayer)
  {
- sendmessage(client,0,0,0)
+ sendmessage(client,"",0,0)
  }
 break;
       }

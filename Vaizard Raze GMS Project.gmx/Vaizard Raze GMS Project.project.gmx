@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
       <name>39dll.dll</name>
       <exists>-1</exists>
@@ -20,6 +20,40 @@
         </Config>
       </ConfigOptions>
       <filename>39dll.dll</filename>
+    </datafile>
+    <datafile>
+      <name>readme.txt</name>
+      <exists>-1</exists>
+      <size>317</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>readme.txt</filename>
+    </datafile>
+    <datafile>
+      <name>Ideas.txt</name>
+      <exists>-1</exists>
+      <size>1536</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Ideas.txt</filename>
     </datafile>
   </datafiles>
   <NewExtensions>
@@ -159,7 +193,6 @@
       <script>scripts\get_mouse_in.gml</script>
     </scripts>
     <scripts name="Players">
-      <script>scripts\scr_player_create.gml</script>
       <script>scripts\player_scripts.gml</script>
       <script>scripts\scr_player_freeze.gml</script>
     </scripts>
@@ -167,11 +200,15 @@
       <script>scripts\scr_save_data.gml</script>
       <script>scripts\scr_load_data.gml</script>
     </scripts>
+    <scripts name="Entities">
+      <script>scripts\scr_entity_jump.gml</script>
+      <script>scripts\scr_entity_movement.gml</script>
+      <script>scripts\scr_entity_freeze.gml</script>
+      <script>scripts\get_entity_id.gml</script>
+      <script>scripts\scr_entity_create.gml</script>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_roomid.gml</script>
-    <script>scripts\scr_entity_jump.gml</script>
-    <script>scripts\scr_entity_movement.gml</script>
-    <script>scripts\scr_entity_freeze.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
     <script>scripts\script666.gml</script>
@@ -221,7 +258,12 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="25">
+  <constants number="30">
+    <constant name="TEAM_TEMP">4</constant>
+    <constant name="TEAM_BLUE">3</constant>
+    <constant name="TEAM_RED">2</constant>
+    <constant name="TEAM_ENEMY">1</constant>
+    <constant name="TEAM_PLAYER">0</constant>
     <constant name="SEND_ALL">3</constant>
     <constant name="SEND_PLAYER">2</constant>
     <constant name="SEND_SELF">1</constant>

@@ -1,3 +1,5 @@
+if instance_exists(obj_otherplayer)
+{
 var ttempid,rroom;
 
 ttempid=readushort(0);
@@ -23,4 +25,6 @@ if playerid=tempid
 {
 myroom=rroom;
 }
+}
+
 }

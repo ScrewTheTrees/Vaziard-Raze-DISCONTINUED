@@ -62,7 +62,7 @@
     <option_android_use_test_ads>0</option_android_use_test_ads>
     <option_argumenterrors>True</option_argumenterrors>
     <option_audioGroupCount>1</option_audioGroupCount>
-    <option_author></option_author>
+    <option_author>Attacka</option_author>
     <option_backimage>nil</option_backimage>
     <option_borderless>False</option_borderless>
     <option_changed>false</option_changed>
@@ -78,8 +78,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>False</option_fullscreen>
-    <option_gameguid>{DA4EE682-3202-4075-A31A-A19AB34DBD88}</option_gameguid>
-    <option_gameid>203960930</option_gameid>
+    <option_gameguid>{72FDA705-752C-4B2F-AB6F-E31B897B168B}</option_gameguid>
+    <option_gameid>422519050</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>

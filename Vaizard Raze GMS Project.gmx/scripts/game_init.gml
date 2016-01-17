@@ -1,5 +1,8 @@
+randomize(); //Since the netcode relies on this.
+
 netcode_start();
 scr_dropdown_init();
+
 
 
 display_set_gui_size(1920,1080);
@@ -9,7 +12,7 @@ global.cutscene=false;  //In a cutscene?
 global.enter=0;         //Entrance point in a room
 global.playername="Faggot";
 global.myroom=room_menu;
-
+global.entity_id=0;     //ID's that entities use
 
 global.difficult=3;     //How hard!
 

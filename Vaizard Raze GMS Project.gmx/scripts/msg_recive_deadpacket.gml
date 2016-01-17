@@ -3,6 +3,8 @@ clearbuffer(0);
 
 obj_otherplayer.tempid=pid;
 
+if instance_exists(obj_otherplayer)
+{
 with(obj_otherplayer)
 {
 if playerid==tempid
@@ -17,4 +19,5 @@ if playerid==tempid
        clearbuffer(0);
        }
     }
+}
 }

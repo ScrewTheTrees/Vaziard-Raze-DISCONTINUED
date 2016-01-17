@@ -14,3 +14,4 @@ global.udpport_server=17651;
 global.udpport_client=17652;
 
 global.udpport_client=choose(17652,17653,17654,17655,17656,17657,17658,17659);
+global.udpport_client=irandom_range(17652,17669)
