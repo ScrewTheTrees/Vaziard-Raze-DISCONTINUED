@@ -45,6 +45,13 @@ stuck=false;         //If you are stuck
 
 alarm[0]=30;
 
+
+
+
+color_legs=c_blue;
+color_torso=c_red;
+color_eyes=c_green;
+
 #define scr_player_move
 //First of all, retrieve packets from all other players
 if (object_index==obj_otherplayer && global.host==true)

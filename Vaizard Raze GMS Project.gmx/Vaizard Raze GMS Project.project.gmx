@@ -68,6 +68,10 @@
     <sprite>sprites\mask_player</sprite>
     <sprite>sprites\spr_menu_host</sprite>
     <sprite>sprites\spr_menu_join</sprite>
+    <sprite>sprites\spr_player_legs</sprite>
+    <sprite>sprites\spr_player_torso</sprite>
+    <sprite>sprites\spr_player_head</sprite>
+    <sprite>sprites\spr_player_eye_standard</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -195,6 +199,7 @@
     <scripts name="Players">
       <script>scripts\player_scripts.gml</script>
       <script>scripts\scr_player_freeze.gml</script>
+      <script>scripts\scr_player_draw.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
@@ -258,7 +263,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="30">
+  <constants number="31">
     <constant name="TEAM_TEMP">4</constant>
     <constant name="TEAM_BLUE">3</constant>
     <constant name="TEAM_RED">2</constant>
@@ -283,6 +288,7 @@
     <constant name="KEY_ABILITY3">8</constant>
     <constant name="KEY_ABILITY2">7</constant>
     <constant name="KEY_ABILITY1">6</constant>
+    <constant name="KEY_SHOOT2">11</constant>
     <constant name="KEY_SHOOT">5</constant>
     <constant name="KEY_JUMP">4</constant>
     <constant name="KEY_DOWN">3</constant>
