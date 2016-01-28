@@ -1,7 +1,4 @@
 #define player_scripts
-//Player input and functions are handled from here
-
-#define scr_player_create
 //Online stuff
 playerid=-1;//No ID
 client_ip="127.0.0.1"; //UDP IP adress

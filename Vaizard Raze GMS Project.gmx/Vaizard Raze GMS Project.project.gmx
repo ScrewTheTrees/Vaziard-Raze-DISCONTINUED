@@ -71,7 +71,9 @@
     <sprite>sprites\spr_player_legs</sprite>
     <sprite>sprites\spr_player_torso</sprite>
     <sprite>sprites\spr_player_head</sprite>
+    <sprite>sprites\spr_player_hair_1</sprite>
     <sprite>sprites\spr_player_eye_standard</sprite>
+    <sprite>sprites\spr_player_legs_jump</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -197,9 +199,17 @@
       <script>scripts\get_mouse_in.gml</script>
     </scripts>
     <scripts name="Players">
-      <script>scripts\player_scripts.gml</script>
+      <script>scripts\scr_player_create.gml</script>
       <script>scripts\scr_player_freeze.gml</script>
       <script>scripts\scr_player_draw.gml</script>
+      <script>scripts\scr_player_move.gml</script>
+      <script>scripts\scr_player_movespeed.gml</script>
+      <script>scripts\scr_player_inputcontroller.gml</script>
+      <script>scripts\scr_player_input_reset.gml</script>
+      <script>scripts\scr_player_vars_reset.gml</script>
+      <script>scripts\scr_player_physics.gml</script>
+      <script>scripts\scr_player_collision.gml</script>
+      <script>scripts\scr_player_moveupdateonline.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>

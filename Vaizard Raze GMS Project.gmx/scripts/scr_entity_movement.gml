@@ -6,6 +6,8 @@ facedir=argument1;
 movescanheight=argument2;
 movescanintervall=argument3;
 
+moving=0;
+
 gg=true;
 movespeed_run=movespeed*facedir;
 
@@ -32,12 +34,15 @@ if (place_meeting(x,y+4,obj_solidparent)==true)  for(i=movescanheight; i>=-moves
        hspeed=0;
        gravity=0;
        i=-10000; //Stop calculation
+       
+       
+       moving=1;
        }
        
      }//For
 
      //We did not move according to slope movement
 movespeed_run=movespeed*facedir; //Turn the movement direction towards facedir
-if gg=false && !place_meeting(x+movespeed_run,y,obj_solidparent) {x+=movespeed_run}   //Full movement speed ahread!
+if gg=false && !place_meeting(x+movespeed_run,y,obj_solidparent) {x+=movespeed_run }   //Full movement speed ahread!
 else if gg=false && !place_meeting(x+facedir,y,obj_solidparent) {x+=facedir};         //A small step against the wall to make better interpolation
 }//if movespeed

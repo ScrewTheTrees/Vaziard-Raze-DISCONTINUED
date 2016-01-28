@@ -181,9 +181,10 @@ scr_recive_message();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if myroom==global.myroom
+            <string>
+if myroom==global.myroom
 {
-draw_self();
+scr_player_draw();
 }
 
 draw_set_colour(c_white);

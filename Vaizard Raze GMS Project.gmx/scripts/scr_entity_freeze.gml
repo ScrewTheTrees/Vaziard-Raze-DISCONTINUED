@@ -4,4 +4,3 @@ x=xprevious;
 y=yprevious;
 gravity=0;
 stuck=true;
-
