@@ -1,7 +1,7 @@
 ﻿No shortcuts, complicated netcode with no shortcuts
 Different main weapons, can carry 2 weapons and switch between them
 96x96 Base Res ^_^
-
+Attribute stat system... for those actually useless but funny buffs and debuffs
 
 
 
