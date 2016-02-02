@@ -1,41 +1,57 @@
 //Recive Code
-var playeridd,xx,yy,zz,mmoving,ddirection,zzspeed;
+var tempid,xx,yy,movement1,vvspeed,hhspeed;
 
-playeridd=readushort(0);
-xx=readushort(0);
-yy=readushort(0);
-zz=readushort(0);
-ddirection=readshort(0)/100;
-mmoving=readbyte(0)/10;
-zzspeed=readbyte(0)
+tempid=readushort(0);
+xx=readshort(0);
+yy=readshort(0);
+movement1=readbyte(0);
+vvspeed=readfloat(0);
+hhspeed=readfloat(0);
+
 clearbuffer(0);
 
 if global.playerid=0
 {
-writebyte(MSG_MOVE_XY,0)
-writeushort(playeridd,0);
-writeushort(xx,0);
-writeushort(yy,0);
-writeushort(zz,0);
-writeshort(ddirection*100,0);
-writebyte(sspeed*10,0);
+writebyte(MSG_MOVE,0)
+writeushort(tempid,0)
+writeshort(xx,0)
+writeshort(yy,0)
+writebyte(movement1,0)
+writefloat(vvspeed,0)
+writefloat(hhspeed,0)
 
-scr_send_client(SEND_OTHER,0)
+scr_send_client_udp(SEND_ALL,0)
 clearbuffer(0);
 }
 
+
+    if instance_exists(obj_otherplayer) {
+obj_otherplayer.tempid=tempid;
 obj_otherplayer.xx=xx;
 obj_otherplayer.yy=yy;
-obj_otherplayer.ddirection=ddirection;
-obj_otherplayer.sspeed=sspeed;
+obj_otherplayer.vvspeed=vvspeed;
+obj_otherplayer.hhspeed=hhspeed;
+
+obj_otherplayer.movement1=movement1;
+
 
 with(obj_otherplayer)
 {
-if playerid=tempid
+if playerid==tempid
 {
 x=xx;
 y=yy;
-direction=ddirection;
-speed=sspeed;
+vspeed=vvspeed;
+hspeed=hhspeed;
+press_right=readbit(movement1,7);
+press_left=readbit(movement1,6);
+press_up=readbit(movement1,5);
+press_down=readbit(movement1,4);
+press_jump=readbit(movement1,3);
+do_sidedash_right=readbit(movement1,2);
+do_sidedash_left=readbit(movement1,1);
+stuck=readbit(movement1,0);
 }
 }
+
+    }

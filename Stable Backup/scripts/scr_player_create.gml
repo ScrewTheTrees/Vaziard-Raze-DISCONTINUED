@@ -1,18 +1,28 @@
 //Online stuff
 playerid=-1;//No ID
-client_ip="127.0.0.1"; //Placeholder IP
+client_ip="127.0.0.1"; //UDP IP adress
+client_port=global.udpport_client;   //UDP Port number
+client=-1; //No client
+playername="Error?";
+myroom=room_loading;
 
 //Create Company objects
 instance_create(x,y,obj_camera);
 
 //Reset the player movement variables
-scr_reset_player_input();
-scr_reset_player_vars();
+scr_player_input_reset();
+scr_player_vars_reset();
+
+scr_player_create_health();
+scr_player_attribute_create();
 
 //Maximum speed of any vspeed/hspeed/speed things
 max_speed=50;
 max_fallspeed=20;
 facedir=1;
+
+moving=0;
+moveair=0;
 
 //Gravitational things
 max_gravity=1;
@@ -30,7 +40,17 @@ movescanheight=20; //The height it scans up/down when checking for slope movemen
 movescanintervall=2; // Height checking per step (how precise the checking is)
 
 
+stuck=false;         //If you are stuck
+
 
 
 
 alarm[0]=30;
+
+
+
+
+color_legs=c_blue;
+color_torso=c_red;
+color_eyes=c_green;
+color_hair=c_maroon;

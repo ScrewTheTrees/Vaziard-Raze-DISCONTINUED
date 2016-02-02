@@ -1,5 +1,53 @@
 #define player_scripts
-//Player input and functions are handled from here
+//Online stuff
+playerid=-1;//No ID
+client_ip="127.0.0.1"; //UDP IP adress
+client_port=global.udpport_client;   //UDP Port number
+client=-1; //No client
+playername="Error?";
+myroom=room_loading;
+
+//Create Company objects
+instance_create(x,y,obj_camera);
+
+//Reset the player movement variables
+scr_reset_player_input();
+scr_reset_player_vars();
+
+//Maximum speed of any vspeed/hspeed/speed things
+max_speed=50;
+max_fallspeed=20;
+facedir=1;
+
+//Gravitational things
+max_gravity=1;
+gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
+jumpspeed=20;
+jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
+walljumpspeed=14;
+walljumpupspeed=14;
+
+//Movement speed things
+movespeed=0;
+movespeed_mod=0;   //Set to positive or negative to increase/decrease movement speed
+max_movespeed=6;
+movescanheight=20; //The height it scans up/down when checking for slope movement
+movescanintervall=2; // Height checking per step (how precise the checking is)
+
+
+stuck=false;         //If you are stuck
+
+
+
+
+alarm[0]=30;
+
+
+
+
+color_legs=c_blue;
+color_torso=c_red;
+color_eyes=c_green;
 
 #define scr_player_move
 //First of all, retrieve packets from all other players
@@ -12,17 +60,23 @@ scr_player_physics();
 
 
 //If this is the player it needs to accept the input
-if object_index==obj_player
+if (object_index==obj_player)
    {
    scr_reset_player_input();
    scr_player_inputcontroller();
-   scr_player_movespeed();
+   
+   scr_player_moveupdateonline();
+   
+   stuck=false;//Stop being stuck
    }
 
 //
+scr_player_movespeed();
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
 
+
+if stuck==true {scr_entity_freeze();}
  
 
 scr_reset_player_vars(); //Reset vars that should be reset
@@ -38,7 +92,7 @@ if keyboard_check(global.keybind[KEY_DOWN])     press_down=true;
 if place_meeting(x,y+4,obj_solidparent)
 {
 do_walljump_right=false;
-do_walljump_right=false;
+do_walljump_left=false;
 }
 
 
@@ -71,24 +125,7 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    
    
    
-   //If you press any of the keys you need to send this update to the other players
-   if keyboard_check_pressed(global.keybind[KEY_RIGHT])
-   or keyboard_check_pressed(global.keybind[KEY_LEFT])
-   or keyboard_check_pressed(global.keybind[KEY_UP])
-   or keyboard_check_pressed(global.keybind[KEY_DOWN])
-   or keyboard_check_pressed(global.keybind[KEY_JUMP])
-   or keyboard_check_pressed(global.keybind[KEY_SPECIAL])
-   or keyboard_check_released(global.keybind[KEY_RIGHT])
-   or keyboard_check_released(global.keybind[KEY_LEFT])
-   or keyboard_check_released(global.keybind[KEY_UP])
-   or keyboard_check_released(global.keybind[KEY_DOWN])
-   or keyboard_check_released(global.keybind[KEY_JUMP])
-   or keyboard_check_released(global.keybind[KEY_SPECIAL])
-   {
-   //Send the movement update NOW
-   msg_send_move();
-   alarm[0]=10; 
-   }
+
 
 #define scr_reset_player_input
 press_right=false;
@@ -178,3 +215,25 @@ press_special=false;
 do_jump=false;
 do_walljump_right=false;
 do_walljump_left=false;
+#define scr_player_moveupdateonline
+
+
+
+   //If you press any of the keys you need to send this update to the other players
+   if keyboard_check_pressed(global.keybind[KEY_RIGHT])
+   or keyboard_check_pressed(global.keybind[KEY_LEFT])
+   or keyboard_check_pressed(global.keybind[KEY_UP])
+   or keyboard_check_pressed(global.keybind[KEY_DOWN])
+   or keyboard_check_pressed(global.keybind[KEY_JUMP])
+   or keyboard_check_pressed(global.keybind[KEY_SPECIAL])
+   or keyboard_check_released(global.keybind[KEY_RIGHT])
+   or keyboard_check_released(global.keybind[KEY_LEFT])
+   or keyboard_check_released(global.keybind[KEY_UP])
+   or keyboard_check_released(global.keybind[KEY_DOWN])
+   or keyboard_check_released(global.keybind[KEY_JUMP])
+   or keyboard_check_released(global.keybind[KEY_SPECIAL])
+   {
+   //Send the movement update NOW
+   msg_send_move();
+   alarm[0]=1; 
+   }

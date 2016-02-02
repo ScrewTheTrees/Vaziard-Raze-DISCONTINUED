@@ -1,3 +1,4 @@
+///readbit(number,position0-7)
 /*
   Reads the bit at a certain position in a number
   argument0 = number

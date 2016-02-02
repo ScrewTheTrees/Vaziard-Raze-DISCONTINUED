@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
+  <datafiles number="6" name="datafiles">
     <datafile>
       <name>39dll.dll</name>
       <exists>-1</exists>
@@ -21,6 +21,40 @@
       </ConfigOptions>
       <filename>39dll.dll</filename>
     </datafile>
+    <datafile>
+      <name>readme.txt</name>
+      <exists>-1</exists>
+      <size>317</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>readme.txt</filename>
+    </datafile>
+    <datafile>
+      <name>Ideas.txt</name>
+      <exists>-1</exists>
+      <size>1536</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Ideas.txt</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMFileSystem</extension>
@@ -34,6 +68,13 @@
     <sprite>sprites\mask_player</sprite>
     <sprite>sprites\spr_menu_host</sprite>
     <sprite>sprites\spr_menu_join</sprite>
+    <sprite>sprites\spr_player_legs</sprite>
+    <sprite>sprites\spr_player_legs_jump</sprite>
+    <sprite>sprites\spr_player_torso</sprite>
+    <sprite>sprites\spr_player_head</sprite>
+    <sprite>sprites\spr_player_hair_1</sprite>
+    <sprite>sprites\spr_player_eye_standard</sprite>
+    <sprite>sprites\sprite13</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -121,6 +162,7 @@
         <script>scripts\get_next_playerid.gml</script>
       </scripts>
       <scripts name="39DLL Online Base">
+        <script>scripts\scr_changeudp.gml</script>
         <script>scripts\scr_recive_message.gml</script>
         <script>scripts\scr_recive_message_udp.gml</script>
         <script>scripts\scr_send_server.gml</script>
@@ -131,15 +173,21 @@
         <script>scripts\scr_recive_packets_udp_server.gml</script>
       </scripts>
       <scripts name="Sending Messages">
-        <script>scripts\msg_send_player_leave.gml</script>
+        <script>scripts\msg_send_leavegame.gml</script>
         <script>scripts\msg_send_playerid.gml</script>
-        <script>scripts\msg_send_exit.gml</script>
         <script>scripts\msg_send_move.gml</script>
         <script>scripts\msg_send_deadpacket.gml</script>
+        <script>scripts\msg_send_update_myroom.gml</script>
+        <script>scripts\msg_send_connectinfo.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
+        <script>scripts\msg_recive_leavegame.gml</script>
+        <script>scripts\msg_recive_joingame.gml</script>
+        <script>scripts\msg_recive_playerid.gml</script>
         <script>scripts\msg_recive_move.gml</script>
-        <script>scripts\msg_recive_exit.gml</script>
+        <script>scripts\msg_recive_deadpacket.gml</script>
+        <script>scripts\msg_recive_update_myroom.gml</script>
+        <script>scripts\msg_recive_connectinfo.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -153,25 +201,48 @@
     </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
-      <script>scripts\player_scripts.gml</script>
+      <script>scripts\scr_player_create_health.gml</script>
+      <script>scripts\scr_player_attribute_create.gml</script>
+      <script>scripts\scr_player_freeze.gml</script>
+      <script>scripts\scr_player_draw.gml</script>
+      <script>scripts\scr_player_move.gml</script>
+      <script>scripts\scr_player_movespeed.gml</script>
+      <script>scripts\scr_player_inputcontroller.gml</script>
+      <script>scripts\scr_player_input_reset.gml</script>
+      <script>scripts\scr_player_vars_reset.gml</script>
+      <script>scripts\scr_player_physics.gml</script>
+      <script>scripts\scr_player_collision.gml</script>
+      <script>scripts\scr_player_moveupdateonline.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
       <script>scripts\scr_load_data.gml</script>
     </scripts>
+    <scripts name="Entities">
+      <script>scripts\scr_entity_jump.gml</script>
+      <script>scripts\scr_entity_movement.gml</script>
+      <script>scripts\scr_entity_freeze.gml</script>
+      <script>scripts\get_entity_id.gml</script>
+      <script>scripts\scr_entity_create.gml</script>
+    </scripts>
+    <scripts name="Projectiles">
+      <script>scripts\scr_projectile_create.gml</script>
+      <script>scripts\scr_projectile_init.gml</script>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_roomid.gml</script>
-    <script>scripts\scr_entity_jump.gml</script>
-    <script>scripts\scr_entity_movement.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
     <script>scripts\script666.gml</script>
     <script>scripts\scr_dropdown_menus_create.gml</script>
     <script>scripts\DropDown_Handler.gml</script>
     <script>scripts\scr_resolution_from_string.gml</script>
-    <script>scripts\scr_player_freeze.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
+    <script>scripts\scr_weapon_create_vars.gml</script>
+    <script>scripts\scr_weapon_update_vars.gml</script>
+    <script>scripts\scr_weapon_buster.gml</script>
+    <script>scripts\get_team_color.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -187,6 +258,7 @@
       <object>objects\obj_bossparent</object>
       <object>objects\obj_enemyparent</object>
       <object>objects\obj_menuparent</object>
+      <object>objects\projectile_parent</object>
     </objects>
     <objects name="Menu">
       <object>objects\obj_menu_host</object>
@@ -206,6 +278,10 @@
     <object>objects\obj_solid_slope_l</object>
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
+    <object>objects\obj_projectile_bustershot</object>
+    <object>objects\obj_projectile_bustercharge</object>
+    <object>objects\obj_projectile_busterspecial</object>
+    <object>objects\obj_enemy_dummy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -213,16 +289,45 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="15">
+  <constants number="44">
+    <constant name="ATR_MANA_REGEN">11</constant>
+    <constant name="ATR_MANA_MAX">10</constant>
+    <constant name="ATR_MOVEMENT_GRAVITY">9</constant>
+    <constant name="ATR_MOVEMENT_JUMP">8</constant>
+    <constant name="ATR_MOVEMENT_SPEED">7</constant>
+    <constant name="ATR_HEALTH_REGEN">6</constant>
+    <constant name="ATR_HEALTH_MAX">5</constant>
+    <constant name="ATR_BULLET_PROCENT">4</constant>
+    <constant name="ATR_BULLET_FLAT">3</constant>
+    <constant name="ATR_DAMAGE_PROCENT">2</constant>
+    <constant name="ATR_DAMAGE_FLAT">1</constant>
+    <constant name="TEAM_ALLY">6</constant>
+    <constant name="TEAM_TEMP">5</constant>
+    <constant name="TEAM_GREEN">4</constant>
+    <constant name="TEAM_BLUE">3</constant>
+    <constant name="TEAM_RED">2</constant>
+    <constant name="TEAM_ENEMY">1</constant>
+    <constant name="TEAM_PLAYER">0</constant>
+    <constant name="SEND_ALL">3</constant>
+    <constant name="SEND_PLAYER">2</constant>
+    <constant name="SEND_SELF">1</constant>
+    <constant name="SEND_OTHER">0</constant>
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_CONNECTINFO">6</constant>
+    <constant name="MSG_UPDATE_MYROOM">5</constant>
+    <constant name="MSG_MOVE">4</constant>
+    <constant name="MSG_PLAYERID">3</constant>
+    <constant name="MSG_LEAVEGAME">2</constant>
+    <constant name="MSG_JOINGAME">1</constant>
     <constant name="MSG_DEADPACKET">0</constant>
-    <constant name="IiIiI">IiIiI</constant>
+    <constant name="KEY_SWAP">10</constant>
     <constant name="KEY_SPECIAL">9</constant>
     <constant name="KEY_ABILITY3">8</constant>
     <constant name="KEY_ABILITY2">7</constant>
     <constant name="KEY_ABILITY1">6</constant>
+    <constant name="KEY_SHOOT2">11</constant>
     <constant name="KEY_SHOOT">5</constant>
     <constant name="KEY_JUMP">4</constant>
     <constant name="KEY_DOWN">3</constant>

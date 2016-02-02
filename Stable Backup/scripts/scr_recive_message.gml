@@ -1,6 +1,6 @@
 //--------********************----------
 //TCP
-repeat (100)
+repeat (20)
 {
   if global.playerid=0
   size = receivemessage(client,0,0);
@@ -12,6 +12,5 @@ repeat (100)
   messageid = readbyte(0);
   
             scr_messages(messageid);
-  clearbuffer(0);
 }
 clearbuffer(0);

@@ -31,4 +31,3 @@ else if (do_walljump_left==true)
      hspeed=-walljumpspeed;
      vspeed=-(walljumpupspeed+(jumpspeed_mod/2));
      }
-
