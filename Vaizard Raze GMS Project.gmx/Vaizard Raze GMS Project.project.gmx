@@ -243,6 +243,8 @@
     <script>scripts\scr_weapon_update_vars.gml</script>
     <script>scripts\scr_weapon_buster.gml</script>
     <script>scripts\get_team_color.gml</script>
+    <script>scripts\get_team_hostile.gml</script>
+    <script>scripts\scr_enemy_damage.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -279,8 +281,6 @@
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
     <object>objects\obj_projectile_bustershot</object>
-    <object>objects\obj_projectile_bustercharge</object>
-    <object>objects\obj_projectile_busterspecial</object>
     <object>objects\obj_enemy_dummy</object>
   </objects>
   <rooms name="rooms">
