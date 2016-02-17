@@ -61,10 +61,12 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\mask_solid</sprite>
-    <sprite>sprites\mask_oddbumps</sprite>
-    <sprite>sprites\mask_slope_l</sprite>
-    <sprite>sprites\mask_slope_r</sprite>
+    <sprites name="Solids">
+      <sprite>sprites\mask_solid</sprite>
+      <sprite>sprites\mask_oddbumps</sprite>
+      <sprite>sprites\mask_slope_l</sprite>
+      <sprite>sprites\mask_slope_r</sprite>
+    </sprites>
     <sprite>sprites\mask_player</sprite>
     <sprite>sprites\spr_menu_host</sprite>
     <sprite>sprites\spr_menu_join</sprite>
@@ -75,6 +77,7 @@
     <sprite>sprites\spr_player_hair_1</sprite>
     <sprite>sprites\spr_player_eye_standard</sprite>
     <sprite>sprites\sprite13</sprite>
+    <sprite>sprites\spr_gun_greengun</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
