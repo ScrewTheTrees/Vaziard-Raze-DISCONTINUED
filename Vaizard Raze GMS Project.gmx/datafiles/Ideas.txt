@@ -28,16 +28,15 @@ Enemies Walking Cycle is 120 Frames
 
 (Starter Weapon) *Assult Rifle, 30 shots then reload, Special ability launches a hip grenade
 (Starter Weapon) *Buster, 3 shots and charging ability, Special ability creates a damage field in melee range ahead of you
-(Common Drop) *Mortar, Fires a mortar shot in an ARC, Special allows you to aim your shot instead
+(Starter Weapon) *Sword, Slice a lot, allows for charging on any attack, increasing the damage of that slice by 2X, Special gives you 120 invicibility  frames
+(Common Drop) *Mortar, Fires a mortar shot in an ARC, Special consumes mana but fires 5 mortar while the player character is frozen.
 (Common Drop) *Revolver, 6 shots then reload, Special ability quickfires all remaining bullets.
-(Common Drop) *Sword, Slice a lot, allows for charging on any attack, increasing the damage of that slice by 2X, Special gives you 120 invicibility  frames
 (Common Drop) *Sniper rifle , 1 shot bolt but pierces damage , Special ability consumes 40 Mana but will fire a bullet with 2X damage and knock you back
 (Event Drop) *Halberd Rifle, Generally a close range weapon with a 2 barrel shotgun with stabbing/swiping attacks
 
 	[Abilities]
 *Flash Step, Teleports X blocks in facing direction.
 *Spring Trap, Throws a spring forward that can be used to jump to great heights.
-*Bubble boop, a slightly bounceable bubble that is more walkable than actually bouncy
 *Power within, A toggle ability that will continiously decrease your health but will increase all weapon damage by ~80% while active
 *
 

@@ -35,7 +35,7 @@ walljumpupspeed=14;
 //Movement speed things
 movespeed=0;
 movespeed_mod=0;   //Set to positive or negative to increase/decrease movement speed
-max_movespeed=6;
+max_movespeed=6;   //Actual moving speed of character
 movescanheight=20; //The height it scans up/down when checking for slope movement
 movescanintervall=2; // Height checking per step (how precise the checking is)
 
@@ -48,6 +48,8 @@ stuck=false;         //If you are stuck
 alarm[0]=30;
 
 
+weapon_equipped=WEP_NOONE;
+weapon_sprite=spr_noone;
 
 
 color_legs=c_blue;

@@ -77,7 +77,9 @@
     <sprite>sprites\spr_player_hair_1</sprite>
     <sprite>sprites\spr_player_eye_standard</sprite>
     <sprite>sprites\sprite13</sprite>
-    <sprite>sprites\spr_gun_greengun</sprite>
+    <sprite>sprites\spr_wep_buster</sprite>
+    <sprite>sprites\spr_error</sprite>
+    <sprite>sprites\spr_noone</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -248,6 +250,7 @@
     <script>scripts\get_team_color.gml</script>
     <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
+    <script>scripts\get_weapon_sprite.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -292,7 +295,15 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="44">
+  <constants number="52">
+    <constant name="WEP_HALBERD">7</constant>
+    <constant name="WEP_SNIPER">6</constant>
+    <constant name="WEP_SWORD">5</constant>
+    <constant name="WEP_REVOLVER">4</constant>
+    <constant name="WEP_MORTAR">3</constant>
+    <constant name="WEP_ASSAULT">2</constant>
+    <constant name="WEP_BUSTER">1</constant>
+    <constant name="WEP_NOONE">0</constant>
     <constant name="ATR_MANA_REGEN">11</constant>
     <constant name="ATR_MANA_MAX">10</constant>
     <constant name="ATR_MOVEMENT_GRAVITY">9</constant>
