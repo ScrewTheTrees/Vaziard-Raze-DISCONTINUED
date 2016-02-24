@@ -10,6 +10,8 @@ Room Start Event works for persistent objects
 DO NOT put any mathematics or vital stuff in the draw events
 
 
+*Poison damage per tick
+*Add dorito hat
 
 
 Functional dashing system?
@@ -20,7 +22,7 @@ Functional dashing system?
 Enemies can move in slopes -_-.
 Enemies fire in intervalls, that reduce in accordance to maximum amount of players to ramp up difficulty
 Enemies Firing frames are 240 frames till they fire, then 240 frames till they start walking again (4S in total)
-Enemies Walking Cycle is 120 Frames
+Enemies Basic Walking Cycle is 120 Frames.... ofcourse that does not actually matter... why did i note that down?
 
 
 
@@ -33,6 +35,7 @@ Enemies Walking Cycle is 120 Frames
 (Common Drop) *Revolver, 6 shots then reload, Special ability quickfires all remaining bullets.
 (Common Drop) *Sniper rifle , 1 shot bolt but pierces damage , Special ability consumes 40 Mana but will fire a bullet with 2X damage and knock you back
 (Event Drop) *Halberd Rifle, Generally a close range weapon with a 2 barrel shotgun with stabbing/swiping attacks
+(I dont even) *Shit gun, Fires poison shit and special makes character ascend while shitting below
 
 	[Abilities]
 *Flash Step, Teleports X blocks in facing direction.

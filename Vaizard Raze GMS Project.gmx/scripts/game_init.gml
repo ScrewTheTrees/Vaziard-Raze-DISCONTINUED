@@ -2,7 +2,7 @@ randomize(); //Since the netcode relies on this.
 
 netcode_start();
 scr_dropdown_init();
-
+scr_weaponlist_init();
 
 
 display_set_gui_size(1920,1080);
@@ -22,7 +22,7 @@ global.fullscreen=false;
 global.gamewidth=1920;
 global.gameheight=1080;
 
-global.gamewidth=1280 ;
+global.gamewidth=1280;
 global.gameheight=720;
 
 
@@ -39,3 +39,5 @@ global.keybind[KEY_ABILITY2]=ord("S");
 global.keybind[KEY_ABILITY3]=ord("D");
 global.keybind[KEY_SPECIAL]=vk_space;
 global.keybind[KEY_SWAP]=vk_shift;
+
+

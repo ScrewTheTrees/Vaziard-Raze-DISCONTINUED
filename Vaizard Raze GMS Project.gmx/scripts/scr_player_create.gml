@@ -8,6 +8,7 @@ myroom=room_loading;
 
 //Create Company objects
 instance_create(x,y,obj_camera);
+instance_create(x,y,obj_weapon);
 
 //Reset the player movement variables
 scr_player_input_reset();
@@ -23,6 +24,7 @@ facedir=1;
 
 moving=0;
 moveair=0;
+isdead=false;
 
 //Gravitational things
 max_gravity=1;

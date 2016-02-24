@@ -80,6 +80,7 @@
     <sprite>sprites\spr_wep_buster</sprite>
     <sprite>sprites\spr_error</sprite>
     <sprite>sprites\spr_noone</sprite>
+    <sprite>sprites\spr_bustershot</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -204,6 +205,16 @@
       </scripts>
       <script>scripts\get_mouse_in.gml</script>
     </scripts>
+    <scripts name="Player Weapons">
+      <script>scripts\scr_weapon_create_vars.gml</script>
+      <script>scripts\scr_weapon_update_vars.gml</script>
+      <script>scripts\scr_weaponlist_init.gml</script>
+      <script>scripts\scr_weaponlist_add.gml</script>
+      <script>scripts\scr_weaponlist_remove.gml</script>
+      <scripts name="Weapons handling">
+        <script>scripts\scr_weapon_buster.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
       <script>scripts\scr_player_create_health.gml</script>
@@ -244,13 +255,11 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_weapon_create_vars.gml</script>
-    <script>scripts\scr_weapon_update_vars.gml</script>
-    <script>scripts\scr_weapon_buster.gml</script>
     <script>scripts\get_team_color.gml</script>
     <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
     <script>scripts\get_weapon_sprite.gml</script>
+    <script>scripts\scr_weapon_init.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -260,6 +269,8 @@
     <object>objects\game_controller</object>
     <object>objects\obj_player</object>
     <object>objects\obj_otherplayer</object>
+    <object>objects\obj_camera</object>
+    <object>objects\obj_weapon</object>
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
@@ -280,10 +291,9 @@
       <object>objects\obj_recive_packet</object>
       <object>objects\obj_wait</object>
     </objects>
-    <object>objects\obj_camera</object>
     <object>objects\obj_solid_block</object>
-    <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_slope_l</object>
+    <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
     <object>objects\obj_projectile_bustershot</object>

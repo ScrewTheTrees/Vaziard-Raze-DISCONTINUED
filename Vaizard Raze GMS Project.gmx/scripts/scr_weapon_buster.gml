@@ -10,13 +10,13 @@ if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
 //Charge attack release
 if keyboard_check_released(global.keybind[KEY_SHOOT]) && charge1>max_charge1
     {
-    scr_projectile_create(x-20,y+(facedir*16),obj_projectile_bustercharge,team,damage1,damage2,damage3,facedir,0,color_torso);
+    //scr_projectile_create(x-20,y+(facedir*16),obj_projectile_bustercharge,team,damage1,damage2,damage3,facedir,0,color_torso);
     }
 
     //Special attack
 if keyboard_check_released(global.keybind[KEY_SHOOT2]) && charge1>max_charge1
     {
-    scr_projectile_create(x-20,y+(facedir*16),obj_projectile_busterspecial,team,damage1,damage2,damage3,facedir,0,color_torso);
+    //scr_projectile_create(x-20,y+(facedir*16),obj_projectile_busterspecial,team,damage1,damage2,damage3,facedir,0,color_torso);
     }
     
     

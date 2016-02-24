@@ -9,7 +9,7 @@
 
 #define scr_camera_create
 //The amount of pixels left/right of players to check
-global.padding=256;
+global.padding=400;
 
 //The W/H of the view for the actual screen
 curr_w=view_wview;
@@ -30,6 +30,8 @@ minimum_width=960;
 maximum_width=((room_height/room_width)*room_width)-200;
 
 #define scr_normalcamera
+//Script for the dimensional movement camera that can be user controlled (when dead or similar)
+
 var look_up,look_down;
 
 look_up=0;
@@ -100,20 +102,36 @@ global.camerax=0;
 global.cameray=0;
 
 //Variables for scaling
-global.left_x=obj_playerparent.x;
-global.top_y=obj_playerparent.y;
-global.right_x=obj_playerparent.x;
-global.bottom_y=obj_playerparent.y;
+global.left_x=0;
+global.top_y=0;
+global.right_x=0;
+global.bottom_y=0;
 
-//The amount of pixels left/right of players to check
-global.padding=128;
+if instance_exists(obj_playerparent)
+{
+      with (obj_playerparent)
+      {
+        if isdead=false
+        {
+        global.left_x=x;
+        global.top_y=y;
+        global.right_x=x;
+        global.bottom_y=y;
+        }
+      }
+}
+      
 
+
+global.deadchars=0;
 
 //Obj_otherplayer is the player parent
 if instance_exists(obj_playerparent)
 {
       with (obj_playerparent)
       {
+        if isdead=false
+        {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
 
@@ -126,12 +144,18 @@ if instance_exists(obj_playerparent)
       //Add player X and Y to the collective
       global.camerax+=x;
       global.cameray+=y;
+        }
+        else global.deadchars+=1
       }//WIth
 }//Exists
 
 //Fix the X and Y to the center point;
-global.camerax=global.camerax/instance_number(obj_playerparent);
-global.cameray=global.cameray/instance_number(obj_playerparent);
+if (instance_number(obj_playerparent)-global.deadchars)>0
+&& (instance_number(obj_playerparent)-global.deadchars)>0
+{
+global.camerax=global.camerax/(instance_number(obj_playerparent)-global.deadchars);
+global.cameray=global.cameray/(instance_number(obj_playerparent)-global.deadchars);
+}
 
 //Get the widths
 widthx=global.right_x-global.left_x;
@@ -191,10 +215,24 @@ global.camerax=0;
 global.cameray=0;
 
 //Variables for scaling
-global.left_x=obj_playerparent.x;
-global.top_y=obj_playerparent.y;
-global.right_x=obj_playerparent.x;
-global.bottom_y=obj_playerparent.y;
+global.left_x=0;
+global.top_y=0;
+global.right_x=0;
+global.bottom_y=0;
+
+if instance_exists(obj_playerparent)
+{
+      with (obj_playerparent)
+      {
+        if isdead=false
+        {
+        global.left_x=x;
+        global.top_y=y;
+        global.right_x=x;
+        global.bottom_y=y;
+        }
+      }
+}
 
 
 
@@ -206,6 +244,8 @@ if instance_exists(obj_player)
 {
       with (obj_player)
       {
+        if isdead=false
+        {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
 
@@ -221,6 +261,7 @@ if instance_exists(obj_player)
       
       //One more
       global.sel+=1;
+        }
       }//WIth
 }//Exists
 //Obj_otherplayer is the player parent
@@ -268,8 +309,12 @@ if instance_exists(obj_enemyparent)
 }
 
 //Fix the X and Y to the center point;
-global.camerax=global.camerax/global.sel;
-global.cameray=global.cameray/global.sel;
+if (instance_number(obj_playerparent)-global.deadchars)>0
+&& (instance_number(obj_playerparent)-global.deadchars)>0
+{
+global.camerax=global.camerax/(instance_number(obj_playerparent)-global.deadchars);
+global.cameray=global.cameray/(instance_number(obj_playerparent)-global.deadchars);
+}
 
 //Get the widths
 widthx=global.right_x-global.left_x;
