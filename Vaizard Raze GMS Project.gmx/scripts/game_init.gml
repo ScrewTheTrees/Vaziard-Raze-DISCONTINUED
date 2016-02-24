@@ -1,4 +1,8 @@
-randomize(); //Since the netcode relies on this.
+random_set_seed(date_get_second_of_year(date_current_datetime())); //Since the netcode relies on this.
+
+global.game_version="0.2";
+global.netcode_version="0.1";
+
 
 netcode_start();
 scr_dropdown_init();
@@ -14,7 +18,8 @@ global.playername="Faggot";
 global.myroom=room_menu;
 global.entity_id=0;     //ID's that entities use
 
-global.difficult=3;     //How hard!
+
+global.difficult=3;     //How hard! ;D
 
 
 global.draw_intervall=0.5;     //Drawing rate
@@ -37,7 +42,7 @@ global.keybind[KEY_SHOOT2]=ord("C");
 global.keybind[KEY_ABILITY1]=ord("A");
 global.keybind[KEY_ABILITY2]=ord("S");
 global.keybind[KEY_ABILITY3]=ord("D");
-global.keybind[KEY_SPECIAL]=vk_space;
-global.keybind[KEY_SWAP]=vk_shift;
+global.keybind[KEY_SPECIAL]=vk_shift;
+global.keybind[KEY_SWAP]=vk_space;
 
 

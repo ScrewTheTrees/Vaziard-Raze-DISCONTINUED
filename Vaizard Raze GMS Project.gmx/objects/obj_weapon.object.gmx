@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>scr_weapon_create_vars();
+
+scr_weapon_init();
 </string>
           </argument>
         </arguments>

@@ -206,6 +206,8 @@
       <script>scripts\get_mouse_in.gml</script>
     </scripts>
     <scripts name="Player Weapons">
+      <script>scripts\scr_weapon_init.gml</script>
+      <script>scripts\scr_weapon_step.gml</script>
       <script>scripts\scr_weapon_create_vars.gml</script>
       <script>scripts\scr_weapon_update_vars.gml</script>
       <script>scripts\scr_weaponlist_init.gml</script>
@@ -244,6 +246,7 @@
     <scripts name="Projectiles">
       <script>scripts\scr_projectile_create.gml</script>
       <script>scripts\scr_projectile_init.gml</script>
+      <script>scripts\scr_projectile_velocity.gml</script>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_roomid.gml</script>
@@ -259,7 +262,7 @@
     <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
     <script>scripts\get_weapon_sprite.gml</script>
-    <script>scripts\scr_weapon_init.gml</script>
+    <script>scripts\get_weapon_basestats.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
