@@ -7,7 +7,8 @@ switch (argument0)
     
     bullets1=4;
     damage1=1000;
-    damage2=5000;
+    damage1_2=5000;
+    damage2=100;
     
     break;
     

@@ -45,4 +45,3 @@ global.keybind[KEY_ABILITY3]=ord("D");
 global.keybind[KEY_SPECIAL]=vk_shift;
 global.keybind[KEY_SWAP]=vk_space;
 
-

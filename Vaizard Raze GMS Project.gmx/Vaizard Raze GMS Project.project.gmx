@@ -206,16 +206,21 @@
       <script>scripts\get_mouse_in.gml</script>
     </scripts>
     <scripts name="Player Weapons">
-      <script>scripts\scr_weapon_init.gml</script>
+      <scripts name="WeaponList">
+        <script>scripts\scr_weaponlist_init.gml</script>
+        <script>scripts\scr_weaponlist_add.gml</script>
+        <script>scripts\scr_weaponlist_remove.gml</script>
+      </scripts>
+      <script>scripts\scr_weapon_create.gml</script>
       <script>scripts\scr_weapon_step.gml</script>
-      <script>scripts\scr_weapon_create_vars.gml</script>
-      <script>scripts\scr_weapon_update_vars.gml</script>
-      <script>scripts\scr_weaponlist_init.gml</script>
-      <script>scripts\scr_weaponlist_add.gml</script>
-      <script>scripts\scr_weaponlist_remove.gml</script>
+      <script>scripts\scr_step_switch_weapontype.gml</script>
+      <script>scripts\get_weapon_basestats.gml</script>
+      <script>scripts\get_weapon_sprite.gml</script>
       <scripts name="Weapons handling">
         <script>scripts\scr_weapon_buster.gml</script>
       </scripts>
+      <script>scripts\add_weapon_attributes.gml</script>
+      <script>scripts\scr_attribute_modify.gml</script>
     </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
@@ -261,8 +266,6 @@
     <script>scripts\get_team_color.gml</script>
     <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
-    <script>scripts\get_weapon_sprite.gml</script>
-    <script>scripts\get_weapon_basestats.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -308,7 +311,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="52">
+  <constants number="53">
     <constant name="WEP_HALBERD">7</constant>
     <constant name="WEP_SNIPER">6</constant>
     <constant name="WEP_SWORD">5</constant>
@@ -328,6 +331,7 @@
     <constant name="ATR_BULLET_FLAT">3</constant>
     <constant name="ATR_DAMAGE_PROCENT">2</constant>
     <constant name="ATR_DAMAGE_FLAT">1</constant>
+    <constant name="ATR_EMPTY">0</constant>
     <constant name="TEAM_ALLY">6</constant>
     <constant name="TEAM_TEMP">5</constant>
     <constant name="TEAM_GREEN">4</constant>

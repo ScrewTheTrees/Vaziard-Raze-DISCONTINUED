@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_weapon_create_vars();
-
-scr_weapon_init();
+            <string>scr_weapon_create();
 </string>
           </argument>
         </arguments>
@@ -53,7 +51,7 @@ scr_weapon_init();
             <string>x=obj_player.x;
 y=obj_player.y;
 
-scr_weapon_update_vars();
+scr_weapon_step();
 </string>
           </argument>
         </arguments>
