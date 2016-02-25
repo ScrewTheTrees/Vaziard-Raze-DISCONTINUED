@@ -4,6 +4,8 @@ else if global.selected_weapon=2 wep_id=global.weapon2;
 
 type=global.weapon_type[wep_id];
 
+obj_player.weapon_equipped=global.weapon_type[wep_id];
+obj_player.weapon_sprite=get_weapon_sprite(global.weapon_type[wep_id]);
 
 get_weapon_basestats(type);
 add_weapon_attributes(wep_id);

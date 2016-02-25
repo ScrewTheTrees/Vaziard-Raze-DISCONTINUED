@@ -15,7 +15,6 @@ scr_player_input_reset();
 scr_player_vars_reset();
 
 scr_player_create_health();
-scr_player_attribute_create();
 
 //Maximum speed of any vspeed/hspeed/speed things
 max_speed=50;

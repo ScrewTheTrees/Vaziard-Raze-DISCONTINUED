@@ -14,3 +14,8 @@ draw_sprite_ext(spr_player_hair_1,image_index,x,y-66,facedir,image_yscale,image_
 
 draw_sprite_ext(spr_player_eye_standard,0,x+(6*facedir),y-64,facedir,image_yscale,image_angle,image_blend,image_alpha);
 draw_sprite_ext(spr_player_eye_standard,1,x+(6*facedir),y-64,facedir,image_yscale,image_angle,color_eyes,image_alpha);
+
+
+draw_sprite_ext(weapon_sprite,1,x,y-40,facedir,image_yscale,image_angle,color_torso,image_alpha);
+draw_sprite_ext(weapon_sprite,0,x,y-40,facedir,image_yscale,image_angle,image_blend,image_alpha);
+

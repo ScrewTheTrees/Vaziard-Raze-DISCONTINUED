@@ -1,8 +1,8 @@
 //Standard shooting
 if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
     {
-    projectile=scr_projectile_create(x+(obj_player.facedir*16),y-40,obj_projectile_bustershot,obj_player.team,damage1,damage1,damage1,obj_player.facedir,0,obj_player.color_torso);
-    scr_projectile_velocity(projectile,obj_player.facedir*10,0,0);
+    projectile=scr_projectile_create(x+(obj_player.facedir*16),y-36,obj_projectile_bustershot,obj_player.team,damage1,damage1,damage1,obj_player.facedir,0,obj_player.color_torso);
+    scr_projectile_velocity(projectile,obj_player.facedir*14,0,0);
     
     bullets1-=1;
     cooldown1=240;

@@ -81,6 +81,7 @@
     <sprite>sprites\spr_error</sprite>
     <sprite>sprites\spr_noone</sprite>
     <sprite>sprites\spr_bustershot</sprite>
+    <sprite>sprites\spr_trail_buster</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -225,7 +226,6 @@
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
       <script>scripts\scr_player_create_health.gml</script>
-      <script>scripts\scr_player_attribute_create.gml</script>
       <script>scripts\scr_player_freeze.gml</script>
       <script>scripts\scr_player_draw.gml</script>
       <script>scripts\scr_player_move.gml</script>
@@ -302,8 +302,9 @@
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
-    <object>objects\obj_projectile_bustershot</object>
     <object>objects\obj_enemy_dummy</object>
+    <object>objects\obj_projectile_bustershot</object>
+    <object>objects\part_bullettrail</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
