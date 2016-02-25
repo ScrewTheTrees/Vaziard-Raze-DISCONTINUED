@@ -8,6 +8,4 @@ proj=argument0;
 
 proj.hspeed=argument1;
 proj.vspeed=argument2;
-proj.direction=argument3;
-proj.speed=argument4;
-proj.gravity=argument5;
+proj.gravity=argument3;

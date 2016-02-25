@@ -1,5 +1,6 @@
 ///scr_attribute_modify(Attribute,value,WeaponList ID)
 
+w=argument2;
 
 switch (argument0)
     {

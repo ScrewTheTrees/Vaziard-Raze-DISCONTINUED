@@ -5,7 +5,7 @@ switch (argument0)
     case WEP_BUSTER:
     max_charge1=140;
     
-    bullets1=4;
+    max_bullets1=4;
     damage1=1000;
     damage1_2=5000;
     damage2=100;

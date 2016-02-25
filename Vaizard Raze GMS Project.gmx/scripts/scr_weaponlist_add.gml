@@ -13,7 +13,7 @@ while (found==false)
     }
     
 global.weapon_enabled[searchid]=true
-global.weapon_type[searchid]=argument0;
+global.weapon_type[searchid]=argument[0];
 
 if argument_count>1
     {
