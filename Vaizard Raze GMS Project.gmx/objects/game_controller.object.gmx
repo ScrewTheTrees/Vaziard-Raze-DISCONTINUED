@@ -30,6 +30,7 @@
 gamedraw=0;
 
 
+instance_create(x,y,ps_handler);
 
 
 room_goto_next();

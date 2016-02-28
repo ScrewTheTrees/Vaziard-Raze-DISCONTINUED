@@ -81,6 +81,7 @@
     <sprite>sprites\spr_error</sprite>
     <sprite>sprites\spr_noone</sprite>
     <sprite>sprites\spr_bustershot</sprite>
+    <sprite>sprites\spr_bustercharge</sprite>
     <sprite>sprites\spr_trail_buster</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -186,6 +187,7 @@
         <script>scripts\msg_send_deadpacket.gml</script>
         <script>scripts\msg_send_update_myroom.gml</script>
         <script>scripts\msg_send_connectinfo.gml</script>
+        <script>scripts\msg_send_projectile_create.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
         <script>scripts\msg_recive_leavegame.gml</script>
@@ -195,6 +197,7 @@
         <script>scripts\msg_recive_deadpacket.gml</script>
         <script>scripts\msg_recive_update_myroom.gml</script>
         <script>scripts\msg_recive_connectinfo.gml</script>
+        <script>scripts\msg_recive_projectile_create.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -249,8 +252,8 @@
       <script>scripts\scr_entity_create.gml</script>
     </scripts>
     <scripts name="Projectiles">
-      <script>scripts\scr_projectile_create.gml</script>
       <script>scripts\scr_projectile_init.gml</script>
+      <script>scripts\scr_projectile_create.gml</script>
       <script>scripts\scr_projectile_velocity.gml</script>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
@@ -266,6 +269,7 @@
     <script>scripts\get_team_color.gml</script>
     <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
+    <script>scripts\get_projectile_instance.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -289,13 +293,17 @@
       <object>objects\obj_menu_host</object>
       <object>objects\obj_menu_join</object>
     </objects>
+    <objects name="Online">
+      <object>objects\obj_recive_packet</object>
+      <object>objects\obj_wait</object>
+    </objects>
     <objects name="GFX">
       <object>objects\fade_to_black_room</object>
       <object>objects\fade_from_black</object>
     </objects>
-    <objects name="Online">
-      <object>objects\obj_recive_packet</object>
-      <object>objects\obj_wait</object>
+    <objects name="Graphics Particles">
+      <object>objects\ps_handler</object>
+      <object>objects\part_bullettrail</object>
     </objects>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_slope_l</object>
@@ -304,7 +312,7 @@
     <object>objects\obj_select_resolution</object>
     <object>objects\obj_enemy_dummy</object>
     <object>objects\obj_projectile_bustershot</object>
-    <object>objects\part_bullettrail</object>
+    <object>objects\obj_projectile_bustercharge</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -312,7 +320,9 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="53">
+  <constants number="57">
+    <constant name="PROJ_BUSTERCHARGE">2</constant>
+    <constant name="PROJ_BUSTERSHOT">1</constant>
     <constant name="WEP_HALBERD">7</constant>
     <constant name="WEP_SNIPER">6</constant>
     <constant name="WEP_SWORD">5</constant>
@@ -340,6 +350,7 @@
     <constant name="TEAM_RED">2</constant>
     <constant name="TEAM_ENEMY">1</constant>
     <constant name="TEAM_PLAYER">0</constant>
+    <constant name="SEND_ROOM">4</constant>
     <constant name="SEND_ALL">3</constant>
     <constant name="SEND_PLAYER">2</constant>
     <constant name="SEND_SELF">1</constant>
@@ -347,6 +358,7 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_CREATE_PROJECTILE">7</constant>
     <constant name="MSG_CONNECTINFO">6</constant>
     <constant name="MSG_UPDATE_MYROOM">5</constant>
     <constant name="MSG_MOVE">4</constant>

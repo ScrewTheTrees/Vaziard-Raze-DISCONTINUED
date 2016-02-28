@@ -41,6 +41,18 @@ with(obj_otherplayer)
  sendmessage(client,"",0,0)
  }
 break;
-      }
+
+case 4:
+with(obj_otherplayer)
+{
+if myroom=global.myroom
+{
+sendmessage(client,"",0,0)
+}
+}
+
+
+
+      }//Switch
       
       clearbuffer(0);

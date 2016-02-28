@@ -8,7 +8,7 @@ var messageid=argument0;
     case MSG_CONNECTINFO: msg_recive_connectinfo(); break;
     case MSG_PLAYERID: msg_recive_playerid(); break;
     case MSG_DEADPACKET: msg_recive_deadpacket(); break;
-    
+    case MSG_CREATE_PROJECTILE: msg_recive_projectile_create(); break;
     
   }
   clearbuffer(0);

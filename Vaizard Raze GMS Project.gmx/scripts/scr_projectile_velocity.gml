@@ -1,4 +1,4 @@
-///scr_projectile_velocity(ProjectileID,hspeed,vspeed,direction,speed,gravity)
+///scr_projectile_velocity(ProjectileID,hspeed,vspeed,gravity)
 
 
 //For adding more velocity information to a projectile

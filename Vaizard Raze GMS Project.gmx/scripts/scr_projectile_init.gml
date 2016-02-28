@@ -7,7 +7,7 @@ critdamage=0;
 
 team=TEAM_TEMP;
 color=c_white;
-
+proj_type=0;
 
 dir=0;
 facedir=0;
