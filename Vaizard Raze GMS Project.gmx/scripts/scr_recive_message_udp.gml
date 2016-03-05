@@ -1,6 +1,6 @@
 //--------********************----------
 //UDP
-repeat (20)
+repeat (500)
 {
 
     size = receivemessage(global.udp,0,0);

@@ -1,11 +1,15 @@
+
 if global.selected_weapon=1  wep_id=global.weapon1
 else if global.selected_weapon=2 wep_id=global.weapon2;
 
 
 type=global.weapon_type[wep_id];
 
+if instance_exists(obj_player)
+{
 obj_player.weapon_equipped=global.weapon_type[wep_id];
 obj_player.weapon_sprite=get_weapon_sprite(global.weapon_type[wep_id]);
+
 
 get_weapon_basestats(type);
 add_weapon_attributes(wep_id);
@@ -37,7 +41,7 @@ if critchance>=irandom_range(1,100)
 
 //Last 
 scr_step_switch_weapontype(type)
-
+}//If player exists
 
 
 //Taking care of the weapon step manuevers

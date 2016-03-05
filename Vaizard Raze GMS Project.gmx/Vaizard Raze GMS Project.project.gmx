@@ -88,6 +88,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\game_init.gml</script>
+    <script>scripts\options_variables.gml</script>
     <scripts name="Online Functionality">
       <scripts name="39dll Core Functions">
         <script>scripts\dllinit.gml</script>
@@ -188,6 +189,7 @@
         <script>scripts\msg_send_update_myroom.gml</script>
         <script>scripts\msg_send_connectinfo.gml</script>
         <script>scripts\msg_send_projectile_create.gml</script>
+        <script>scripts\msg_send_playerinfo.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
         <script>scripts\msg_recive_leavegame.gml</script>
@@ -198,6 +200,7 @@
         <script>scripts\msg_recive_update_myroom.gml</script>
         <script>scripts\msg_recive_connectinfo.gml</script>
         <script>scripts\msg_recive_projectile_create.gml</script>
+        <script>scripts\msg_recive_playerinfo.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -320,7 +323,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="57">
+  <constants number="58">
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
     <constant name="WEP_HALBERD">7</constant>
@@ -358,6 +361,7 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_PLAYERINFO">8</constant>
     <constant name="MSG_CREATE_PROJECTILE">7</constant>
     <constant name="MSG_CONNECTINFO">6</constant>
     <constant name="MSG_UPDATE_MYROOM">5</constant>

@@ -1,6 +1,6 @@
 //--------********************----------
 //TCP
-repeat (20)
+repeat (500)
 {
   if global.playerid=0
   size = receivemessage(client,0,0);

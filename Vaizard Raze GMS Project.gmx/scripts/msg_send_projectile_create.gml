@@ -1,7 +1,7 @@
-///msg_send_projectile_create(AutomaticFetchOfInformation)
+///msg_send_projectile_create()
 
 
-var dd=argument[0];
+var dd;
 
 clearbuffer(0)
 writebyte(MSG_CREATE_PROJECTILE,0)
