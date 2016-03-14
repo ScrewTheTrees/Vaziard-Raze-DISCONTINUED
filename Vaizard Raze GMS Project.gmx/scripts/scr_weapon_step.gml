@@ -14,6 +14,7 @@ obj_player.weapon_sprite=get_weapon_sprite(global.weapon_type[wep_id]);
 get_weapon_basestats(type);
 add_weapon_attributes(wep_id);
 
+//Add attribute related values
 damage1=damage1*(1+procentdamage);
 damage2=damage2*(1+procentdamage);
 damage1_2=damage1_2*(1+procentdamage);

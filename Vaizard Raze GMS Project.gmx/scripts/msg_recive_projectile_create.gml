@@ -41,5 +41,4 @@ clearbuffer(0);
 }
 
 pro=scr_projectile_create(xx,yy,proj_type,team,damage1,damage2,damage3,facedir,direction,color);
-scr_projectile_velocity(pro,hhspeed,vvspeed,ggravity);
-
+scr_projectile_spawn_velocity(pro,hhspeed,vvspeed,ggravity);

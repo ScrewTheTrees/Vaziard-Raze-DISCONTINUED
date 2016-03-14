@@ -2,8 +2,8 @@
 if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
     {
     projectile=scr_projectile_create(x+(obj_player.facedir*16),y-36,PROJ_BUSTERSHOT,obj_player.team,damage1,damage1,damage1,obj_player.facedir,0,obj_player.color_torso);
-    scr_projectile_velocity(projectile,obj_player.facedir*14,0,0);
-    projectile.alarm[1]=2; //Send packet
+    scr_projectile_spawn_velocity(projectile,obj_player.facedir*14,0,0);
+    projectile.alarm[1]=2; //Send creation packet
     
     bullets1-=1;
     cooldown1=240;
@@ -13,7 +13,7 @@ if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
 if keyboard_check_released(global.keybind[KEY_SHOOT]) && charge1>max_charge1
     {
     projectile=scr_projectile_create(x+(obj_player.facedir*16),y-36,PROJ_BUSTERCHARGE,obj_player.team,damage1_2,damage1_2,damage1_2,obj_player.facedir,0,obj_player.color_torso);
-    scr_projectile_velocity(projectile,obj_player.facedir*11,0,0);
+    scr_projectile_spawn_velocity(projectile,obj_player.facedir*11,0,0);
     projectile.alarm[1]=2; //Send creation packet
     
     }

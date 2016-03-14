@@ -248,19 +248,28 @@
       <script>scripts\scr_load_data.gml</script>
     </scripts>
     <scripts name="Entities">
+      <script>scripts\scr_entity_create.gml</script>
       <script>scripts\scr_entity_jump.gml</script>
       <script>scripts\scr_entity_movement.gml</script>
       <script>scripts\scr_entity_freeze.gml</script>
       <script>scripts\get_entity_id.gml</script>
-      <script>scripts\scr_entity_create.gml</script>
     </scripts>
     <scripts name="Projectiles">
-      <script>scripts\scr_projectile_init.gml</script>
       <script>scripts\scr_projectile_create.gml</script>
-      <script>scripts\scr_projectile_velocity.gml</script>
+      <script>scripts\scr_projectile_spawn_velocity.gml</script>
+    </scripts>
+    <scripts name="Spawning">
+      <script>scripts\scr_entity_spawn.gml</script>
+      <script>scripts\scr_projectile_spawn.gml</script>
+    </scripts>
+    <scripts name="GET Information">
+      <script>scripts\get_entity_instance.gml</script>
+      <script>scripts\get_roomid.gml</script>
+      <script>scripts\get_projectile_instance.gml</script>
+      <script>scripts\get_team_color.gml</script>
+      <script>scripts\get_team_hostile.gml</script>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
-    <script>scripts\get_roomid.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
     <script>scripts\script666.gml</script>
@@ -269,10 +278,7 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\get_team_color.gml</script>
-    <script>scripts\get_team_hostile.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
-    <script>scripts\get_projectile_instance.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -323,7 +329,8 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="58">
+  <constants number="59">
+    <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
     <constant name="WEP_HALBERD">7</constant>
@@ -361,6 +368,9 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_ENEMY_DAMAGE">11</constant>
+    <constant name="MSG_ENEMY_HEALTH">10</constant>
+    <constant name="MSG_ENEMY_CREATE">9</constant>
     <constant name="MSG_PLAYERINFO">8</constant>
     <constant name="MSG_CREATE_PROJECTILE">7</constant>
     <constant name="MSG_CONNECTINFO">6</constant>
@@ -379,9 +389,6 @@
     <constant name="KEY_SHOOT">5</constant>
     <constant name="KEY_JUMP">4</constant>
     <constant name="KEY_DOWN">3</constant>
-    <constant name="KEY_UP">2</constant>
-    <constant name="KEY_LEFT">1</constant>
-    <constant name="KEY_RIGHT">0</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

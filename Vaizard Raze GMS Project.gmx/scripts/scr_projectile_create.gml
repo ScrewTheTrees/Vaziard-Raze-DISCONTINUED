@@ -1,15 +1,13 @@
-///scr_projectile_create(X,Y,PROJ_,Team,Damage1,Damage2,Damage3,Facedir,Direction,Color)
+damage1=1000;
+damage2=1000;
+damage3=1000;
+//war
+critchance=0;
+critdamage=0;
 
-ii=instance_create(argument0,argument1,get_projectile_instance(argument2));
-ii.team=argument3;
-ii.damage1=argument4;
-ii.damage2=argument5;
-ii.damage3=argument6;
-ii.facedir=argument7;
-ii.dir=argument8;
-ii.color=argument9;
-ii.proj_type=argument2;
+team=TEAM_TEMP;
+color=c_white;
+proj_type=0;
 
-
-
-return (ii);
+dir=0;
+facedir=0;
