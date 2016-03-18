@@ -5,7 +5,7 @@ cclient_port=readushort(0);
 
 clearbuffer(0);
 
-obj_otherplayer.tempid=tempid;
+obj_otherplayer.tempid=ppid;
 obj_otherplayer.cclient_port=cclient_port;
 
 with(obj_otherplayer)

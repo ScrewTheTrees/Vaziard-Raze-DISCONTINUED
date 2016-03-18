@@ -20,4 +20,3 @@ global.entity_id=0;     //ID's that entities use
 
 
 global.difficult=3;     //How hard! ;D
-

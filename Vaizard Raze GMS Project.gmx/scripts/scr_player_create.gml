@@ -6,13 +6,6 @@ client=-1; //No client
 playername="Error?";
 myroom=room_loading;
 
-//Create Company objects (Only for main player ofcourse)
-if object_index=obj_player
-{
-instance_create(x,y,obj_camera);
-instance_create(x,y,obj_weapon);
-}
-
 //Reset the player movement variables
 scr_player_input_reset();
 scr_player_vars_reset();

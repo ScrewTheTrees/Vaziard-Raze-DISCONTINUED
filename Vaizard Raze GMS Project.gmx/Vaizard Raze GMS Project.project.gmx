@@ -190,6 +190,7 @@
         <script>scripts\msg_send_connectinfo.gml</script>
         <script>scripts\msg_send_projectile_create.gml</script>
         <script>scripts\msg_send_playerinfo.gml</script>
+        <script>scripts\msg_send_entity_create.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
         <script>scripts\msg_recive_leavegame.gml</script>
@@ -201,6 +202,7 @@
         <script>scripts\msg_recive_connectinfo.gml</script>
         <script>scripts\msg_recive_projectile_create.gml</script>
         <script>scripts\msg_recive_playerinfo.gml</script>
+        <script>scripts\msg_recive_entity_create.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -264,8 +266,8 @@
     </scripts>
     <scripts name="GET Information">
       <script>scripts\get_entity_instance.gml</script>
-      <script>scripts\get_roomid.gml</script>
       <script>scripts\get_projectile_instance.gml</script>
+      <script>scripts\get_roomid.gml</script>
       <script>scripts\get_team_color.gml</script>
       <script>scripts\get_team_hostile.gml</script>
     </scripts>
@@ -279,6 +281,8 @@
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
     <script>scripts\scr_enemy_damage.gml</script>
+    <script>scripts\scr_collide_enemy.gml</script>
+    <script>scripts\scr_collide_player.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -329,7 +333,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="59">
+  <constants number="63">
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
@@ -360,6 +364,7 @@
     <constant name="TEAM_RED">2</constant>
     <constant name="TEAM_ENEMY">1</constant>
     <constant name="TEAM_PLAYER">0</constant>
+    <constant name="SEND_ROOM_OTHER">5</constant>
     <constant name="SEND_ROOM">4</constant>
     <constant name="SEND_ALL">3</constant>
     <constant name="SEND_PLAYER">2</constant>
@@ -389,6 +394,9 @@
     <constant name="KEY_SHOOT">5</constant>
     <constant name="KEY_JUMP">4</constant>
     <constant name="KEY_DOWN">3</constant>
+    <constant name="KEY_RIGHT">2</constant>
+    <constant name="KEY_LEFT">1</constant>
+    <constant name="KEY_UP">0</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

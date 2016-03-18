@@ -16,6 +16,8 @@ if (object_index==obj_player)
    scr_player_moveupdateonline();
    
    stuck=false;//Stop being stuck
+   
+   myroom=global.myroom; //Update important information
    }
 
 //

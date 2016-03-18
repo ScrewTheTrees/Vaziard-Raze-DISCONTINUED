@@ -1,14 +1,12 @@
 //Recive Code
-var team,proj_type,damage1,damage2,damage3,facedir,dir,color,hsspeed,vvspeed,ggravity,xx,yy;
-
-team=readbyte(0);
-proj_type=readushort(0);
-damage1=readshort(0);
-damage2=readshort(0);
-damage3=readshort(0);
-facedir=readshort(0);
-dir=readfloat(0);
-color=readint(0);
+teamm=readbyte(0);
+proj_type=readshort(0);
+damage1=readint(0);
+damage2=readint(0);
+damage3=readint(0);
+facedirr=readshort(0);
+dirr=readfloat(0);
+colorr=readint(0);
 hhspeed=readfloat(0);
 vvspeed=readfloat(0);
 ggravity=readfloat(0);
@@ -20,14 +18,14 @@ clearbuffer(0);
 if global.playerid=0
 {
 writebyte(MSG_CREATE_PROJECTILE,0)
-writebyte(team,0)
-writeushort(proj_type,0);
-writeshort(damage1,0);
-writeshort(damage2,0);
-writeshort(damage3,0);
-writeshort(facedir,0);
-writefloat(dir,0);
-writeint(color,0);
+writebyte(teamm,0)
+writeshort(proj_type,0);
+writeint(damage1,0);
+writeint(damage2,0);
+writeint(damage3,0);
+writeshort(facedirr,0);
+writefloat(dirr,0);
+writeint(colorr,0);
 writefloat(hhspeed,0);
 writefloat(vvspeed,0);
 writefloat(ggravity,0);
@@ -35,10 +33,10 @@ writeint(xx,0);
 writeint(yy,0);
 
 if global.playerid==0 
-scr_send_client(SEND_ROOM,0)
+scr_send_client(SEND_ROOM_OTHER,playerid)
 
 clearbuffer(0);
 }
 
-pro=scr_projectile_create(xx,yy,proj_type,team,damage1,damage2,damage3,facedir,direction,color);
-scr_projectile_spawn_velocity(pro,hhspeed,vvspeed,ggravity);
+proj=scr_projectile_spawn(xx,yy,proj_type,teamm,damage1,damage2,damage3,facedirr,dirr,colorr);
+scr_projectile_spawn_velocity(proj,hhspeed,vvspeed,ggravity);

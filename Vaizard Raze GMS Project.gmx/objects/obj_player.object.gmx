@@ -28,6 +28,12 @@
             <string>scr_player_create();
 
 alarm[1]=30;
+
+
+
+
+instance_create(x,y,obj_camera);
+instance_create(x,y,obj_weapon);
 </string>
           </argument>
         </arguments>
@@ -71,7 +77,7 @@ alarm[1]=30;
           <argument>
             <kind>1</kind>
             <string>msg_send_playerinfo();
-
+msg_send_update_myroom();
 
 alarm[1]=60;
 </string>
@@ -122,6 +128,8 @@ alarm[0]=60;
           <argument>
             <kind>1</kind>
             <string>scr_player_move();
+
+
 </string>
           </argument>
         </arguments>
