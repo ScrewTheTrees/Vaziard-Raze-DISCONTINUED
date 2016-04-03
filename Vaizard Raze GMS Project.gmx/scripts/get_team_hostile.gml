@@ -8,6 +8,10 @@ if team1=TEAM_PLAYER
     {
     if team2=TEAM_ENEMY return (1);
     }
+if team1=TEAM_ALLY
+    {
+    if team2=TEAM_ENEMY return (2);
+    }
 
 else if team1=TEAM_ENEMY
     {

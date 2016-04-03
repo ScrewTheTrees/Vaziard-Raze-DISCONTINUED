@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_enemyparent</parentName>
+  <parentName>obj_entityparent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -32,6 +32,7 @@ alarm[1]=2;
 }
 
 entitytype=ENTITY_ENEMYTEST;
+
 </string>
           </argument>
         </arguments>

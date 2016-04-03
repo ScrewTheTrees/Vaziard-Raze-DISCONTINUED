@@ -7,7 +7,7 @@ entity_max_sp=argument2;
 team=argument3;
 
 
-entityid=get_entity_id(); //Irrelevant for hosts but yah know.
+entityid=get_entity_id(); //Irrelevant for non hosts but yah know.
 
 
 

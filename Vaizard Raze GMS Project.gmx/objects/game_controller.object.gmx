@@ -101,9 +101,6 @@ if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;
             <string>///Room Handling
 
 
-global.myroom=room;
-
-
 
 if keyboard_check_pressed(ord("T"))
 {
@@ -189,7 +186,7 @@ draw_text(view_xview+100,view_yview+100,"Engine fps = "+string(fps)+" - Drawing 
 draw_text(view_xview+100,view_yview+120,"playerid = "+string(global.playerid));
 draw_text(view_xview+100,view_yview+140,"Update Rate = "+string(global.draw_intervall)+" // Press Y&amp;U to change");
 draw_text(view_xview+100,view_yview+180,"MyUDPport = "+string(global.udpport_client));
-
+draw_text(view_xview+100,view_yview+200,"MyRoom = "+string(global.myroom));
 
 if instance_exists(obj_playerparent)
    {

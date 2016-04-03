@@ -99,7 +99,7 @@ part_particles_create(ps_handler.part_system,x,y,ps_handler.buster_charge_part,2
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemyparent">
+    <event eventtype="4" ename="obj_entityparent">
       <action>
         <libid>1</libid>
         <id>603</id>

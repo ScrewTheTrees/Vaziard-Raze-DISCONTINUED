@@ -4,7 +4,7 @@
 var dd;
 
 clearbuffer(0)
-writebyte(MSG_ENEMY_CREATE,0)
+writebyte(MSG_ENTITY_CREATE,0)
 writeshort(entitytype,0);
 writeint(entityid,0);
 writebyte(team,0)

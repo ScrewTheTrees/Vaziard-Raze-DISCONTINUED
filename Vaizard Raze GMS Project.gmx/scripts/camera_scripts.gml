@@ -286,9 +286,9 @@ if instance_exists(obj_bossparent)
       global.sel+=1;
       }//WIth
 }//Exists
-if instance_exists(obj_enemyparent)
+if instance_exists(obj_entityparent)
 {
-      with (instance_nearest(obj_player.x,obj_player.y,obj_enemyparent))
+      with (instance_nearest(obj_player.x,obj_player.y,obj_entityparent))
       {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;

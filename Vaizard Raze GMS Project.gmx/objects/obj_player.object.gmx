@@ -78,6 +78,7 @@ instance_create(x,y,obj_weapon);
             <kind>1</kind>
             <string>msg_send_playerinfo();
 msg_send_update_myroom();
+msg_send_connectinfo();
 
 alarm[1]=60;
 </string>
@@ -127,7 +128,7 @@ alarm[0]=60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_move();
+            <string>scr_player_step();
 
 
 </string>

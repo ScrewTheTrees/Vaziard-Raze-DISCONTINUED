@@ -97,7 +97,7 @@ ii.image_blend=color;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemyparent">
+    <event eventtype="4" ename="obj_entityparent">
       <action>
         <libid>1</libid>
         <id>603</id>

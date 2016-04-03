@@ -1,8 +1,3 @@
-//First of all, retrieve packets from all other players
-if (object_index==obj_otherplayer && global.host==true)
-   {
-   scr_recive_message();
-   }
 //Reset that shit
 scr_player_physics();  
 
@@ -17,6 +12,7 @@ if (object_index==obj_player)
    
    stuck=false;//Stop being stuck
    
+   global.myroom=get_roomid(room,RETURN_ID_NUM);
    myroom=global.myroom; //Update important information
    }
 
