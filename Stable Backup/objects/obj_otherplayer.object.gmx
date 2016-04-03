@@ -3,7 +3,7 @@
   <spriteName>spr_player_legs</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
+  <depth>-9</depth>
   <persistent>-1</persistent>
   <parentName>obj_playerparent</parentName>
   <maskName>mask_player</maskName>
@@ -131,11 +131,13 @@ if playerid=global.playerid instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_move();
+            <string>scr_player_step();
 
 
-
+if global.playerid=0
+{
 scr_recive_message();
+}
 </string>
           </argument>
         </arguments>

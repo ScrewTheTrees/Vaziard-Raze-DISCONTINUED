@@ -4,7 +4,7 @@
 switch (argument0)
     {
     case TEAM_PLAYER: return (make_colour_rgb(0,255,0)) break;
-    case TEAM_ALLY: return (make_colour_rgb(0,220,50)) break;
+    case TEAM_ALLY: return (make_colour_rgb(0,255,255)) break;
     case TEAM_ENEMY: return (make_colour_rgb(255,0,0)) break;
     
     case TEAM_RED: return (make_colour_rgb(255,0,0)) break;

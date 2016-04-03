@@ -9,7 +9,7 @@ myfile=FS_file_text_open_write("EData\Data.vsave");
 FS_file_text_write_string(myfile,"Save format for Vaizard");                             FS_file_text_writeln(myfile);
 FS_file_text_write_string(myfile,"Save Name: General data");                             FS_file_text_writeln(myfile);
 FS_file_text_write_string(myfile,"Do not edit unless you know what the hell you are doing"); FS_file_text_writeln(myfile);
-FS_file_text_writeln(myfile);  
+FS_file_text_writeln(myfile);
 
 //Keybindings
 FS_file_text_write_real(myfile,global.keybinds)   

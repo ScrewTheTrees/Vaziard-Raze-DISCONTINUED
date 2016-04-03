@@ -1,7 +1,3 @@
-if instance_exists(obj_otherplayer)
-{
-var ttempid,rroom;
-
 ttempid=readushort(0);
 rroom=readshort(0);
 clearbuffer(0);
@@ -16,10 +12,10 @@ clearbuffer(0);
 }
 
 
-obj_otherplayer.tempid=ttempid;
-obj_otherplayer.rroom=rroom;
+obj_playerparent.tempid=ttempid;
+obj_playerparent.rroom=rroom;
 
-with(obj_otherplayer)
+with(obj_playerparent)
 {
 if playerid=tempid
 {
@@ -27,4 +23,3 @@ myroom=rroom;
 }
 }
 
-}

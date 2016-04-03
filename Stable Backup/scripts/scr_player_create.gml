@@ -6,15 +6,11 @@ client=-1; //No client
 playername="Error?";
 myroom=room_loading;
 
-//Create Company objects
-instance_create(x,y,obj_camera);
-
 //Reset the player movement variables
 scr_player_input_reset();
 scr_player_vars_reset();
 
 scr_player_create_health();
-scr_player_attribute_create();
 
 //Maximum speed of any vspeed/hspeed/speed things
 max_speed=50;
@@ -23,19 +19,20 @@ facedir=1;
 
 moving=0;
 moveair=0;
+isdead=false;
 
 //Gravitational things
 max_gravity=1;
 gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
 jumpspeed=20;
 jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=14;
+walljumpspeed=16;
 walljumpupspeed=14;
 
 //Movement speed things
 movespeed=0;
 movespeed_mod=0;   //Set to positive or negative to increase/decrease movement speed
-max_movespeed=6;
+max_movespeed=6;   //Actual moving speed of character
 movescanheight=20; //The height it scans up/down when checking for slope movement
 movescanintervall=2; // Height checking per step (how precise the checking is)
 
@@ -48,6 +45,8 @@ stuck=false;         //If you are stuck
 alarm[0]=30;
 
 
+weapon_equipped=WEP_NOONE;
+weapon_sprite=spr_noone;
 
 
 color_legs=c_blue;

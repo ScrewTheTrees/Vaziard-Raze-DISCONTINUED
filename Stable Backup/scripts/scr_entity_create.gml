@@ -5,7 +5,9 @@ entity_max_mp=argument1;
 entity_max_sp=argument2;
 
 team=argument3;
-entityid=get_entity_id();
+
+
+entityid=get_entity_id(); //Irrelevant for non hosts but yah know.
 
 
 

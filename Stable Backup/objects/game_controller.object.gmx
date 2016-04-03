@@ -30,6 +30,7 @@
 gamedraw=0;
 
 
+instance_create(x,y,ps_handler);
 
 
 room_goto_next();
@@ -98,9 +99,6 @@ if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;
           <argument>
             <kind>1</kind>
             <string>///Room Handling
-
-
-global.myroom=room;
 
 
 
@@ -188,12 +186,35 @@ draw_text(view_xview+100,view_yview+100,"Engine fps = "+string(fps)+" - Drawing 
 draw_text(view_xview+100,view_yview+120,"playerid = "+string(global.playerid));
 draw_text(view_xview+100,view_yview+140,"Update Rate = "+string(global.draw_intervall)+" // Press Y&amp;U to change");
 draw_text(view_xview+100,view_yview+180,"MyUDPport = "+string(global.udpport_client));
-
+draw_text(view_xview+100,view_yview+200,"MyRoom = "+string(global.myroom));
 
 if instance_exists(obj_playerparent)
    {
    draw_text(view_xview+100,view_yview+160,"Total Players = "+string(instance_number(obj_playerparent)));
    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_entity_spawn(mouse_x,mouse_y,ENTITY_ENEMYTEST);
 </string>
           </argument>
         </arguments>
