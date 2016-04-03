@@ -241,6 +241,7 @@
       <script>scripts\scr_player_freeze.gml</script>
       <script>scripts\scr_player_draw.gml</script>
       <script>scripts\scr_player_step.gml</script>
+      <script>scripts\scr_player_step_stats.gml</script>
       <script>scripts\scr_player_movespeed.gml</script>
       <script>scripts\scr_player_inputcontroller.gml</script>
       <script>scripts\scr_player_input_reset.gml</script>

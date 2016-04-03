@@ -10,6 +10,7 @@ if (object_index==obj_player)
    
    scr_player_moveupdateonline();
    
+   
    stuck=false;//Stop being stuck
    
    global.myroom=get_roomid(room,RETURN_ID_NUM);
@@ -24,5 +25,6 @@ scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,
 
 if stuck==true {scr_entity_freeze();}
  
+scr_player_step_health();
 
 scr_player_vars_reset(); //Reset vars that should be reset

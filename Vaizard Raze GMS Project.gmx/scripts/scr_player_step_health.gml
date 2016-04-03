@@ -1,0 +1,7 @@
+if player_health<player_max_health+player_bonus_health
+player_health+=player_health_regen;
+
+
+if player_health>player_max_health+player_bonus_health 
+player_health=player_max_health+player_bonus_health;
+
