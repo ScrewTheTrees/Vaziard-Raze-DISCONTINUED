@@ -190,6 +190,7 @@
         <script>scripts\msg_send_connectinfo.gml</script>
         <script>scripts\msg_send_projectile_create.gml</script>
         <script>scripts\msg_send_playerinfo.gml</script>
+        <script>scripts\msg_send_playerhealth.gml</script>
         <script>scripts\msg_send_entity_create.gml</script>
         <script>scripts\msg_send_entity_damage.gml</script>
       </scripts>
@@ -203,6 +204,7 @@
         <script>scripts\msg_recive_connectinfo.gml</script>
         <script>scripts\msg_recive_projectile_create.gml</script>
         <script>scripts\msg_recive_playerinfo.gml</script>
+        <script>scripts\msg_recive_playerhealth.gml</script>
         <script>scripts\msg_recive_entity_create.gml</script>
         <script>scripts\msg_recive_entity_damage.gml</script>
       </scripts>
@@ -282,9 +284,10 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_entity_damage.gml</script>
     <script>scripts\scr_collide_enemy.gml</script>
+    <script>scripts\scr_entity_damage.gml</script>
     <script>scripts\scr_collide_player.gml</script>
+    <script>scripts\scr_player_damage.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -335,7 +338,7 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="63">
+  <constants number="64">
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
@@ -375,6 +378,7 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_PLAYERHEALTH">12</constant>
     <constant name="MSG_ENTITY_DAMAGE">11</constant>
     <constant name="MSG_ENTITY_HEALTH">10</constant>
     <constant name="MSG_ENTITY_CREATE">9</constant>
