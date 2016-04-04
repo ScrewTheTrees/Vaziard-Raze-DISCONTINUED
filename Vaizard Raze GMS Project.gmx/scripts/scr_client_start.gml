@@ -20,5 +20,5 @@ global.playerid=-1;
 instance_create(0,0,obj_recive_packet)
 //instance_create(0,0,obj_chatbox)
 
-scr_changeroom(room_test,0,"Starting");
+scr_changeroom(ROOM_TEST,0,"Starting");
 }

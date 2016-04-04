@@ -63,6 +63,7 @@
   <sprites name="sprites">
     <sprites name="Solids">
       <sprite>sprites\mask_solid</sprite>
+      <sprite>sprites\mask_hugesolid</sprite>
       <sprite>sprites\mask_oddbumps</sprite>
       <sprite>sprites\mask_slope_l</sprite>
       <sprite>sprites\mask_slope_r</sprite>
@@ -83,6 +84,12 @@
     <sprite>sprites\spr_bustershot</sprite>
     <sprite>sprites\spr_bustercharge</sprite>
     <sprite>sprites\spr_trail_buster</sprite>
+    <sprite>sprites\spr_entrance_0</sprite>
+    <sprite>sprites\spr_entrance_1</sprite>
+    <sprite>sprites\spr_entrance_2</sprite>
+    <sprite>sprites\spr_entrance_3</sprite>
+    <sprite>sprites\spr_entrance_4</sprite>
+    <sprite>sprites\spr_entrance_5</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -248,6 +255,7 @@
       <script>scripts\scr_player_vars_reset.gml</script>
       <script>scripts\scr_player_physics.gml</script>
       <script>scripts\scr_player_collision.gml</script>
+      <script>scripts\scr_player_roomstart.gml</script>
       <script>scripts\scr_player_moveupdateonline.gml</script>
     </scripts>
     <scripts name="Save/Load">
@@ -273,6 +281,7 @@
       <script>scripts\get_entity_instance.gml</script>
       <script>scripts\get_projectile_instance.gml</script>
       <script>scripts\get_roomid.gml</script>
+      <script>scripts\get_roomname.gml</script>
       <script>scripts\get_team_color.gml</script>
       <script>scripts\get_team_hostile.gml</script>
     </scripts>
@@ -324,9 +333,19 @@
       <object>objects\ps_handler</object>
       <object>objects\part_bullettrail</object>
     </objects>
+    <objects name="Room Entrances">
+      <object>objects\entrance_parent</object>
+      <object>objects\obj_entrance_0</object>
+      <object>objects\obj_entrance_1</object>
+      <object>objects\obj_entrance_2</object>
+      <object>objects\obj_entrance_3</object>
+      <object>objects\obj_entrance_4</object>
+      <object>objects\obj_entrance_5</object>
+    </objects>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_slope_l</object>
     <object>objects\obj_solid_slope_r</object>
+    <object>objects\obj_solid_hugeblock</object>
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
     <object>objects\obj_enemy_dummy</object>
@@ -339,7 +358,8 @@
     <room>rooms\room_test</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="64">
+  <constants number="65">
+    <constant name="ROOM_TEST">1</constant>
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
