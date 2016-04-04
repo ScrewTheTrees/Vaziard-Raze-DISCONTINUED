@@ -1,0 +1,19 @@
+if player_health<player_max_health+player_bonus_health
+player_health+=player_health_regen;
+
+if player_health>player_max_health+player_bonus_health 
+player_health=player_max_health+player_bonus_health;
+
+
+if player_mana<player_max_mana+player_bonus_mana
+player_mana+=player_mana_regen;
+
+if player_mana>player_max_mana+player_bonus_mana
+player_mana=player_max_mana+player_bonus_mana;
+
+
+if player_stamina<player_max_stamina+player_bonus_stamina
+player_stamina+=player_stamina_regen;
+
+if player_stamina>player_max_stamina+player_bonus_stamina
+player_stamina=player_max_stamina+player_bonus_stamina;

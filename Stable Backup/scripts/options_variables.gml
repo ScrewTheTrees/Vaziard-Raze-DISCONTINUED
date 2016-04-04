@@ -9,7 +9,7 @@ global.gameheight=720;
 global.shorttrails=false;
 
 
-global.keybinds=11; //How many keybinds to write to save
+global.keybinds=11; //How many keybinds to write to save (first is 0)
 global.keybind[KEY_RIGHT]=vk_right;
 global.keybind[KEY_LEFT]=vk_left;
 global.keybind[KEY_UP]=vk_up;
