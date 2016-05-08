@@ -131,9 +131,10 @@ alarm[1]=60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>msg_send_move();
+            <string>///send movement packets
+msg_send_move();
 
-alarm[0]=60;
+alarm[0]=30;
 </string>
           </argument>
         </arguments>
