@@ -1,7 +1,11 @@
-﻿No shortcuts, complicated netcode with no shortcuts
+﻿
 Different main weapons, can carry 2 weapons and switch between them
-96x96 Base Res ^_^
 Attribute stat system... for those actually useless but funny buffs and debuffs
+
+Overhaul Player Graphics to look better and more fluid
+*Need new animation software with spinal animation and inbuilt image editor for this.
+
+
 
 
 
@@ -22,7 +26,6 @@ Functional dashing system?
 Enemies can move in slopes -_-.
 Enemies fire in intervalls, that reduce in accordance to maximum amount of players to ramp up difficulty
 Enemies Firing frames are 240 frames till they fire, then 240 frames till they start walking again (4S in total)
-Enemies Basic Walking Cycle is 120 Frames.... ofcourse that does not actually matter... why did i note that down?
 
 
 
@@ -30,7 +33,8 @@ Enemies Basic Walking Cycle is 120 Frames.... ofcourse that does not actually ma
 
 (Starter Weapon) *Assult Rifle, 30 shots then reload, Special ability launches a hip grenade
 (Starter Weapon) *Buster, 3 shots and charging ability, Special ability creates a damage field in melee range ahead of you
-(Starter Weapon) *Sword, Slice a lot, allows for charging on any attack, increasing the damage of that slice by 2X, Special gives you 120 invicibility  frames
+(Starter Weapon) *Sword, Slice a lot, allows for charging on any attack, increasing the damage of that slice by 2X, Special gives you 120 invicibility  frames, passively grants 20% horizontal movement while equipped.
+
 (Common Drop) *Mortar, Fires a mortar shot in an ARC, Special consumes mana but fires 5 mortar while the player character is frozen.
 (Common Drop) *Revolver, 6 shots then reload, Special ability quickfires all remaining bullets.
 (Common Drop) *Sniper rifle , 1 shot bolt but pierces damage , Special ability consumes 40 Mana but will fire a bullet with 2X damage and knock you back

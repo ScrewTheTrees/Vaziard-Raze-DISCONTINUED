@@ -305,6 +305,7 @@
   <fonts name="fonts">
     <font>fonts\font12a</font>
     <font>fonts\font20c</font>
+    <font>fonts\font32c</font>
   </fonts>
   <objects name="objects">
     <object>objects\game_controller</object>
