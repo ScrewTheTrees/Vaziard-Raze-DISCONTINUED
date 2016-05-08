@@ -10,6 +10,7 @@ if team==TEAM_PLAYER  writebyte(TEAM_ALLY,0)
 else writebyte(team,0)
 
 writeshort(proj_type,0);
+writeint(global.myroom,0);
 writeint(damage1,0);
 writeint(damage2,0);
 writeint(damage3,0);

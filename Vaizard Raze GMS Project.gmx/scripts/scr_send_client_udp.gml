@@ -6,8 +6,6 @@ send_client(Player/s)
 1=Current Player
 2=Player with the playerid defined in argument1
 3=Send to all
-4=Send to others in room
-5= All with variable in_mission=true
 */
 
 switch(argument0)

@@ -289,7 +289,8 @@
     <instance objName="obj_solid_block" x="6432" y="1920" name="inst_05FF7782" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_entrance_0" x="768" y="288" name="inst_72860432" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="fade_from_black" x="192" y="192" name="inst_86236824" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_goto_room_vertical" x="1920" y="96" name="inst_CF5EBE81" locked="0" code="scr_set_goto_room(ROOM_TEST2,1,&quot;Wee&quot;);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_entrance_1" x="4512" y="192" name="inst_5D6F6801" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_goto_room_vertical" x="5856" y="672" name="inst_2A3280A1" locked="0" code="scr_set_goto_room(ROOM_TEST, 0, &quot;Wee&quot;); &#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

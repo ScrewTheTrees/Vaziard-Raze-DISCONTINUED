@@ -90,6 +90,7 @@
     <sprite>sprites\spr_entrance_3</sprite>
     <sprite>sprites\spr_entrance_4</sprite>
     <sprite>sprites\spr_entrance_5</sprite>
+    <sprite>sprites\sprite27</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -294,10 +295,12 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_collide_enemy.gml</script>
     <script>scripts\scr_entity_damage.gml</script>
+    <script>scripts\scr_collide_enemy.gml</script>
     <script>scripts\scr_collide_player.gml</script>
     <script>scripts\scr_player_damage.gml</script>
+    <script>scripts\scr_set_goto_room.gml</script>
+    <script>scripts\scr_outside_relevancy.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -351,14 +354,17 @@
     <object>objects\obj_enemy_dummy</object>
     <object>objects\obj_projectile_bustershot</object>
     <object>objects\obj_projectile_bustercharge</object>
+    <object>objects\obj_goto_room_vertical</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_test</room>
+    <room>rooms\room_test2</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="65">
+  <constants number="66">
+    <constant name="ROOM_TEST2">2</constant>
     <constant name="ROOM_TEST">1</constant>
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>

@@ -9,6 +9,7 @@ gmid=room_preset;
        switch (argument0)
        {
        case ROOM_TEST: gmid=room_test; break;
+       case ROOM_TEST2: gmid=room_test2; break;
        }
 
 
