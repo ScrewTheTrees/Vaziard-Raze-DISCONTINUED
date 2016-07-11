@@ -2,7 +2,8 @@ if keyboard_check_pressed(global.keybind[KEY_SWAP])
     {
     if global.selected_weapon==1 {global.selected_weapon=2}
     else global.selected_weapon=1;
-    with (obj_player){msg_send_playerinfo();} //Send sprite update
+    with (obj_player){msg_send_playerinfo();} //Send sprite update and movementMOD updates.
+    
     }
 
 

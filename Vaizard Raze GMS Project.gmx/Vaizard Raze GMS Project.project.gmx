@@ -92,15 +92,19 @@
       <sprite>sprites\spr_bustercharge</sprite>
       <sprite>sprites\spr_bustershot</sprite>
     </sprites>
+    <sprites name="Player Parts">
+      <sprites name="Hairs">
+        <sprite>sprites\spr_player_hair_1</sprite>
+      </sprites>
+      <sprite>sprites\spr_player_legs</sprite>
+      <sprite>sprites\spr_player_legs_jump</sprite>
+      <sprite>sprites\spr_player_torso</sprite>
+      <sprite>sprites\spr_player_head</sprite>
+      <sprite>sprites\spr_player_eye_standard</sprite>
+    </sprites>
     <sprite>sprites\mask_player</sprite>
     <sprite>sprites\spr_menu_host</sprite>
     <sprite>sprites\spr_menu_join</sprite>
-    <sprite>sprites\spr_player_legs</sprite>
-    <sprite>sprites\spr_player_legs_jump</sprite>
-    <sprite>sprites\spr_player_torso</sprite>
-    <sprite>sprites\spr_player_head</sprite>
-    <sprite>sprites\spr_player_hair_1</sprite>
-    <sprite>sprites\spr_player_eye_standard</sprite>
     <sprite>sprites\sprite13</sprite>
     <sprite>sprites\spr_error</sprite>
     <sprite>sprites\spr_noone</sprite>

@@ -20,4 +20,4 @@ global.weapon_attr5_value[ii]=0;
 }
 
 scr_weaponlist_add(WEP_BUSTER,0,0,0,0,0,0,0,0,0,0);
-scr_weaponlist_add(WEP_BUSTER,ATR_DAMAGE_PROCENT,0.50,ATR_DAMAGE_FLAT,100,0,0,0,0,0,0);
+scr_weaponlist_add(WEP_BUSTER,ATR_DAMAGE_PROCENT,0.10,ATR_DAMAGE_FLAT,100,0,0,0,0,0,0);

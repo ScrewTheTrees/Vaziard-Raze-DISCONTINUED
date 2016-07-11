@@ -5,5 +5,5 @@
 *Overhauled sprite system to be index based, not weapon based. allows for more than 1 sprite per weapon which will really help with more complicated weapon art (still flash framed art thou).
 *Added more attributes to the weapon attribute system.
 *Changes to some stat updating.
-
+*Reformated certain code to work differently.
 *change minor elements to the movement to make jumping more fluid.
