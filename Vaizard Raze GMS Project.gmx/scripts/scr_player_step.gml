@@ -28,3 +28,14 @@ if stuck==true {scr_entity_freeze();}
 scr_player_step_stats();
 
 scr_player_vars_reset(); //Reset vars that should be reset
+
+
+//Only reset movespeed mod if you are the player
+if (object_index==obj_player)
+   {
+    scr_player_mod_reset();
+    }
+
+
+
+

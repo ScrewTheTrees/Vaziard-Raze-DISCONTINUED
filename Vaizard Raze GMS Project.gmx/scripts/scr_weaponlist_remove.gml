@@ -40,3 +40,4 @@ for (ii=remove;ii<global.weapons_inventory_max;ii+=1)
     }
 
 global.weapons_inventory_max-=1;
+global.weapons_inventory_now-=1;

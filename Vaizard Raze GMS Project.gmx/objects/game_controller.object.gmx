@@ -190,8 +190,24 @@ draw_text(view_xview+100,view_yview+200,"MyRoom = "+string(global.myroom));
 
 if instance_exists(obj_playerparent)
    {
-   draw_text(view_xview+100,view_yview+160,"Total Players = "+string(instance_number(obj_playerparent)));
+   draw_text(view_xview+100,view_yview+220,"Total Players = "+string(instance_number(obj_playerparent)));
+   draw_text(view_xview+100,view_yview+240,"Weapon Slot = "+string(global.selected_weapon));
+   
+   
+   
+   draw_text(view_xview+500,view_yview+100,"WEPAPONID(in list) = "+string(obj_weapon.wep_id));
+   draw_text(view_xview+500,view_yview+120,"ATR_TYPE1 = "+string(global.weapon_attr1_type[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+140,"ATR_VALUE1 = "+string(global.weapon_attr1_value[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+160,"ATR_TYPE2 = "+string(global.weapon_attr2_type[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+180,"ATR_VALUE2 = "+string(global.weapon_attr2_value[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+200,"ATR_TYPE3 = "+string(global.weapon_attr3_type[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+220,"ATR_VALUE3 = "+string(global.weapon_attr3_value[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+240,"ATR_TYPE4 = "+string(global.weapon_attr4_type[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+260,"ATR_VALUE4 = "+string(global.weapon_attr4_value[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+280,"ATR_TYPE5 = "+string(global.weapon_attr5_type[obj_weapon.wep_id]));
+   draw_text(view_xview+500,view_yview+300,"ATR_VALUE5 = "+string(global.weapon_attr5_value[obj_weapon.wep_id]));
    }
+
 </string>
           </argument>
         </arguments>

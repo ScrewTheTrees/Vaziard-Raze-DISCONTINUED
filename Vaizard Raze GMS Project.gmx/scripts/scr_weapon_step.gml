@@ -1,6 +1,13 @@
+if keyboard_check_pressed(global.keybind[KEY_SWAP]) 
+    {
+    if global.selected_weapon==1 {global.selected_weapon=2}
+    else global.selected_weapon=1;
+    with (obj_player){msg_send_playerinfo();} //Send sprite update
+    }
 
-if global.selected_weapon=1  wep_id=global.weapon1
-else if global.selected_weapon=2 wep_id=global.weapon2;
+
+if global.selected_weapon==1  wep_id=global.weapon1
+else if global.selected_weapon==2 wep_id=global.weapon2;
 
 
 type=global.weapon_type[wep_id];
@@ -30,6 +37,7 @@ damage2_2+=flatdamage;
 damage1_3+=flatdamage;
 damage2_3+=flatdamage;
 
+
 if critchance>=irandom_range(1,100)
     {
     damage1+=damage1*(2+critdamage)
@@ -41,8 +49,10 @@ if critchance>=irandom_range(1,100)
     }
 
 
-//Last 
+//Lastly, switch between possible weapon types
 scr_step_switch_weapontype(type)
+
+
 }//If player exists
 
 
@@ -60,3 +70,10 @@ if cooldown1>0 cooldown1-=1;
 if cooldown2>0 cooldown2-=1;
 if cooldown1_2>0 cooldown1_2-=1;
 if cooldown2_2>0 cooldown2_2-=1;
+
+
+//Reset damage bonuses
+procentdamage=0;
+flatdamage=0;
+critchance=0;
+critdamage=0;

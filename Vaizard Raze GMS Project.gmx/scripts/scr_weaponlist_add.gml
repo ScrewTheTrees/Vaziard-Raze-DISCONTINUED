@@ -3,47 +3,25 @@
 var found,searchid;
 
 found=false;
-searchid=0;
+searchid=global.weapons_inventory_max;
 
-while (found==false)
-    {
-    if global.weapon_enabled[searchid]==false
-        found=true;
-    else searchid+=1;
-    }
-    
+
+
 global.weapon_enabled[searchid]=true
-global.weapon_type[searchid]=argument[0];
+global.weapon_type[searchid]=argument0;
 
-if argument_count>1
-    {
-    global.weapon_attr1_type[searchid]=argument[1];
-    global.weapon_attr1_value[searchid]=argument[2];
-    }
 
-if argument_count>3
-    {
-    global.weapon_attr2_type[searchid]=argument[3];
-    global.weapon_attr2_value[searchid]=argument[4];
-    }
+    global.weapon_attr1_type[searchid]=argument1;
+    global.weapon_attr1_value[searchid]=argument2;
+    global.weapon_attr2_type[searchid]=argument3;
+    global.weapon_attr2_value[searchid]=argument4;
+    global.weapon_attr3_type[searchid]=argument5;
+    global.weapon_attr3_value[searchid]=argument6;
+    global.weapon_attr4_type[searchid]=argument7;
+    global.weapon_attr4_value[searchid]=argument8;
+    global.weapon_attr5_type[searchid]=argument9;
+    global.weapon_attr5_value[searchid]=argument10;
+
     
-if argument_count>5
-    {
-    global.weapon_attr3_type[searchid]=argument[5];
-    global.weapon_attr3_value[searchid]=argument[6];
-    }
-    
-if argument_count>7
-    {
-    global.weapon_attr4_type[searchid]=argument[7];
-    global.weapon_attr4_value[searchid]=argument[8];
-    }
-
-if argument_count>9
-    {
-    global.weapon_attr5_type[searchid]=argument[9];
-    global.weapon_attr5_value[searchid]=argument[10];
-    }
-
-
+global.weapons_inventory_now=global.weapons_inventory_max;
 global.weapons_inventory_max+=1;

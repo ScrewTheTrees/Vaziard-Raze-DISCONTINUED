@@ -3,13 +3,6 @@
 //This function adds attributes to the weapons such as damage and similar
 
 
-procentdamage=0;
-flatdamage=0;
-critchance=0;
-critdamage=0;
-
-
-
 
 
 scr_attribute_modify(global.weapon_attr1_type[argument0],global.weapon_attr1_value[argument0],argument0);

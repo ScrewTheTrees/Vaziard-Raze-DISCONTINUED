@@ -275,10 +275,12 @@
       <script>scripts\scr_player_inputcontroller.gml</script>
       <script>scripts\scr_player_input_reset.gml</script>
       <script>scripts\scr_player_vars_reset.gml</script>
+      <script>scripts\scr_player_reset_tempstats.gml</script>
       <script>scripts\scr_player_physics.gml</script>
       <script>scripts\scr_player_collision.gml</script>
       <script>scripts\scr_player_roomstart.gml</script>
       <script>scripts\scr_player_moveupdateonline.gml</script>
+      <script>scripts\scr_player_mod_reset.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
@@ -385,7 +387,7 @@
     <room>rooms\room_test2</room>
     <room>rooms\room_preset</room>
   </rooms>
-  <constants number="67">
+  <constants number="69">
     <constant name="WEPSPR_BUSTERBASIC">1</constant>
     <constant name="ROOM_TEST2">2</constant>
     <constant name="ROOM_TEST">1</constant>
@@ -400,6 +402,8 @@
     <constant name="WEP_ASSAULT">2</constant>
     <constant name="WEP_BUSTER">1</constant>
     <constant name="WEP_NOONE">0</constant>
+    <constant name="ATR_STAMINA_REGEN">13</constant>
+    <constant name="ATR_STAMINA_MAX">12</constant>
     <constant name="ATR_MANA_REGEN">11</constant>
     <constant name="ATR_MANA_MAX">10</constant>
     <constant name="ATR_MOVEMENT_GRAVITY">9</constant>
