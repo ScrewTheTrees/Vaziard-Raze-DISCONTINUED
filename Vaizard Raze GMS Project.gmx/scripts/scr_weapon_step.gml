@@ -8,7 +8,8 @@ type=global.weapon_type[wep_id];
 if instance_exists(obj_player)
 {
 obj_player.weapon_equipped=global.weapon_type[wep_id];
-obj_player.weapon_sprite=get_weapon_sprite(global.weapon_type[wep_id]);
+obj_player.weapon_sprite=WEPSPR_BUSTERBASIC; 
+//Give temporary sprite for now, let the scr_weapon_xxxx handle the final sprite.
 
 
 get_weapon_basestats(type);

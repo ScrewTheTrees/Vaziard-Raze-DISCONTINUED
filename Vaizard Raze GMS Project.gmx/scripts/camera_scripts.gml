@@ -38,15 +38,15 @@ look_up=0;
 look_down=0
 
 if keyboard_check(global.keybind[KEY_DOWN])
-look_up=300
+look_up=250
 
 if keyboard_check(global.keybind[KEY_UP])
-look_down=300
+look_down=250
 
 
 if global.is_dead=false && instance_exists(obj_player)
 {
-if obj_player.facedir=1 slide_to_point(obj_player.x+400-look_up-look_down ,obj_player.y+look_up-look_down ,20)
+if obj_player.facedir=1 slide_to_point(obj_player.x+300-look_up-look_down ,obj_player.y+look_up-look_down ,20)
 else slide_to_point(obj_player.x-400+look_up+look_down ,obj_player.y+look_up-look_down ,20)
 }
 

@@ -1,3 +1,6 @@
+//set the sprite.
+obj_player.weapon_sprite=WEPSPR_BUSTERBASIC; 
+
 //Standard shooting
 if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
     {

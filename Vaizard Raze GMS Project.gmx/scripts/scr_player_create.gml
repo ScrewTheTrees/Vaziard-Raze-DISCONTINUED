@@ -22,12 +22,12 @@ moveair=0;
 isdead=false;
 
 //Gravitational things
-max_gravity=1;
+max_gravity=0.75;
 gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
-jumpspeed=20;
+jumpspeed=16;
 jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=16;
-walljumpupspeed=14;
+walljumpspeed=15;
+walljumpupspeed=12;
 
 //Movement speed things
 movespeed=0;
