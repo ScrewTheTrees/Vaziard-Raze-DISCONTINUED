@@ -17,19 +17,22 @@ while (startx<finalx)
     
     
     if startx<1000 module=MODULE_FLAT //Start should always have some kind of ground
-    else module=choose(MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_EMPTY);
+    else module=choose(MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_STAIR,MODULE_STAIR,MODULE_EMPTY);
     
         switch(module)
         {
         case MODULE_FLAT:
-        scr_type1_ground_module_flat(startx,starty,endx,endy);
+        scr_type1_ground_module_flat();
         break;
         case MODULE_EMPTY:
-        scr_type1_ground_module_empty(startx,starty,endx,endy);
+        scr_type1_ground_module_empty();
+        break;
+        case MODULE_STAIR:
+        scr_type1_ground_module_stair();
         break;
         }//Switch module
     
-    
+    lastgroundmodule=module;
     startx+=96;
         
     }//Startx<finalX

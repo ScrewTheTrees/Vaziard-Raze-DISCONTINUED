@@ -3,14 +3,15 @@ StartY or EndY may never,ever, go below MinHeight, or above MaxHeight
 U shapes for lifu
 always add +96 to the StartX after a module has generated
 Ceiling blocks may not be within 288 blocks of a ground block (and vice versa)
-Platforms must not have a collision with ground/ceil blocks in a (-96,-192,+96,+196) area around them
-Dont forget to start/end the generator outside the room boundaries so that spec cam has some move room (768 pixels should do it)
+Platforms must not have a collision with ground/ceil blocks in a (-96,-288,+96,+288) area around them
+Dont forget to start/end the generator outside the room boundaries so that spec cam has some move room (768 pixels should do it), also makes it a bit leeway for the generator.
 
 
 
-Debug nodes:     Dot-Line
+Debug nodes:     Dot / Line
 
 0=end (empty) --- Red/Purple
 1=start ceiling --- Orange/Orange
 2=start ground --- Green/Green
-10=total void --- noone/noone
+3=start stairs --- yellow/yellow
+10=total void --- Noone/Noone

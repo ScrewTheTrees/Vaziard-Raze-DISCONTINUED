@@ -95,6 +95,7 @@
     <sprites name="Player Parts">
       <sprites name="Hairs">
         <sprite>sprites\spr_player_hair_1</sprite>
+        <sprite>sprites\spr_player_hair_2</sprite>
       </sprites>
       <sprite>sprites\spr_player_legs</sprite>
       <sprite>sprites\spr_player_legs_jump</sprite>
@@ -314,6 +315,37 @@
       <script>scripts\get_team_color.gml</script>
       <script>scripts\get_team_hostile.gml</script>
     </scripts>
+    <scripts name="Map Generator">
+      <script>scripts\scr_generator_init.gml</script>
+      <scripts name="TYPE1">
+        <scripts name="MOD Ceiling">
+          <script>scripts\scr_type1_ceiling_module_flat.gml</script>
+          <script>scripts\scr_type1_ceiling_module_empty.gml</script>
+        </scripts>
+        <scripts name="MOD Ground">
+          <script>scripts\scr_type1_ground_module_flat.gml</script>
+          <script>scripts\scr_type1_ground_module_empty.gml</script>
+          <script>scripts\scr_type1_ground_module_stair.gml</script>
+        </scripts>
+        <script>scripts\scr_type1_generate_ceiling.gml</script>
+        <script>scripts\scr_type1_generate_ground.gml</script>
+      </scripts>
+      <script>scripts\scr_place_ceiling_block.gml</script>
+      <script>scripts\scr_place_ground_block.gml</script>
+      <script>scripts\scr_place_solid_block.gml</script>
+      <script>scripts\scr_place_solid_slope_r.gml</script>
+      <script>scripts\scr_place_solid_slope_l.gml</script>
+      <scripts name="ASTAR CHECKING">
+        <script>scripts\scr_debuggrid_create.gml</script>
+        <script>scripts\scr_debuggrid_destroy.gml</script>
+        <script>scripts\scr_debuggrid_path_possible.gml</script>
+      </scripts>
+      <scripts name="Debug">
+        <script>scripts\scr_debug_generator_init.gml</script>
+        <script>scripts\scr_debug_generator_add.gml</script>
+        <script>scripts\scr_debug_generator_draw.gml</script>
+      </scripts>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
@@ -329,27 +361,6 @@
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_set_goto_room.gml</script>
     <script>scripts\scr_outside_relevancy.gml</script>
-    <scripts name="Map Generator">
-      <scripts name="TYPE1">
-        <scripts name="MOD Ceiling">
-          <script>scripts\scr_type1_ceiling_module_flat.gml</script>
-          <script>scripts\scr_type1_ceiling_module_empty.gml</script>
-        </scripts>
-        <scripts name="MOD Ground">
-          <script>scripts\scr_type1_ground_module_flat.gml</script>
-          <script>scripts\scr_type1_ground_module_empty.gml</script>
-        </scripts>
-        <script>scripts\scr_type1_generate_ceiling.gml</script>
-        <script>scripts\scr_type1_generate_ground.gml</script>
-      </scripts>
-      <script>scripts\scr_place_ceiling_block.gml</script>
-      <script>scripts\scr_place_ground_block.gml</script>
-      <scripts name="Debug">
-        <script>scripts\scr_debug_generator_init.gml</script>
-        <script>scripts\scr_debug_generator_add.gml</script>
-        <script>scripts\scr_debug_generator_draw.gml</script>
-      </scripts>
-    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -419,9 +430,8 @@
     <room>rooms\room_preset</room>
     <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="74">
-    <constant name="MODULE_STAIR_UP">4</constant>
-    <constant name="MODULE_STAIR_DOWN">3</constant>
+  <constants number="73">
+    <constant name="MODULE_STAIR">3</constant>
     <constant name="MODULE_EMPTY">2</constant>
     <constant name="MODULE_FLAT">1</constant>
     <constant name="WEPSPR_BUSTERBASIC">1</constant>
