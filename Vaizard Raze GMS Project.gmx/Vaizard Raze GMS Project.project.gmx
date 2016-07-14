@@ -116,6 +116,7 @@
     <sprite>sprites\spr_entrance_4</sprite>
     <sprite>sprites\spr_entrance_5</sprite>
     <sprite>sprites\sprite27</sprite>
+    <sprite>sprites\spr_mapgen</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -328,6 +329,21 @@
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_set_goto_room.gml</script>
     <script>scripts\scr_outside_relevancy.gml</script>
+    <scripts name="Map Generator">
+      <scripts name="TYPE1">
+        <script>scripts\scr_type1_generate_ceiling.gml</script>
+        <scripts name="MOD Ceiling">
+          <script>scripts\scr_type1_ceiling_module_flat.gml</script>
+          <script>scripts\scr_type1_ceiling_module_empty.gml</script>
+        </scripts>
+      </scripts>
+      <script>scripts\scr_place_ceiling_block.gml</script>
+      <scripts name="Debug">
+        <script>scripts\scr_debug_generator_init.gml</script>
+        <script>scripts\scr_debug_generator_add.gml</script>
+        <script>scripts\scr_debug_generator_draw.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
@@ -374,6 +390,9 @@
       <object>objects\obj_entrance_5</object>
     </objects>
     <object>objects\obj_solid_block</object>
+    <object>objects\obj_solid_ceiling</object>
+    <object>objects\obj_solid_ground</object>
+    <object>objects\obj_solid_sidewall</object>
     <object>objects\obj_solid_slope_l</object>
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_hugeblock</object>
@@ -383,6 +402,8 @@
     <object>objects\obj_projectile_bustershot</object>
     <object>objects\obj_projectile_bustercharge</object>
     <object>objects\obj_goto_room_vertical</object>
+    <object>objects\obj_mapgenerator_type1</object>
+    <object>objects\debugfreeze</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -390,9 +411,15 @@
     <room>rooms\room_test</room>
     <room>rooms\room_test2</room>
     <room>rooms\room_preset</room>
+    <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="69">
+  <constants number="74">
+    <constant name="MODULE_STAIR_UP">4</constant>
+    <constant name="MODULE_STAIR_DOWN">3</constant>
+    <constant name="MODULE_EMPTY">2</constant>
+    <constant name="MODULE_FLAT">1</constant>
     <constant name="WEPSPR_BUSTERBASIC">1</constant>
+    <constant name="ROOM_MISSION_TYPE1">3</constant>
     <constant name="ROOM_TEST2">2</constant>
     <constant name="ROOM_TEST">1</constant>
     <constant name="ENTITY_ENEMYTEST">1</constant>

@@ -3,6 +3,7 @@ UDP ports for hosting: 17651
 UDP ports for joining: 17652-1669
 
 
+(Standard controls)
 Left+Right arrows = Move
 Up+Down arrows = Look up/down
 Z = Jump
