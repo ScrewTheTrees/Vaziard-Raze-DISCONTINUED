@@ -1,6 +1,6 @@
 
-min_height=96;
-max_height=(room_height/2)-192
+min_height=(room_height/2)+192
+max_height=room_height-192;
 
 startx=(-768);
 starty=round(irandom_range(min_height,max_height)/96)*96;
@@ -16,23 +16,21 @@ while (startx<finalx)
     {      
     
     
-    
-    module=choose(MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_EMPTY);
+    if startx<1000 module=MODULE_FLAT //Start should always have some kind of ground
+    else module=choose(MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_FLAT,MODULE_EMPTY);
     
         switch(module)
         {
         case MODULE_FLAT:
-        scr_type1_ceiling_module_flat(startx,starty,endx,endy);
+        scr_type1_ground_module_flat(startx,starty,endx,endy);
         break;
         case MODULE_EMPTY:
-        scr_type1_ceiling_module_empty(startx,starty,endx,endy);
+        scr_type1_ground_module_empty(startx,starty,endx,endy);
         break;
         }//Switch module
     
     
     startx+=96;
-    
-    
         
     }//Startx<finalX
     

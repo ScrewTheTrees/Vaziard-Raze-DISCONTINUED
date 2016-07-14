@@ -7,10 +7,10 @@ padding=768;
 
 //remeber that the 
 
-nexty=irandom_range(-6,8)*96; //Choose new blcok
+nexty=irandom_range(-6,7)*96; //Choose new blcok
         while(nexty+starty<min_height || nexty+starty>max_height)
         {
-        nexty=irandom_range(-6,8)*96; //Choose new blcok
+        nexty=irandom_range(-4,7)*96; //Choose new blcok
         }//While
     
     nextx=irandom_range(5,13)*96; //Choose new blcok
@@ -23,20 +23,20 @@ nexty=irandom_range(-6,8)*96; //Choose new blcok
     blocky=starty;
     
     
-    scr_debug_generator_add(1,startx,starty)
+    scr_debug_generator_add(2,startx,starty)
     scr_debug_generator_add(0,endx,endy)
     
     
-        while (blocky> -padding)
+        while (blocky< room_height+padding)
         {
-        scr_place_ceiling_block(startx,blocky);
-        scr_place_ceiling_block(endx,blocky);
-        blocky-=96;
+        scr_place_ground_block(startx,blocky);
+        scr_place_ground_block(endx,blocky);
+        blocky+=96;
         }//Side blocks
     
         while (startx<endx)
         {
-        scr_place_ceiling_block(startx,starty);
+        scr_place_ground_block(startx,starty);
         startx+=96;
         
         }

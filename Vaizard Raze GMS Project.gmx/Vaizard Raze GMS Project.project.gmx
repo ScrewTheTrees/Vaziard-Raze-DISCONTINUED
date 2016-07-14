@@ -331,13 +331,19 @@
     <script>scripts\scr_outside_relevancy.gml</script>
     <scripts name="Map Generator">
       <scripts name="TYPE1">
-        <script>scripts\scr_type1_generate_ceiling.gml</script>
         <scripts name="MOD Ceiling">
           <script>scripts\scr_type1_ceiling_module_flat.gml</script>
           <script>scripts\scr_type1_ceiling_module_empty.gml</script>
         </scripts>
+        <scripts name="MOD Ground">
+          <script>scripts\scr_type1_ground_module_flat.gml</script>
+          <script>scripts\scr_type1_ground_module_empty.gml</script>
+        </scripts>
+        <script>scripts\scr_type1_generate_ceiling.gml</script>
+        <script>scripts\scr_type1_generate_ground.gml</script>
       </scripts>
       <script>scripts\scr_place_ceiling_block.gml</script>
+      <script>scripts\scr_place_ground_block.gml</script>
       <scripts name="Debug">
         <script>scripts\scr_debug_generator_init.gml</script>
         <script>scripts\scr_debug_generator_add.gml</script>

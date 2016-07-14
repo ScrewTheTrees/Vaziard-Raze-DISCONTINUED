@@ -8,6 +8,9 @@ Dont forget to start/end the generator outside the room boundaries so that spec 
 
 
 
-Debug nodes:
-0=start ceiling
-1=end ceiling
+Debug nodes:     Dot-Line
+
+0=end (empty) --- Red/Purple
+1=start ceiling --- Orange/Orange
+2=start ground --- Green/Green
+10=total void --- noone/noone

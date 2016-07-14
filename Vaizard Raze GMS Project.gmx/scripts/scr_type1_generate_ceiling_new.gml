@@ -1,9 +1,9 @@
 
-min_height=96;
-max_height=(room_height/2)-192
+min_height=(room_height/2)-192
+max_height=96;
 
 startx=(-768);
-starty=round(irandom_range(min_height,max_height)/96)*96;
+starty=round(irandom_range(0,min_height)/96)*96;
 
 endx=0;
 endy=0;
@@ -31,10 +31,5 @@ while (startx<finalx)
     
     
     startx+=96;
-    
-    
         
     }//Startx<finalX
-    
-    
-scr_debug_generator_add(10,startx,starty);//End debug drawing for this section
