@@ -1,0 +1,12 @@
+﻿*Make stage generator (Mostly)
+*Make stage mission room
+*Make entrance
+Make exit
+Make exit pathfind
+draw exit pathfind
+
+
+Implement a few test weapons
+Tiling System for stage graphics
+
+Create Stage System and Stage Progression system.

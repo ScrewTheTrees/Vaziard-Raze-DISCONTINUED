@@ -78,8 +78,8 @@
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
     <option_fullscreen>False</option_fullscreen>
-    <option_gameguid>{72FDA705-752C-4B2F-AB6F-E31B897B168B}</option_gameguid>
-    <option_gameid>422519050</option_gameid>
+    <option_gameguid>{EE49C9E0-1447-47DE-B9B7-7ADD79CFC60C}</option_gameguid>
+    <option_gameid>446811727</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
     <option_hasloadimage>false</option_hasloadimage>
     <option_helpkey>true</option_helpkey>
@@ -253,7 +253,7 @@
     <option_sci_serverLocation></option_sci_serverLocation>
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
-    <option_shortcircuit>True</option_shortcircuit>
+    <option_shortcircuit>False</option_shortcircuit>
     <option_showcursor>True</option_showcursor>
     <option_showprogress>1</option_showprogress>
     <option_sizeable>True</option_sizeable>

@@ -45,7 +45,7 @@ break;
 case 4:
 with(obj_otherplayer)
 {
-if argument1=global.myroom
+if argument1=myroom
 {
 sendmessage(client,"",0,0)
 }
@@ -55,10 +55,11 @@ break;
 case SEND_ROOM_OTHER:
 
 obj_otherplayer.tempid=playerid
+obj_otherplayer.temproom=argument1
 
 with(obj_otherplayer)
 {
-if myroom=global.myroom
+if myroom=temproom
 && tempid!=playerid
 {
 

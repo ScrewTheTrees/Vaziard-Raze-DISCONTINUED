@@ -92,6 +92,13 @@ destroy_outside=true; //Destroy when outside room
             <kind>1</kind>
             <string>ii=instance_create(x,y,part_bullettrail);
 ii.image_blend=color;
+
+
+
+if destroy_outside==true &amp;&amp; scr_outside_relevancy()=true
+{
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -161,32 +168,6 @@ ii.image_blend=color;
           <argument>
             <kind>1</kind>
             <string>if destroy_wall==true instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if destroy_outside==true
-{
-instance_destroy();
-}
 </string>
           </argument>
         </arguments>

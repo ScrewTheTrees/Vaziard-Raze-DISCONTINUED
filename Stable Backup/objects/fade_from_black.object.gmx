@@ -32,7 +32,7 @@ mytext="";
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,8 +81,8 @@ instance_destroy();
             <string>draw_set_blend_mode(0)
 draw_set_color(c_black);
 draw_set_alpha(alpha);
-draw_rectangle(0,0,window_get_width(),window_get_height(),false);
-draw_text_center(window_get_width()/2,window_get_height()/2,mytext,c_blue,font20c,0)
+draw_rectangle(0,0,display_get_gui_width(),display_get_gui_height(),false);
+draw_text_center(display_get_gui_width()/2,display_get_gui_height()/2,mytext,c_blue,font32c,0)
 
 draw_set_color(c_white);
 draw_set_alpha(1);

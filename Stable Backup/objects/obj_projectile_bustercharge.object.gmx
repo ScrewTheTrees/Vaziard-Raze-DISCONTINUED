@@ -94,6 +94,14 @@ ii.image_blend=color;
 
 
 part_particles_create(ps_handler.part_system,x,y,ps_handler.buster_charge_part,2);
+
+
+
+
+if destroy_outside==true &amp;&amp; scr_outside_relevancy()=true
+{
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>

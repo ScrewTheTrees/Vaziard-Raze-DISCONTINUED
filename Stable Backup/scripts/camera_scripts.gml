@@ -38,15 +38,15 @@ look_up=0;
 look_down=0
 
 if keyboard_check(global.keybind[KEY_DOWN])
-look_up=300
+look_up=250
 
 if keyboard_check(global.keybind[KEY_UP])
-look_down=300
+look_down=250
 
 
 if global.is_dead=false && instance_exists(obj_player)
 {
-if obj_player.facedir=1 slide_to_point(obj_player.x+400-look_up-look_down ,obj_player.y+look_up-look_down ,20)
+if obj_player.facedir=1 slide_to_point(obj_player.x+300-look_up-look_down ,obj_player.y+look_up-look_down ,20)
 else slide_to_point(obj_player.x-400+look_up+look_down ,obj_player.y+look_up-look_down ,20)
 }
 
@@ -95,6 +95,47 @@ if view_yview[0]<0 view_yview[0]=0;
 if view_xview[0]+view_wview[0]>room_width[0] view_xview[0]=room_width[0]-view_wview[0];
 if view_yview[0]+view_hview[0]>room_height[0] view_yview[0]=room_height[0]-view_hview[0];
 }
+
+#define scr_freecamera
+if keyboard_check(global.keybind[KEY_UP])
+y-=24;
+
+if keyboard_check(global.keybind[KEY_DOWN])
+y+=24;
+
+if keyboard_check(global.keybind[KEY_RIGHT])
+x+=24;
+
+if keyboard_check(global.keybind[KEY_LEFT])
+x-=24;
+
+
+
+//Set camera
+x=round(x);
+y=round(y);
+view_xview[0]=x-(view_wview[0]/2);
+view_yview[0]=y-(view_hview[0]/2);
+view_wview[0]=basic_w;
+view_hview[0]=basic_h;
+
+if view_xview[0]<0 view_xview[0]=0;
+if view_yview[0]<0 view_yview[0]=0;
+if view_xview[0]+view_wview[0]>room_width[0] view_xview[0]=room_width[0]-view_wview[0];
+if view_yview[0]+view_hview[0]>room_height[0] view_yview[0]=room_height[0]-view_hview[0];
+
+
+
+//Clamp so it cant go outside room borders
+if x>room_width[0]-(view_wview[0]/2)
+x=room_width[0]-(view_wview[0]/2)
+if x<view_wview[0]/2
+x=view_wview[0]/2
+
+if y>room_height[0]-(view_hview[0]/2)
+y=room_height[0]-(view_hview[0]/2)
+if y<view_hview[0]/2
+y=view_hview[0]/2
 
 #define scr_arenacamera
 //Variables for camera center

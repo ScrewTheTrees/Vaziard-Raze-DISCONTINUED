@@ -3,7 +3,7 @@
 
 switch (argument0)
     {
-    case WEP_BUSTER: return(spr_wep_buster) break;
+    case WEPSPR_BUSTERBASIC: return(spr_wep_busterbasic) break;
     
     
     

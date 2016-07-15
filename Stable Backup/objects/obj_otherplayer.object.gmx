@@ -205,7 +205,7 @@ draw_text(x-32,y-220,"press_down: "+string(press_down));
 draw_text(x-32,y-208,"press_jump: "+string(press_jump));
 draw_text(x-32,y-196,"do_sidedash_right: "+string(do_sidedash_right));
 draw_text(x-32,y-184,"do_sidedash_right: "+string(do_sidedash_left));
-
+draw_text(x-32,y-172,"stuck: "+string(stuck));
 
 
 draw_set_colour(c_white);

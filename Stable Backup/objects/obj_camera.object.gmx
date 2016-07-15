@@ -53,13 +53,14 @@ scr_camera_create();
             <string>if currcam=0 scr_normalcamera();
 if currcam=1 scr_arenacamera();
 if currcam=2 scr_bosscamera();
+if currcam=3 scr_freecamera();
 
 
 if keyboard_check_pressed(ord("P"))
 {
 currcam+=1;
 
-if currcam&gt;2 currcam=0;
+if currcam&gt;3 currcam=0;
 }
 </string>
           </argument>

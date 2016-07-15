@@ -4,6 +4,9 @@ writebyte(MSG_PLAYERINFO,0);
 writeushort(global.playerid,0)
 writeushort(weapon_sprite,0);
 writeushort(weapon_equipped,0);
+writefloat(movespeed_mod,0);
+writefloat(jumpspeed_mod,0);
+writefloat(gravity_mod,0);
 
 if global.playerid=0
 scr_send_client(SEND_ALL,0)

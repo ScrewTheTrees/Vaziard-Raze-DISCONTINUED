@@ -16,8 +16,14 @@ if place_meeting(x,y+4,obj_solidparent)
 else if place_meeting(x,y+real(vspeed),obj_solidparent) {gravity=0}
 else {gravity = max_gravity+gravity_mod;   moveair=1;}
 
+//Fix walljumping glitch
+if place_meeting(x+hspeed,y,obj_solidparent)==true
+{
+    if hspeed!=0 move_contact_solid(direction,16);
+    hspeed=0
+}
 
-
+//Going inside blocks is not a  very good thing for the game engine really.
 if place_meeting(x,y,obj_solidparent)
 {
 if !place_meeting(x+4,y,obj_solidparent) x+=1;

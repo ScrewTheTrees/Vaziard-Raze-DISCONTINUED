@@ -34,19 +34,18 @@ switch (argument0)
     obj_player.player_stamina_regen+=argument1;
     break;
     case ATR_MOVEMENT_SPEED:
-    movespeed_mod+=argument1;
+    obj_player.movespeed_mod+=argument1;
     break;
     case ATR_MOVEMENT_JUMP:
-    jumpspeed_mod+=argument1;
+    obj_player.jumpspeed_mod+=argument1;
     break;
     case ATR_MOVEMENT_GRAVITY:
-    gravity_mod+=argument1;
+    obj_player.gravity_mod+=argument1;
     break;
     }//Switch
 
        
 w=argument2;
-
 
 
 

@@ -12,6 +12,7 @@ writebyte(movement1,0)
 writefloat(vspeed,0)
 writefloat(hspeed,0)
 
+
 if global.playerid=0
 scr_send_client_udp(SEND_ALL,0)
 else scr_send_server_udp(0);

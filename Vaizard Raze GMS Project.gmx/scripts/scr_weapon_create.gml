@@ -1,6 +1,7 @@
 //Weapon selection
 global.weapon1=0; //In the list of weapons
 global.weapon2=1; //In the list of weapons
+global.weapon3=2; //In the list of weapons
 
 global.selected_weapon=1; //Weapon used by player
 
@@ -44,4 +45,3 @@ damage1_2=1000;
 damage2_2=1000;
 damage1_3=1000;
 damage2_3=1000;
-

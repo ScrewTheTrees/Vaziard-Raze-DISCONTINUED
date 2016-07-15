@@ -1,5 +1,5 @@
 ///scr_resolution_from_string(String)
-//Make sure that the string contains X
+//Make sure that the string contains X between the h/w
 
 var work,tempw,temph;
 
@@ -10,7 +10,7 @@ temph="";
 
 ii=1;
 
-while(string_char_at(work,ii)!="X" && ii<100)
+while(string_char_at(work,ii)!="X" && ii<8)
     {
     tempw+=string_char_at(work,ii);
     ii+=1;
@@ -18,7 +18,7 @@ while(string_char_at(work,ii)!="X" && ii<100)
 
 ii+=1
     
-while(ii<=string_length(work) && ii<100)
+while(ii<=string_length(work) && ii<8)
     {
     temph+=string_char_at(work,ii);
     ii+=1;

@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="6" name="datafiles">
+  <datafiles number="7" name="datafiles">
     <datafile>
       <name>39dll.dll</name>
       <exists>-1</exists>
@@ -55,6 +55,23 @@
       </ConfigOptions>
       <filename>Ideas.txt</filename>
     </datafile>
+    <datafile>
+      <name>Changelog.txt</name>
+      <exists>-1</exists>
+      <size>0</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Changelog.txt</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMFileSystem</extension>
@@ -68,21 +85,30 @@
       <sprite>sprites\mask_slope_l</sprite>
       <sprite>sprites\mask_slope_r</sprite>
     </sprites>
+    <sprites name="Weapons">
+      <sprite>sprites\spr_wep_busterbasic</sprite>
+    </sprites>
+    <sprites name="Projectiles">
+      <sprite>sprites\spr_bustercharge</sprite>
+      <sprite>sprites\spr_bustershot</sprite>
+    </sprites>
+    <sprites name="Player Parts">
+      <sprites name="Hairs">
+        <sprite>sprites\spr_player_hair_1</sprite>
+        <sprite>sprites\spr_player_hair_2</sprite>
+      </sprites>
+      <sprite>sprites\spr_player_legs</sprite>
+      <sprite>sprites\spr_player_legs_jump</sprite>
+      <sprite>sprites\spr_player_torso</sprite>
+      <sprite>sprites\spr_player_head</sprite>
+      <sprite>sprites\spr_player_eye_standard</sprite>
+    </sprites>
     <sprite>sprites\mask_player</sprite>
     <sprite>sprites\spr_menu_host</sprite>
     <sprite>sprites\spr_menu_join</sprite>
-    <sprite>sprites\spr_player_legs</sprite>
-    <sprite>sprites\spr_player_legs_jump</sprite>
-    <sprite>sprites\spr_player_torso</sprite>
-    <sprite>sprites\spr_player_head</sprite>
-    <sprite>sprites\spr_player_hair_1</sprite>
-    <sprite>sprites\spr_player_eye_standard</sprite>
     <sprite>sprites\sprite13</sprite>
-    <sprite>sprites\spr_wep_buster</sprite>
     <sprite>sprites\spr_error</sprite>
     <sprite>sprites\spr_noone</sprite>
-    <sprite>sprites\spr_bustershot</sprite>
-    <sprite>sprites\spr_bustercharge</sprite>
     <sprite>sprites\spr_trail_buster</sprite>
     <sprite>sprites\spr_entrance_0</sprite>
     <sprite>sprites\spr_entrance_1</sprite>
@@ -90,6 +116,10 @@
     <sprite>sprites\spr_entrance_3</sprite>
     <sprite>sprites\spr_entrance_4</sprite>
     <sprite>sprites\spr_entrance_5</sprite>
+    <sprite>sprites\sprite27</sprite>
+    <sprite>sprites\spr_mapgen</sprite>
+    <sprite>sprites\spr_entrance_stage</sprite>
+    <sprite>sprites\spr_exit_stage</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -253,10 +283,12 @@
       <script>scripts\scr_player_inputcontroller.gml</script>
       <script>scripts\scr_player_input_reset.gml</script>
       <script>scripts\scr_player_vars_reset.gml</script>
+      <script>scripts\scr_player_reset_tempstats.gml</script>
       <script>scripts\scr_player_physics.gml</script>
       <script>scripts\scr_player_collision.gml</script>
       <script>scripts\scr_player_roomstart.gml</script>
       <script>scripts\scr_player_moveupdateonline.gml</script>
+      <script>scripts\scr_player_mod_reset.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
@@ -285,6 +317,41 @@
       <script>scripts\get_team_color.gml</script>
       <script>scripts\get_team_hostile.gml</script>
     </scripts>
+    <scripts name="Map Generator">
+      <script>scripts\scr_generator_init.gml</script>
+      <scripts name="Generate Scripts">
+        <scripts name="MOD Ceiling">
+          <script>scripts\scr_type1_ceiling_module_flat.gml</script>
+          <script>scripts\scr_type1_ceiling_module_empty.gml</script>
+        </scripts>
+        <scripts name="MOD Ground">
+          <script>scripts\scr_type1_ground_module_flat.gml</script>
+          <script>scripts\scr_type1_ground_module_empty.gml</script>
+          <script>scripts\scr_type1_ground_module_stair.gml</script>
+        </scripts>
+        <script>scripts\scr_type1_generate_ceiling.gml</script>
+        <script>scripts\scr_type1_generate_ground.gml</script>
+        <script>scripts\scr_type1_generate_hplatforms.gml</script>
+        <script>scripts\scr_type1_generate_vplatforms.gml</script>
+        <script>scripts\scr_generate_tweakblocks.gml</script>
+        <script>scripts\scr_generate_entrance.gml</script>
+        <script>scripts\scr_generate_exit.gml</script>
+      </scripts>
+      <script>scripts\scr_place_ceiling_block.gml</script>
+      <script>scripts\scr_place_ground_block.gml</script>
+      <script>scripts\scr_place_solid_block.gml</script>
+      <script>scripts\scr_place_solid_slope_r.gml</script>
+      <script>scripts\scr_place_solid_slope_l.gml</script>
+      <scripts name="Debug/MapGenFunctions">
+        <script>scripts\scr_debug_generator_init.gml</script>
+        <script>scripts\scr_debug_generator_add.gml</script>
+        <script>scripts\scr_debug_generator_draw.gml</script>
+        <script>scripts\scr_debuggrid_create.gml</script>
+        <script>scripts\scr_debuggrid_destroy.gml</script>
+        <script>scripts\scr_debuggrid_path_possible.gml</script>
+        <script>scripts\scr_platform_possible.gml</script>
+      </scripts>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
@@ -294,14 +361,17 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_collide_enemy.gml</script>
     <script>scripts\scr_entity_damage.gml</script>
+    <script>scripts\scr_collide_enemy.gml</script>
     <script>scripts\scr_collide_player.gml</script>
     <script>scripts\scr_player_damage.gml</script>
+    <script>scripts\scr_set_goto_room.gml</script>
+    <script>scripts\scr_outside_relevancy.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font12a</font>
     <font>fonts\font20c</font>
+    <font>fonts\font32c</font>
   </fonts>
   <objects name="objects">
     <object>objects\game_controller</object>
@@ -341,8 +411,13 @@
       <object>objects\obj_entrance_3</object>
       <object>objects\obj_entrance_4</object>
       <object>objects\obj_entrance_5</object>
+      <object>objects\obj_entrance_stage</object>
+      <object>objects\obj_exit_stage</object>
     </objects>
     <object>objects\obj_solid_block</object>
+    <object>objects\obj_solid_ceiling</object>
+    <object>objects\obj_solid_ground</object>
+    <object>objects\obj_solid_sidewall</object>
     <object>objects\obj_solid_slope_l</object>
     <object>objects\obj_solid_slope_r</object>
     <object>objects\obj_solid_hugeblock</object>
@@ -351,14 +426,25 @@
     <object>objects\obj_enemy_dummy</object>
     <object>objects\obj_projectile_bustershot</object>
     <object>objects\obj_projectile_bustercharge</object>
+    <object>objects\obj_goto_room_vertical</object>
+    <object>objects\obj_mapgenerator_type1</object>
+    <object>objects\debugfreeze</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
     <room>rooms\room_menu</room>
     <room>rooms\room_test</room>
+    <room>rooms\room_test2</room>
     <room>rooms\room_preset</room>
+    <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="65">
+  <constants number="73">
+    <constant name="MODULE_STAIR">3</constant>
+    <constant name="MODULE_EMPTY">2</constant>
+    <constant name="MODULE_FLAT">1</constant>
+    <constant name="WEPSPR_BUSTERBASIC">1</constant>
+    <constant name="ROOM_MISSION_TYPE1">3</constant>
+    <constant name="ROOM_TEST2">2</constant>
     <constant name="ROOM_TEST">1</constant>
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
@@ -371,6 +457,8 @@
     <constant name="WEP_ASSAULT">2</constant>
     <constant name="WEP_BUSTER">1</constant>
     <constant name="WEP_NOONE">0</constant>
+    <constant name="ATR_STAMINA_REGEN">13</constant>
+    <constant name="ATR_STAMINA_MAX">12</constant>
     <constant name="ATR_MANA_REGEN">11</constant>
     <constant name="ATR_MANA_MAX">10</constant>
     <constant name="ATR_MOVEMENT_GRAVITY">9</constant>

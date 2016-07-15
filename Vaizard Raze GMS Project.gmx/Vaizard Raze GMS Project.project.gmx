@@ -118,6 +118,8 @@
     <sprite>sprites\spr_entrance_5</sprite>
     <sprite>sprites\sprite27</sprite>
     <sprite>sprites\spr_mapgen</sprite>
+    <sprite>sprites\spr_entrance_stage</sprite>
+    <sprite>sprites\spr_exit_stage</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -317,7 +319,7 @@
     </scripts>
     <scripts name="Map Generator">
       <script>scripts\scr_generator_init.gml</script>
-      <scripts name="TYPE1">
+      <scripts name="Generate Scripts">
         <scripts name="MOD Ceiling">
           <script>scripts\scr_type1_ceiling_module_flat.gml</script>
           <script>scripts\scr_type1_ceiling_module_empty.gml</script>
@@ -329,21 +331,25 @@
         </scripts>
         <script>scripts\scr_type1_generate_ceiling.gml</script>
         <script>scripts\scr_type1_generate_ground.gml</script>
+        <script>scripts\scr_type1_generate_hplatforms.gml</script>
+        <script>scripts\scr_type1_generate_vplatforms.gml</script>
+        <script>scripts\scr_generate_tweakblocks.gml</script>
+        <script>scripts\scr_generate_entrance.gml</script>
+        <script>scripts\scr_generate_exit.gml</script>
       </scripts>
       <script>scripts\scr_place_ceiling_block.gml</script>
       <script>scripts\scr_place_ground_block.gml</script>
       <script>scripts\scr_place_solid_block.gml</script>
       <script>scripts\scr_place_solid_slope_r.gml</script>
       <script>scripts\scr_place_solid_slope_l.gml</script>
-      <scripts name="ASTAR CHECKING">
-        <script>scripts\scr_debuggrid_create.gml</script>
-        <script>scripts\scr_debuggrid_destroy.gml</script>
-        <script>scripts\scr_debuggrid_path_possible.gml</script>
-      </scripts>
-      <scripts name="Debug">
+      <scripts name="Debug/MapGenFunctions">
         <script>scripts\scr_debug_generator_init.gml</script>
         <script>scripts\scr_debug_generator_add.gml</script>
         <script>scripts\scr_debug_generator_draw.gml</script>
+        <script>scripts\scr_debuggrid_create.gml</script>
+        <script>scripts\scr_debuggrid_destroy.gml</script>
+        <script>scripts\scr_debuggrid_path_possible.gml</script>
+        <script>scripts\scr_platform_possible.gml</script>
       </scripts>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
@@ -405,6 +411,8 @@
       <object>objects\obj_entrance_3</object>
       <object>objects\obj_entrance_4</object>
       <object>objects\obj_entrance_5</object>
+      <object>objects\obj_entrance_stage</object>
+      <object>objects\obj_exit_stage</object>
     </objects>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_ceiling</object>
