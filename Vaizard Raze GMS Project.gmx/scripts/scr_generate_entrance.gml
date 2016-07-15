@@ -12,7 +12,7 @@ with (instance_find(obj_solid_ground,inum))
     && x>192
     
     {
-        ii=instance_create(x,y-192,obj_entrance_stage);
+        ii=instance_create(x+48,y-192,obj_entrance_stage);
         ii.eid=1;
     }
 }

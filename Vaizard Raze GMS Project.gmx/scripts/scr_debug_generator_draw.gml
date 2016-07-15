@@ -1,5 +1,6 @@
 ///scr_debug_generator_draw()
-
+if global.debugdraw==true
+{
 
 for (ii=0;ii<global.debug_nodes;ii+=1)
     {
@@ -76,3 +77,6 @@ for (ii=0;ii<global.debug_nodes;ii+=1)
     }
     
     draw_set_color(c_white);
+    
+    
+}//IF debugdraw

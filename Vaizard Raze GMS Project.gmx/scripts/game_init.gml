@@ -20,4 +20,6 @@ global.myroom=room_menu;//Room you are in
 global.entity_id=0;     //ID's that entities use
 
 
+global.debugdraw=false;
+
 global.difficult=3;     //How hard! ;D

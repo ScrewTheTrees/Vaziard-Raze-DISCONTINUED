@@ -230,9 +230,8 @@ if instance_exists(obj_playerparent)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message(mp_grid_path(global.generator.debuggrid,global.generator.exitpath,obj_entrance_stage.x,obj_entrance_stage.y,obj_exit_stage.x,obj_exit_stage.y-4,true))
-
-
+            <string>if global.debugdraw=false global.debugdraw=true;
+else global.debugdraw=false;
 </string>
           </argument>
         </arguments>
