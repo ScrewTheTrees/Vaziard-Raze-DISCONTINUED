@@ -69,5 +69,10 @@ for (ii=0;ii<global.debug_nodes;ii+=1)
     
     
     draw_set_color(c_red);
-    draw_path(exitpath,0,0,true);
+    for (pt=0;pt<path_get_number(exitpath)-1;pt+=1)
+    {
+        draw_line_width_colour(path_get_point_x(exitpath,pt),path_get_point_y(exitpath,pt),path_get_point_x(exitpath,pt+1),path_get_point_y(exitpath,pt+1),8,c_red,c_red);
+        
+    }
+    
     draw_set_color(c_white);

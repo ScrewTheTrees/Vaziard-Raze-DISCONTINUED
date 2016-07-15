@@ -84,13 +84,16 @@ case 4: scr_type1_generate_ground() break;
 case 6: scr_type1_generate_hplatforms() break;
 case 8: scr_type1_generate_vplatforms() break;
 case 10: scr_generate_tweakblocks() break;
-case 12: scr_generate_entrance() break;
-case 14: scr_generate_exit() break;
+
+
+case 18: scr_debuggrid_create(); break;
+case 20: scr_generate_entrance() break;
+case 22: scr_generate_exit() break;
 
 
 
 
-case 30: scr_debuggrid_create(); break;
+
 }
 
 </string>
