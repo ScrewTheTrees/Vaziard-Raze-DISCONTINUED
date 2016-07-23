@@ -38,4 +38,3 @@ if (object_index==obj_player)
 
 
 
-

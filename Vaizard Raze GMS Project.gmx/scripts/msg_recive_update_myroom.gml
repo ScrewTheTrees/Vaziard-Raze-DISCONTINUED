@@ -22,4 +22,3 @@ if playerid=tempid
 myroom=rroom;
 }
 }
-

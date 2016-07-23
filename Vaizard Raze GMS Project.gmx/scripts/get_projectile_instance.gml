@@ -8,4 +8,3 @@ switch (argument0)
     
     default:  return 0; break;
     }
-

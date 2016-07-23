@@ -41,4 +41,3 @@ if keyboard_check_pressed(global.keybind[KEY_JUMP])
    
    
    
-

@@ -6,4 +6,3 @@ press_special=false;
 do_jump=false;
 do_walljump_right=false;
 do_walljump_left=false;
-
