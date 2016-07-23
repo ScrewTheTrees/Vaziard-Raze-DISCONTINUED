@@ -11,7 +11,11 @@ Overhaul Player Graphics to look better and more fluid
 
 !!!Remeber!!!
 Room Start Event works for persistent objects
-DO NOT put any mathematics or vital stuff in the draw events, they are not realtime to the engine
+DO NOT put any mathematics or vital stuff in the draw events, they are not realtime to the engine speed.
+Weapons sprites have the index 0 as weapon and index 1 as the arms
+Weapon sprites should be 192x96, the origin of drawing is at pixel 48,48 which is close to the top of the torso in the middle.
+
+
 
 
 *Poison damage per tick

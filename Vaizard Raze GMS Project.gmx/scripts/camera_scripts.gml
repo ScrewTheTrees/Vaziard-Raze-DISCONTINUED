@@ -27,7 +27,11 @@ kk=ww/hh; //Mathematical camera stuff
 
 //Dont want those expanding cameras expanding too muh ehh? XD
 minimum_width=960;
-maximum_width=((room_height/room_width)*room_width)-200;
+
+maximum_width=((room_height/room_width)*room_width);
+
+
+
 
 #define scr_normalcamera
 //Script for the dimensional movement camera that can be user controlled (when dead or similar)
@@ -353,8 +357,10 @@ if instance_exists(obj_entityparent)
 if (instance_number(obj_playerparent)-global.deadchars)>0
 && (instance_number(obj_playerparent)-global.deadchars)>0
 {
-global.camerax=global.camerax/(instance_number(obj_playerparent)-global.deadchars);
-global.cameray=global.cameray/(instance_number(obj_playerparent)-global.deadchars);
+//global.camerax=global.camerax/(instance_number(obj_playerparent)-global.deadchars);
+//global.cameray=global.cameray/(instance_number(obj_playerparent)-global.deadchars);
+global.camerax=global.camerax/(global.sel-global.deadchars);
+global.cameray=global.cameray/(global.sel-global.deadchars);
 }
 
 //Get the widths

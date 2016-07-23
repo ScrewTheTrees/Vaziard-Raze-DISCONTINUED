@@ -1,12 +1,26 @@
-﻿*Make stage generator (Mostly)
-*Make stage mission room
-*Make entrance
-Make exit
-Make exit pathfind
-draw exit pathfind
-
-
+﻿***Make stage generator (Mostly)
+***Make stage mission room
+***Make entrance
+***Make exit
+***Make exit pathfind
+***draw exit pathfind
+***Make weapon sprite sync
+***make weapon switch system
 Implement a few test weapons
-Tiling System for stage graphics
 
-Create Stage System and Stage Progression system.
+
+
+
+Make mission terminal
+Create room for going to missions
+Synchronize mission data
+Synchronize Mission Teleporter
+Create player health system
+Synchronize player health
+
+
+
+
+
+
+Tiling System for stage graphics

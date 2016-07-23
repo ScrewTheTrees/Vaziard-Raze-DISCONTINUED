@@ -55,23 +55,6 @@
       </ConfigOptions>
       <filename>Ideas.txt</filename>
     </datafile>
-    <datafile>
-      <name>Changelog.txt</name>
-      <exists>-1</exists>
-      <size>0</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>Changelog.txt</filename>
-    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\GMFileSystem</extension>
@@ -86,6 +69,7 @@
       <sprite>sprites\mask_slope_r</sprite>
     </sprites>
     <sprites name="Weapons">
+      <sprite>sprites\spr_wep_angelshotgun</sprite>
       <sprite>sprites\spr_wep_busterbasic</sprite>
     </sprites>
     <sprites name="Projectiles">
@@ -268,6 +252,7 @@
       <script>scripts\get_weapon_sprite.gml</script>
       <scripts name="Weapons handling">
         <script>scripts\scr_weapon_buster.gml</script>
+        <script>scripts\scr_weapon_angelshotgun.gml</script>
       </scripts>
       <script>scripts\add_weapon_attributes.gml</script>
       <script>scripts\scr_attribute_modify.gml</script>
@@ -438,10 +423,11 @@
     <room>rooms\room_preset</room>
     <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="73">
+  <constants number="77">
     <constant name="MODULE_STAIR">3</constant>
     <constant name="MODULE_EMPTY">2</constant>
     <constant name="MODULE_FLAT">1</constant>
+    <constant name="WEPSPR_ANGELSHOTGUN">9</constant>
     <constant name="WEPSPR_BUSTERBASIC">1</constant>
     <constant name="ROOM_MISSION_TYPE1">3</constant>
     <constant name="ROOM_TEST2">2</constant>
@@ -449,6 +435,7 @@
     <constant name="ENTITY_ENEMYTEST">1</constant>
     <constant name="PROJ_BUSTERCHARGE">2</constant>
     <constant name="PROJ_BUSTERSHOT">1</constant>
+    <constant name="WEP_ANGELSHOTGUN">8</constant>
     <constant name="WEP_HALBERD">7</constant>
     <constant name="WEP_SNIPER">6</constant>
     <constant name="WEP_SWORD">5</constant>
@@ -487,6 +474,8 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_MAP_PROPS">14</constant>
+    <constant name="MSG_MAP_BLOCKS">13</constant>
     <constant name="MSG_PLAYERHEALTH">12</constant>
     <constant name="MSG_ENTITY_DAMAGE">11</constant>
     <constant name="MSG_ENTITY_HEALTH">10</constant>

@@ -1,9 +1,11 @@
+change=false; // Change to new weapon
+
 if keyboard_check_pressed(global.keybind[KEY_SWAP]) 
     {
     if global.selected_weapon==1 {global.selected_weapon=2}
     else if global.selected_weapon==2 {global.selected_weapon=3}
     else global.selected_weapon=1;
-    with (obj_player){msg_send_playerinfo();} //Send sprite update and movementMOD updates.
+    change=true
     
     }
 
@@ -80,3 +82,10 @@ procentdamage=0;
 flatdamage=0;
 critchance=0;
 critdamage=0;
+
+
+
+if change=true 
+{
+    with (obj_player){msg_send_playerinfo();} //Send sprite update and movementMOD updates
+}

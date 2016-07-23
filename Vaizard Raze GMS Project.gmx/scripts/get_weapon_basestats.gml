@@ -11,5 +11,11 @@ switch (argument0)
     damage2=100;
     
     break;
+    case WEP_ANGELSHOTGUN:
     
+    max_bullets1=2;
+    damage1=2000;
+    damage2=3200;
+    
+    break;
     }

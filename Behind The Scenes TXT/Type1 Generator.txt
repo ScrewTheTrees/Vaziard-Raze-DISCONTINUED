@@ -1,21 +1,26 @@
 Few Rules:
 StartY or EndY may never,ever, go below MinHeight, or above MaxHeight
 U shapes for lifu
-always add +96 to the StartX after a module has generated
+Always add +96 to the StartX after a module has generated
 Ceiling blocks may not be within 288 blocks of a ground block (and vice versa)
-Platforms must not have a collision with ground/ceil blocks in a (-96,-288,+96,+284) area around them
+Platforms must not have a collision with ground/ceil blocks in a (-96,-288,+96,+288) area around them
 Dont forget to start/end the generator outside the room boundaries so that spec cam has some move room (768 pixels should do it), also makes it a bit leeway for the generator.
 
 
 
 Debug nodes:     Dot / Line
 
-0=end (empty) --- Red/Purple
-1=start ceiling --- Orange/Orange
-2=start ground --- Green/Green
-3=start stairs --- yellow/yellow
-4=start platform --- c_lime/c_lime
-5=Fill Platform --- c_lime/Noone
+0=end (empty) --- Red/Purple --- End of a module, show line to next module
+1=start ceiling --- Orange/Orange --- Shows line running along ceiling
+2=start ground --- Green/Green --- shows line running along ground
+3=start stairs --- yellow/yellow --- shows line running along the stairs
+4=start platform --- c_lime/c_lime --- Shows line running along a platform.
+5=Fill Platform --- c_lime/Noone --- Shows a big dot on a block that was generated between blocks to fill an empty and untraversable space
 
-10=total void --- Noone/Noone
-11=Void with red dot ---Red/Noone
+10=total void --- Noone/Noone --- Shows nothing, pretty much an empty point
+11=Void with red dot ---Red/Noone --- Shows the 0 end of module dot without a line
+
+
+
+
+There is a red line showing the way between the entrance/exit

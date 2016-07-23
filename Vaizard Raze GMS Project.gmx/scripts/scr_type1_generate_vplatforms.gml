@@ -11,7 +11,7 @@ while (platforms>0)
     if scr_platform_possible(platx,platy,platx,platy+platv)==true
     {   
         scr_debug_generator_add(4,platx+48,platy+48)
-        scr_debug_generator_add(10,platx+48,platy+platv+48)
+        scr_debug_generator_add(11,platx+48,platy+platv+48)
         
         for (yy=platy; yy<=(platy+platv);yy+=96)
         {
@@ -24,4 +24,3 @@ while (platforms>0)
 
 
 scr_debug_generator_add(10,startx,starty);//End debug drawing for this section
-

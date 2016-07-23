@@ -188,7 +188,7 @@ draw_text(view_xview+100,view_yview+140,"Update Rate = "+string(global.draw_inte
 draw_text(view_xview+100,view_yview+180,"MyUDPport = "+string(global.udpport_client));
 draw_text(view_xview+100,view_yview+200,"MyRoom = "+string(global.myroom));
 
-if instance_exists(obj_playerparent)
+if instance_exists(obj_player)
    {
    draw_text(view_xview+100,view_yview+220,"Total Players = "+string(instance_number(obj_playerparent)));
    draw_text(view_xview+100,view_yview+240,"Weapon Slot = "+string(global.selected_weapon));
