@@ -42,7 +42,7 @@ with(obj_otherplayer)
  }
 break;
 
-case 4:
+case SEND_ROOM:
 with(obj_otherplayer)
 {
 if argument1=myroom
@@ -62,7 +62,26 @@ with(obj_otherplayer)
 if myroom=temproom
 && tempid!=playerid
 {
+sendmessage(client,"",0,0)
+}
+}
+break;
 
+case SEND_INMISSION:
+with(obj_otherplayer)
+{
+if inmission=true
+{
+sendmessage(client,"",0,0)
+}
+}
+break;
+
+case SEND_WAITINGTORECIVE:
+with(obj_otherplayer)
+{
+if readytorecive=true
+{
 sendmessage(client,"",0,0)
 }
 }

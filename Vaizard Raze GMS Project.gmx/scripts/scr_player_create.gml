@@ -6,6 +6,13 @@ client=-1; //No client
 playername="Error?";
 myroom=room_loading;
 
+//Map sending and such
+inmission=false;
+ready=false;
+hasmap=false;
+mapsent=false;
+
+
 //Reset the player movement variables
 scr_player_input_reset();
 scr_player_vars_reset();
@@ -39,6 +46,7 @@ movescanintervall=2; // Height checking per step (how precise the checking is)
 
 stuck=false;         //If you are stuck
 
+movemodtimer=30;
 
 
 

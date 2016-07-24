@@ -1,7 +1,7 @@
-///scr_projectile_spawn(X,Y,PROJ_,Team,Damage1,Damage2,Damage3,Facedir,Direction,Color)
+///scr_projectile_spawn(X,Y,Obj,Team,Damage1,Damage2,Damage3,Facedir,Direction,Color)
 var ii;
 
-ii=instance_create(argument0,argument1,get_projectile_instance(argument2));
+ii=instance_create(argument0,argument1,argument2);
 ii.team=argument3;
 ii.damage1=argument4;
 ii.damage2=argument5;

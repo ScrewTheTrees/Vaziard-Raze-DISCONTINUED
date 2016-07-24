@@ -102,6 +102,8 @@
     <sprite>sprites\spr_entrance_5</sprite>
     <sprite>sprites\sprite27</sprite>
     <sprite>sprites\spr_mapgen</sprite>
+    <sprite>sprites\spr_mission_in</sprite>
+    <sprite>sprites\spr_mission_out</sprite>
     <sprite>sprites\spr_entrance_stage</sprite>
     <sprite>sprites\spr_exit_stage</sprite>
   </sprites>
@@ -211,9 +213,14 @@
         <script>scripts\msg_send_connectinfo.gml</script>
         <script>scripts\msg_send_projectile_create.gml</script>
         <script>scripts\msg_send_playerinfo.gml</script>
+        <script>scripts\msg_send_movemodinfo.gml</script>
         <script>scripts\msg_send_playerhealth.gml</script>
         <script>scripts\msg_send_entity_create.gml</script>
         <script>scripts\msg_send_entity_damage.gml</script>
+        <script>scripts\msg_send_map_blocks.gml</script>
+        <script>scripts\msg_send_map_props.gml</script>
+        <script>scripts\msg_send_changeroom_room.gml</script>
+        <script>scripts\msg_send_changeroom_mission.gml</script>
       </scripts>
       <scripts name="Reciving Messages">
         <script>scripts\msg_recive_leavegame.gml</script>
@@ -225,9 +232,13 @@
         <script>scripts\msg_recive_connectinfo.gml</script>
         <script>scripts\msg_recive_projectile_create.gml</script>
         <script>scripts\msg_recive_playerinfo.gml</script>
+        <script>scripts\msg_recive_movemodinfo.gml</script>
         <script>scripts\msg_recive_playerhealth.gml</script>
         <script>scripts\msg_recive_entity_create.gml</script>
         <script>scripts\msg_recive_entity_damage.gml</script>
+        <script>scripts\msg_recive_map_blocks.gml</script>
+        <script>scripts\msg_recive_map_props.gml</script>
+        <script>scripts\msg_recive_changeroom.gml</script>
       </scripts>
       <script>scripts\scr_messages.gml</script>
     </scripts>
@@ -274,6 +285,7 @@
       <script>scripts\scr_player_roomstart.gml</script>
       <script>scripts\scr_player_moveupdateonline.gml</script>
       <script>scripts\scr_player_mod_reset.gml</script>
+      <script>scripts\scr_player_awareness.gml</script>
     </scripts>
     <scripts name="Save/Load">
       <script>scripts\scr_save_data.gml</script>
@@ -291,14 +303,9 @@
       <script>scripts\scr_projectile_spawn_velocity.gml</script>
     </scripts>
     <scripts name="Spawning">
-      <script>scripts\scr_entity_spawn.gml</script>
       <script>scripts\scr_projectile_spawn.gml</script>
     </scripts>
     <scripts name="GET Information">
-      <script>scripts\get_entity_instance.gml</script>
-      <script>scripts\get_projectile_instance.gml</script>
-      <script>scripts\get_roomid.gml</script>
-      <script>scripts\get_roomname.gml</script>
       <script>scripts\get_team_color.gml</script>
       <script>scripts\get_team_hostile.gml</script>
     </scripts>
@@ -325,6 +332,7 @@
       <script>scripts\scr_place_ceiling_block.gml</script>
       <script>scripts\scr_place_ground_block.gml</script>
       <script>scripts\scr_place_solid_block.gml</script>
+      <script>scripts\scr_place_solid_sidewall.gml</script>
       <script>scripts\scr_place_solid_slope_r.gml</script>
       <script>scripts\scr_place_solid_slope_l.gml</script>
       <scripts name="Debug/MapGenFunctions">
@@ -336,6 +344,7 @@
         <script>scripts\scr_debuggrid_path_possible.gml</script>
         <script>scripts\scr_platform_possible.gml</script>
       </scripts>
+      <script>scripts\scr_generator_type1_case.gml</script>
     </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_keypress_name.gml</script>
@@ -408,12 +417,14 @@
     <object>objects\obj_solid_hugeblock</object>
     <object>objects\obj_test</object>
     <object>objects\obj_select_resolution</object>
-    <object>objects\obj_enemy_dummy</object>
     <object>objects\obj_projectile_bustershot</object>
     <object>objects\obj_projectile_bustercharge</object>
+    <object>objects\obj_enemy_dummy</object>
     <object>objects\obj_goto_room_vertical</object>
     <object>objects\obj_mapgenerator_type1</object>
     <object>objects\debugfreeze</object>
+    <object>objects\obj_mission_in</object>
+    <object>objects\obj_mission_out</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -421,20 +432,15 @@
     <room>rooms\room_test</room>
     <room>rooms\room_test2</room>
     <room>rooms\room_preset</room>
+    <room>rooms\room_mission_terminal1</room>
     <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="77">
+  <constants number="75">
     <constant name="MODULE_STAIR">3</constant>
     <constant name="MODULE_EMPTY">2</constant>
     <constant name="MODULE_FLAT">1</constant>
-    <constant name="WEPSPR_ANGELSHOTGUN">9</constant>
+    <constant name="WEPSPR_ANGELSHOTGUN">2</constant>
     <constant name="WEPSPR_BUSTERBASIC">1</constant>
-    <constant name="ROOM_MISSION_TYPE1">3</constant>
-    <constant name="ROOM_TEST2">2</constant>
-    <constant name="ROOM_TEST">1</constant>
-    <constant name="ENTITY_ENEMYTEST">1</constant>
-    <constant name="PROJ_BUSTERCHARGE">2</constant>
-    <constant name="PROJ_BUSTERSHOT">1</constant>
     <constant name="WEP_ANGELSHOTGUN">8</constant>
     <constant name="WEP_HALBERD">7</constant>
     <constant name="WEP_SNIPER">6</constant>
@@ -465,6 +471,8 @@
     <constant name="TEAM_RED">2</constant>
     <constant name="TEAM_ENEMY">1</constant>
     <constant name="TEAM_PLAYER">0</constant>
+    <constant name="SEND_WAITINGTORECIVE">7</constant>
+    <constant name="SEND_INMISSION">6</constant>
     <constant name="SEND_ROOM_OTHER">5</constant>
     <constant name="SEND_ROOM">4</constant>
     <constant name="SEND_ALL">3</constant>
@@ -474,6 +482,8 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
+    <constant name="MSG_CHANGEROOM">16</constant>
+    <constant name="MSG_MOVEMODINFO">15</constant>
     <constant name="MSG_MAP_PROPS">14</constant>
     <constant name="MSG_MAP_BLOCKS">13</constant>
     <constant name="MSG_PLAYERHEALTH">12</constant>

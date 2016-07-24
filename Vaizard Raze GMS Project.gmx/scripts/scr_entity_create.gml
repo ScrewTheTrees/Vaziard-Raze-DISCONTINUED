@@ -10,7 +10,7 @@ team=argument3;
 entityid=get_entity_id(); //Irrelevant for non hosts but yah know.
 
 
-
+alarm[1]=2;
 
 
 entity_hp=entity_max_hp;

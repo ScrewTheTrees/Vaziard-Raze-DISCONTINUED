@@ -25,14 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_entity_create(10000,10000,10000,TEAM_ENEMY);
-
-if global.playerid=0 {
-alarm[1]=2;
-}
-
-entitytype=ENTITY_ENEMYTEST;
-
+            <string>scr_entity_create(5000,5000,5000,TEAM_ENEMY);
 </string>
           </argument>
         </arguments>

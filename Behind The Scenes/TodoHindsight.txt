@@ -3,11 +3,11 @@
 ***Make entrance
 ***Make exit
 ***Make exit pathfind
-***draw exit pathfind
+***Draw exit pathfind
 ***Make weapon sprite sync
-***make weapon switch system
-***Make stage sync
-***Make stage startup
+***Make weapon switch system
+Make stage sync
+Make stage startup
 
 
 Implement a few test weapons

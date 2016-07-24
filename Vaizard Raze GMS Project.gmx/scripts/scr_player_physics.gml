@@ -17,7 +17,7 @@ else if place_meeting(x,y+real(vspeed),obj_solidparent) {gravity=0}
 else {gravity = max_gravity+gravity_mod;   moveair=1;}
 
 //Fix walljumping glitch
-if place_meeting(x+hspeed,y,obj_solidparent)==true
+if place_meeting(ceil(x+(hspeed*1.1)),y,obj_solidparent)==true
 {
     if hspeed!=0 move_contact_solid(direction,16);
     hspeed=0

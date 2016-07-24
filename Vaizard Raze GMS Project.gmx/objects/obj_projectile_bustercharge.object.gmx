@@ -39,7 +39,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>proj_type=PROJ_BUSTERCHARGE;
+            <string>
 
 destroy_enemy=true; //Destroy when hitting enemy
 destroy_wall=true; //Destroy when hitting enemy

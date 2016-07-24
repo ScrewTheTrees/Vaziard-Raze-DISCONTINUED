@@ -53,12 +53,7 @@
   <instances>
     <instance objName="obj_mapgenerator_type1" x="0" y="0" name="inst_9D323810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_entrance_0" x="576" y="1920" name="inst_5FCAD9AB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="384" y="1920" name="inst_47E8B498" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="384" y="2016" name="inst_D1849D04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="480" y="2016" name="inst_8D13DDFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="576" y="2016" name="inst_E71A3493" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="672" y="2016" name="inst_5FE7312B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_block" x="672" y="1920" name="inst_CB73C252" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mission_in" x="192" y="0" name="inst_C1DD4FF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

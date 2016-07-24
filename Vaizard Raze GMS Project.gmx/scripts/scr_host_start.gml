@@ -11,4 +11,4 @@ instance_create(0,0,obj_wait)
 //instance_create(0,0,obj_chatbox)
 instance_create(0,0,obj_recive_packet)
 
-scr_changeroom(ROOM_TEST,0,"");
+scr_changeroom(room_test,0,"");

@@ -9,7 +9,7 @@ writebyte(MSG_CREATE_PROJECTILE,0)
 if team==TEAM_PLAYER  writebyte(TEAM_ALLY,0)
 else writebyte(team,0)
 
-writeshort(proj_type,0);
+writeshort(object_index,0);
 writeint(global.myroom,0);
 writeint(damage1,0);
 writeint(damage2,0);

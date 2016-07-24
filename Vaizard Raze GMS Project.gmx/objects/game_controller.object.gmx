@@ -72,8 +72,11 @@ else
    {
    draw_enable_drawevent(false);
    }
-
+    
    
+   
+   
+      
 if keyboard_check_pressed(ord("Y")) global.draw_intervall-=0.05;
 if keyboard_check_pressed(ord("U")) global.draw_intervall+=0.05;
 
@@ -130,8 +133,8 @@ global.udpport_client=17658;
             <kind>1</kind>
             <string>if instance_exists(obj_player)
 {
-global.myroom=get_roomname(room);
-myroom=get_roomname(room);
+global.myroom=room;
+myroom=room;
 
 msg_send_update_myroom();
 }
@@ -284,7 +287,8 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_changeroom(ROOM_MISSION_TYPE1,0,"");
+            <string>scr_changeroom(room_mission_type1,0,"");
+msg_send_changeroom_room(room_mission_type1,0,"");
 </string>
           </argument>
         </arguments>
@@ -307,7 +311,7 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_entity_spawn(mouse_x,mouse_y,ENTITY_ENEMYTEST);
+            <string>instance_create(mouse_x,mouse_y,obj_enemy_dummy);
 </string>
           </argument>
         </arguments>

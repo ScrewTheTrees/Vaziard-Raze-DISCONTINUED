@@ -12,5 +12,9 @@ var messageid=argument0;
     case MSG_PLAYERINFO: msg_recive_playerinfo(); break;
     case MSG_ENTITY_CREATE: msg_recive_entity_create(); break;
     case MSG_ENTITY_DAMAGE: msg_recive_entity_damage(); break;
+    case MSG_MAP_BLOCKS: msg_recive_map_blocks(); break;
+    case MSG_MAP_PROPS: msg_recive_map_props(); break;
+    case MSG_MOVEMODINFO: msg_recive_movemodinfo(); break;
+    case MSG_CHANGEROOM: msg_recive_changeroom(); break;
   }
   clearbuffer(0);

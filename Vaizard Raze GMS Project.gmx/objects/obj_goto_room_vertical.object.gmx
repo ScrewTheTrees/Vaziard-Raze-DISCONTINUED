@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_set_goto_room(ROOM_TEST,0,"");
+            <string>scr_set_goto_room(room_test,0,"");
 </string>
           </argument>
         </arguments>

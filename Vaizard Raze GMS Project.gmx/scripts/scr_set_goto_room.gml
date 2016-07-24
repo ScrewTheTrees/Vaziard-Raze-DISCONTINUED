@@ -1,4 +1,4 @@
-///scr_set_goto_room(ROOM_, Entrance Point, Splash Text); 
+///scr_set_goto_room(room, Entrance Point, Splash Text); 
 
 
 nextroom=argument0;

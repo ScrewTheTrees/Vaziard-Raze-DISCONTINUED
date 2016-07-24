@@ -30,7 +30,7 @@
 
 with (obj_player)
 {
-    scr_set_goto_room(ROOM_MISSION_TYPE1,1,"");
+    scr_set_goto_room(room_mission_type1,1,"");
     scr_player_roomstart();
 }
 </string>
