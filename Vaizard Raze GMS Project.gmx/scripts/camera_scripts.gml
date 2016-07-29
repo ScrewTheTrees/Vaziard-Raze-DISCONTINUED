@@ -152,9 +152,9 @@ global.top_y=0;
 global.right_x=0;
 global.bottom_y=0;
 
-if instance_exists(obj_playerparent)
+if instance_exists(obj_player)
 {
-      with (obj_playerparent)
+      with (obj_player)
       {
         if isdead=false
         {
@@ -176,6 +176,7 @@ if instance_exists(obj_playerparent)
       with (obj_playerparent)
       {
         if isdead=false
+        if myroom=global.myroom
         {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
@@ -331,7 +332,7 @@ if instance_exists(obj_bossparent)
       global.sel+=1;
       }//WIth
 }//Exists
-if instance_exists(obj_entityparent)
+else if instance_exists(obj_entityparent)
 {
       with (instance_nearest(obj_player.x,obj_player.y,obj_entityparent))
       {
@@ -354,8 +355,8 @@ if instance_exists(obj_entityparent)
 }
 
 //Fix the X and Y to the center point;
-if (instance_number(obj_playerparent)-global.deadchars)>0
-&& (instance_number(obj_playerparent)-global.deadchars)>0
+if (global.sel-global.deadchars)>0
+&& (global.sel-global.deadchars)>0
 {
 //global.camerax=global.camerax/(instance_number(obj_playerparent)-global.deadchars);
 //global.cameray=global.cameray/(instance_number(obj_playerparent)-global.deadchars);

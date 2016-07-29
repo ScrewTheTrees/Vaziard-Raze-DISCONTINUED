@@ -297,6 +297,7 @@
       <script>scripts\scr_entity_movement.gml</script>
       <script>scripts\scr_entity_freeze.gml</script>
       <script>scripts\get_entity_id.gml</script>
+      <script>scripts\scr_entity_damage.gml</script>
     </scripts>
     <scripts name="Projectiles">
       <script>scripts\scr_projectile_create.gml</script>
@@ -355,7 +356,6 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_entity_damage.gml</script>
     <script>scripts\scr_collide_enemy.gml</script>
     <script>scripts\scr_collide_player.gml</script>
     <script>scripts\scr_player_damage.gml</script>

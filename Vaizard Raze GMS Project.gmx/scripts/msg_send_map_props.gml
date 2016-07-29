@@ -1,4 +1,4 @@
-///msg_send_entity_damage()
+
 //MUST BE CALLED BY OBJ_OTHERPLAYER
 
 clearbuffer(0)
@@ -9,6 +9,6 @@ writeint(obj_exit_stage.x,0);
 writeint(obj_exit_stage.y,0);
 
 
-scr_send_client(SEND_SELF,0)
+scr_send_client(SEND_INMISSION,0)
 
 clearbuffer(0);

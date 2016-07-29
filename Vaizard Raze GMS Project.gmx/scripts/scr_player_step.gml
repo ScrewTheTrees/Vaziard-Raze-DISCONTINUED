@@ -21,6 +21,8 @@ if (object_index==obj_player)
    myroom=global.myroom; //Update important information
    }
 
+
+   
 //
 scr_player_movespeed();
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);

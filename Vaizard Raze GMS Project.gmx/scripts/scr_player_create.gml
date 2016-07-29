@@ -33,7 +33,7 @@ max_gravity=0.75;
 gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
 jumpspeed=16;
 jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=15;
+walljumpspeed=14;
 walljumpupspeed=12;
 
 //Movement speed things

@@ -6,7 +6,7 @@
 ***Draw exit pathfind
 ***Make weapon sprite sync
 ***Make weapon switch system
-Make stage sync
+***Make stage sync
 Make stage startup
 
 

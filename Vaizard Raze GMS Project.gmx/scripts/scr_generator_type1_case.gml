@@ -37,15 +37,11 @@ with (obj_otherplayer)
     if global.bad=true mystep-=2; //Go back and check again
 break;
 
-case 60:
-    with (obj_otherplayer)
-    {
-        msg_send_map_props();
-    }
+case 40:
+    msg_send_map_props();
 break;
 
 }
 
 //Dont want him falling outside the map
 if !instance_exists(obj_entrance_stage) scr_player_freeze();
-
