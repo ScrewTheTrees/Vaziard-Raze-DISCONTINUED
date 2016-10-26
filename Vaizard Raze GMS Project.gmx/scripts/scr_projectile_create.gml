@@ -11,3 +11,10 @@ proj_type=0;
 
 dir=0;
 facedir=0;
+
+destroy_enemy=true; //Destroy when hitting enemy
+destroy_wall=true; //Destroy when hitting enemy
+destroy_outside=true; //Destroy when outside room
+
+hit_enemy = true; //If it should hit enemies
+hit_friendly = true; //If it should hit allies

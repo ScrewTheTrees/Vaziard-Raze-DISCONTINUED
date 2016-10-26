@@ -1,5 +1,5 @@
 global.listen = tcplisten(global.port, 10, true);
-global.udp=udpconnect(global.udpport_server,2);
+global.udp = udpconnect(global.udpport_server,2);
 if (global.listen <= 0)
 {
   show_message("Failed to listen on port: "+string(global.port));

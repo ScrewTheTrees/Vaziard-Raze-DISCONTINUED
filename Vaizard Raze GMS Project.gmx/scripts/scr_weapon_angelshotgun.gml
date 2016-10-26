@@ -1,5 +1,5 @@
 //set the sprite.
-obj_player.weapon_sprite=WEPSPR_ANGELSHOTGUN; 
+scr_weapon_animation_set(spr_wep_angelshotgun,spr_wep_angelshotgun_arms,false,false,false);;
 //27.00 mod 1
 //Standard shooting
 if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0

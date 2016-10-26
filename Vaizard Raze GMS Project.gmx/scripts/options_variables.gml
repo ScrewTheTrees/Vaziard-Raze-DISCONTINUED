@@ -1,15 +1,16 @@
-global.draw_intervall=0.5;     //Drawing rate
+global.draw_intervall=0.25;     //Drawing rate
 global.fullscreen=false;
 global.gamewidth=1920;
 global.gameheight=1080;
 
-global.gamewidth=1280;
-global.gameheight=720;
+global.particle_rate=1;     //Randomizer rate for particles, using irandom so 100%, 50% 33%, 25%
+
 
 global.shorttrails=false;
 
 
-global.keybinds=11; //How many keybinds to write to save (first is 0)
+
+
 global.keybind[KEY_RIGHT]=vk_right;
 global.keybind[KEY_LEFT]=vk_left;
 global.keybind[KEY_UP]=vk_up;
@@ -22,3 +23,5 @@ global.keybind[KEY_ABILITY2]=ord("S");
 global.keybind[KEY_ABILITY3]=ord("D");
 global.keybind[KEY_SPECIAL]=vk_shift;
 global.keybind[KEY_SWAP]=vk_space;
+
+global.keybinds=array_length_1d(global.keybind)-1; //How many keybinds to write to save (first is 0)

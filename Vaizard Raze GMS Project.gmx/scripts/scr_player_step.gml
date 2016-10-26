@@ -21,21 +21,20 @@ if (object_index==obj_player)
    myroom=global.myroom; //Update important information
    }
 
-
+//Set weapon animations and shit
+scr_weapon_animation();
    
-//
+//Player physics
 scr_player_movespeed();
 scr_entity_movement(movespeed,facedir,movescanheight,movescanintervall);
 scr_entity_jump(press_jump,do_jump,do_walljump_right,do_walljump_left,jumpspeed,walljumpspeed,walljumpupspeed,jumpspeed_mod);
 
 
 if stuck==true {scr_entity_freeze();}
- 
-scr_player_step_stats();
 
 scr_player_vars_reset(); //Reset vars that should be reset
 
-
+color_torso_extra = get_team_color(team); //Set secoundary torso color to team color
 
 //Only reset movespeed mod if you are the player
 if (object_index==obj_player)

@@ -3,7 +3,7 @@ var i, j, gg, movespeed, facedir, movescanheight, movespeed_run;
 
 movespeed=argument0;
 facedir=argument1;
-movescanheight=argument2;
+movescanheight=argument2+movespeed;
 movescanintervall=argument3;
 
 moving=0;

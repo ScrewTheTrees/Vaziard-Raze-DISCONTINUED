@@ -1,23 +1,23 @@
-if player_health<player_max_health
-player_health+=player_health_regen;
+if entity_health<entity_max_health && entity_health>0
+entity_health+=entity_health_regen;
 
-if player_health>player_max_health
-player_health=player_max_health;
-
-
-if player_mana<player_max_mana
-player_mana+=player_mana_regen;
-
-if player_mana>player_max_mana
-player_mana=player_max_mana;
+if entity_health>entity_max_health
+entity_health=entity_max_health;
 
 
-if player_stamina<player_max_stamina
-player_stamina+=player_stamina_regen;
+if entity_mana<entity_max_mana&& entity_mana>0
+entity_mana+=entity_mana_regen;
 
-if player_stamina>player_max_stamina
-player_stamina=player_max_stamina;
+if entity_mana>entity_max_mana
+entity_mana=entity_max_mana;
+
+
+if entity_stamina<entity_max_stamina && entity_stamina>0
+entity_stamina+=entity_stamina_regen;
+
+if entity_stamina>entity_max_stamina
+entity_stamina=entity_max_stamina;
 
 
 
-scr_player_reset_tempstats(); //Reset temp stats. they are not neccessary anymore
+scr_entity_reset_tempstats(); //Reset temp stats. they are not neccessary anymore

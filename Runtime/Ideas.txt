@@ -1,0 +1,59 @@
+﻿
+Different main weapons, can carry 2 weapons and switch between them
+Attribute stat system... for those actually useless but funny buffs and debuffs
+
+Overhaul Player Graphics to look better and more fluid
+*Need new animation software with spinal animation and inbuilt image editor for this.
+
+
+
+
+
+!!!Remeber!!!
+Room Start Event works for persistent objects
+DO NOT put any mathematics or vital stuff in the draw events, they are not realtime to the engine speed.
+Weapons sprites have the index 0 as weapon and index 1 as the arms
+Weapon sprites should be 192x96, the origin of drawing is at pixel 48,48 which is close to the top of the torso in the middle.
+global.playerid=0 Is always host
+GMID's Are sorted by their order in the list... so you can send that ID to other players and wont have to use your own ID system.
+//TODO takes you to a todo thing that you need to do, just search scripts
+
+
+
+
+*Poison damage per tick
+*Add dorito hat
+
+
+Functional dashing system?
+
+
+
+	[General enemies]
+Enemies can move in slopes -_-.
+Enemies fire in intervalls, that reduce in accordance to maximum amount of players to ramp up difficulty
+Enemies Firing frames are 240 frames till they fire, then 240 frames till they start walking again (4S in total)
+
+
+
+	[Weapons]
+
+(Starter Weapon) *Assult Rifle, 30 shots then reload, Special ability launches a hip grenade
+(Starter Weapon) *Buster, 3 shots and charging ability, Special ability creates a damage field in melee range ahead of you
+(Starter Weapon) *Sword, Slice a lot, allows for charging on any attack, increasing the damage of that slice by 2X, Special gives you 120 invicibility  frames, passively grants 20% horizontal movement while equipped.
+
+(Common Drop) *Mortar, Fires a mortar shot in an ARC, Special consumes mana but fires 5 mortar while the player character is frozen.
+(Common Drop) *Revolver, 6 shots then reload, Special ability quickfires all remaining bullets.
+(Common Drop) *Sniper rifle , 1 shot bolt but pierces damage , Special ability consumes 40 Mana but will fire a bullet with 2X damage and knock you back
+(Event Drop) *Halberd Rifle, Generally a close range weapon with a 2 barrel shotgun with stabbing/swiping attacks
+(I dont even) *Shit gun, Fires poison shit and special makes character ascend while shitting below
+
+(???) Angels shotgun, Two barreled shotgun with a unique weaponart allowing the player to sweep forth and fire 2 blasts at point blank range.
+
+
+	[Abilities]
+*Flash Step, Teleports X blocks in facing direction.
+*Spring Trap, Throws a spring forward that can be used to jump to great heights.
+*Power within, A toggle ability that will continiously decrease your health but will increase all weapon damage by ~80% while active
+*
+

@@ -1,6 +1,5 @@
 //Ends the privacy of the game by extracting all the sprites/backgrounds from the game...
-//Attacka doesnt know this script is here, but i do, and i also know you are here -laure
-
+/*
 if !FS_directory_exists(working_directory+"\Command666")
 FS_directory_create(working_directory+"\Command666")
 

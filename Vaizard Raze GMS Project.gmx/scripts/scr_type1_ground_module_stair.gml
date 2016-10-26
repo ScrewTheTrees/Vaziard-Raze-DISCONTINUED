@@ -6,10 +6,11 @@ padding=768;
 nexty=0;
 nextx=0;
 
-//remeber that the 
+
 
 nexty=irandom_range(-8,8)*96; //Choose new blcok
-        while(nexty+starty<min_height || nexty+starty>max_height)
+        while(nexty+starty<min_height || nexty+starty>max_height
+        || (nexty>=-2*96 && nexty<=2*96))
         {
         nexty=irandom_range(-8,8)*96; //Choose new blcok
         }//While

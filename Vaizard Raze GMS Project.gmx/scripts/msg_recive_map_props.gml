@@ -11,3 +11,5 @@ instance_create(xx,yy,obj_exit_stage);
 
 
 clearbuffer(0);
+
+obj_player.hasmap=true;

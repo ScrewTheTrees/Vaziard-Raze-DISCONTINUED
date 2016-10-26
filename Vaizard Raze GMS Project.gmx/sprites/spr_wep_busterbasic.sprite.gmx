@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>42</bbox_left>
+  <bbox_left>64</bbox_left>
   <bbox_right>117</bbox_right>
   <bbox_top>40</bbox_top>
-  <bbox_bottom>75</bbox_bottom>
+  <bbox_bottom>61</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -21,6 +21,5 @@
   <height>96</height>
   <frames>
     <frame index="0">images\spr_wep_busterbasic_0.png</frame>
-    <frame index="1">images\spr_wep_busterbasic_1.png</frame>
   </frames>
 </sprite>

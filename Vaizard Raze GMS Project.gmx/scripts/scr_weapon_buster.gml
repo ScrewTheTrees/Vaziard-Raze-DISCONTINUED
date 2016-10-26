@@ -1,5 +1,5 @@
 //set the sprite.
-obj_player.weapon_sprite=WEPSPR_BUSTERBASIC; 
+scr_weapon_animation_set(spr_wep_busterbasic,spr_wep_busterbasic_hands,false,false,false);
 
 //Standard shooting
 if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
@@ -8,6 +8,8 @@ if keyboard_check_pressed(global.keybind[KEY_SHOOT]) && bullets1>0
     scr_projectile_spawn_velocity(projectile,obj_player.facedir*14,0,0);
     projectile.alarm[1]=2; //Send creation packet
     
+    scr_weapon_animation_set(spr_wep_busterbasic_normalattack,spr_wep_busterbasic_hands,true,false,false);
+    msg_send_playerinfo();
     bullets1-=1;
     cooldown1=240;
     }
@@ -22,7 +24,7 @@ if keyboard_check_released(global.keybind[KEY_SHOOT]) && charge1>max_charge1
     }
 
     //Special attack
-if keyboard_check_released(global.keybind[KEY_SHOOT2]) && charge1>max_charge1
+if keyboard_check_pressed(global.keybind[KEY_SHOOT2])
     {
     //scr_projectile_create(x-20,y+(facedir*16),obj_projectile_busterspecial,team,damage2,damage2,damage2,facedir,0,color_torso);
     }

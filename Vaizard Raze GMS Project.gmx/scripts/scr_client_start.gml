@@ -1,7 +1,7 @@
 global.serverip=get_string("Pl0x enter IP","127.0.0.1")
 
 server = tcpconnect(global.serverip, global.port, true);
-global.udp=udpconnect(global.udpport_client,2);
+global.udp = udpconnect(global.udpport_client,2);
 
 
 

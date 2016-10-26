@@ -56,9 +56,7 @@
       <filename>Ideas.txt</filename>
     </datafile>
   </datafiles>
-  <NewExtensions>
-    <extension index="0">extensions\GMFileSystem</extension>
-  </NewExtensions>
+  <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Solids">
@@ -70,7 +68,10 @@
     </sprites>
     <sprites name="Weapons">
       <sprite>sprites\spr_wep_angelshotgun</sprite>
+      <sprite>sprites\spr_wep_angelshotgun_arms</sprite>
       <sprite>sprites\spr_wep_busterbasic</sprite>
+      <sprite>sprites\spr_wep_busterbasic_normalattack</sprite>
+      <sprite>sprites\spr_wep_busterbasic_hands</sprite>
     </sprites>
     <sprites name="Projectiles">
       <sprite>sprites\spr_bustercharge</sprite>
@@ -84,6 +85,7 @@
       <sprite>sprites\spr_player_legs</sprite>
       <sprite>sprites\spr_player_legs_jump</sprite>
       <sprite>sprites\spr_player_torso</sprite>
+      <sprite>sprites\spr_player_torso_extra</sprite>
       <sprite>sprites\spr_player_head</sprite>
       <sprite>sprites\spr_player_eye_standard</sprite>
     </sprites>
@@ -106,6 +108,8 @@
     <sprite>sprites\spr_mission_out</sprite>
     <sprite>sprites\spr_entrance_stage</sprite>
     <sprite>sprites\spr_exit_stage</sprite>
+    <sprite>sprites\spr_healthbar</sprite>
+    <sprite>sprites\spr_manabar</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -207,7 +211,8 @@
       <scripts name="Sending Messages">
         <script>scripts\msg_send_leavegame.gml</script>
         <script>scripts\msg_send_playerid.gml</script>
-        <script>scripts\msg_send_move.gml</script>
+        <script>scripts\msg_send_playermove.gml</script>
+        <script>scripts\msg_send_entitymove.gml</script>
         <script>scripts\msg_send_deadpacket.gml</script>
         <script>scripts\msg_send_update_myroom.gml</script>
         <script>scripts\msg_send_connectinfo.gml</script>
@@ -226,7 +231,7 @@
         <script>scripts\msg_recive_leavegame.gml</script>
         <script>scripts\msg_recive_joingame.gml</script>
         <script>scripts\msg_recive_playerid.gml</script>
-        <script>scripts\msg_recive_move.gml</script>
+        <script>scripts\msg_recive_playermove.gml</script>
         <script>scripts\msg_recive_deadpacket.gml</script>
         <script>scripts\msg_recive_update_myroom.gml</script>
         <script>scripts\msg_recive_connectinfo.gml</script>
@@ -236,6 +241,7 @@
         <script>scripts\msg_recive_playerhealth.gml</script>
         <script>scripts\msg_recive_entity_create.gml</script>
         <script>scripts\msg_recive_entity_damage.gml</script>
+        <script>scripts\scr_recive_entity_move.gml</script>
         <script>scripts\msg_recive_map_blocks.gml</script>
         <script>scripts\msg_recive_map_props.gml</script>
         <script>scripts\msg_recive_changeroom.gml</script>
@@ -260,26 +266,24 @@
       <script>scripts\scr_weapon_step.gml</script>
       <script>scripts\scr_step_switch_weapontype.gml</script>
       <script>scripts\get_weapon_basestats.gml</script>
-      <script>scripts\get_weapon_sprite.gml</script>
       <scripts name="Weapons handling">
         <script>scripts\scr_weapon_buster.gml</script>
         <script>scripts\scr_weapon_angelshotgun.gml</script>
       </scripts>
       <script>scripts\add_weapon_attributes.gml</script>
       <script>scripts\scr_attribute_modify.gml</script>
+      <script>scripts\scr_weapon_animation.gml</script>
+      <script>scripts\scr_weapon_animation_end.gml</script>
+      <script>scripts\scr_weapon_animation_set.gml</script>
     </scripts>
     <scripts name="Players">
       <script>scripts\scr_player_create.gml</script>
-      <script>scripts\scr_player_create_health.gml</script>
-      <script>scripts\scr_player_freeze.gml</script>
       <script>scripts\scr_player_draw.gml</script>
       <script>scripts\scr_player_step.gml</script>
-      <script>scripts\scr_player_step_stats.gml</script>
       <script>scripts\scr_player_movespeed.gml</script>
       <script>scripts\scr_player_inputcontroller.gml</script>
       <script>scripts\scr_player_input_reset.gml</script>
       <script>scripts\scr_player_vars_reset.gml</script>
-      <script>scripts\scr_player_reset_tempstats.gml</script>
       <script>scripts\scr_player_physics.gml</script>
       <script>scripts\scr_player_collision.gml</script>
       <script>scripts\scr_player_roomstart.gml</script>
@@ -298,6 +302,8 @@
       <script>scripts\scr_entity_freeze.gml</script>
       <script>scripts\get_entity_id.gml</script>
       <script>scripts\scr_entity_damage.gml</script>
+      <script>scripts\scr_entity_step.gml</script>
+      <script>scripts\scr_entity_step_stats.gml</script>
     </scripts>
     <scripts name="Projectiles">
       <script>scripts\scr_projectile_create.gml</script>
@@ -347,6 +353,9 @@
       </scripts>
       <script>scripts\scr_generator_type1_case.gml</script>
     </scripts>
+    <scripts name="Healthbars">
+      <script>scripts\scr_health_draw_player.gml</script>
+    </scripts>
     <script>scripts\camera_scripts.gml</script>
     <script>scripts\get_keypress_name.gml</script>
     <script>scripts\Resolution_Handler.gml</script>
@@ -356,10 +365,11 @@
     <script>scripts\scr_resolution_from_string.gml</script>
     <script>scripts\draw_text_center.gml</script>
     <script>scripts\scr_changeroom.gml</script>
-    <script>scripts\scr_collide_enemy.gml</script>
+    <script>scripts\scr_collide_entity.gml</script>
     <script>scripts\scr_collide_player.gml</script>
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_set_goto_room.gml</script>
+    <script>scripts\instance_create_particle.gml</script>
     <script>scripts\scr_outside_relevancy.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -376,10 +386,9 @@
     <objects name="Parents">
       <object>objects\obj_solidparent</object>
       <object>objects\obj_playerparent</object>
-      <object>objects\obj_bossparent</object>
       <object>objects\obj_entityparent</object>
+      <object>objects\obj_projectile_parent</object>
       <object>objects\obj_menuparent</object>
-      <object>objects\projectile_parent</object>
     </objects>
     <objects name="Menu">
       <object>objects\obj_menu_host</object>
@@ -408,6 +417,9 @@
       <object>objects\obj_entrance_stage</object>
       <object>objects\obj_exit_stage</object>
     </objects>
+    <objects name="Object Dummies">
+      <object>objects\dummy_entity</object>
+    </objects>
     <object>objects\obj_solid_block</object>
     <object>objects\obj_solid_ceiling</object>
     <object>objects\obj_solid_ground</object>
@@ -425,6 +437,7 @@
     <object>objects\debugfreeze</object>
     <object>objects\obj_mission_in</object>
     <object>objects\obj_mission_out</object>
+    <object>objects\ENTITY</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_loading</room>
@@ -435,7 +448,7 @@
     <room>rooms\room_mission_terminal1</room>
     <room>rooms\room_mission_type1</room>
   </rooms>
-  <constants number="75">
+  <constants number="76">
     <constant name="MODULE_STAIR">3</constant>
     <constant name="MODULE_EMPTY">2</constant>
     <constant name="MODULE_FLAT">1</constant>
@@ -482,29 +495,30 @@
     <constant name="RETURN_ID_NAME">2</constant>
     <constant name="RETURN_ID_GM">1</constant>
     <constant name="RETURN_ID_NUM">0</constant>
-    <constant name="MSG_CHANGEROOM">16</constant>
-    <constant name="MSG_MOVEMODINFO">15</constant>
-    <constant name="MSG_MAP_PROPS">14</constant>
-    <constant name="MSG_MAP_BLOCKS">13</constant>
-    <constant name="MSG_PLAYERHEALTH">12</constant>
-    <constant name="MSG_ENTITY_DAMAGE">11</constant>
-    <constant name="MSG_ENTITY_HEALTH">10</constant>
-    <constant name="MSG_ENTITY_CREATE">9</constant>
-    <constant name="MSG_PLAYERINFO">8</constant>
+    <constant name="MSG_MAP_PROPS">91</constant>
+    <constant name="MSG_MAP_BLOCKS">90</constant>
+    <constant name="MSG_ENTITYMOVE">53</constant>
+    <constant name="MSG_ENTITY_DAMAGE">52</constant>
+    <constant name="MSG_ENTITY_HEALTH">51</constant>
+    <constant name="MSG_ENTITY_CREATE">50</constant>
+    <constant name="MSG_PLAYERMOVE">14</constant>
+    <constant name="MSG_CHANGEROOM">13</constant>
+    <constant name="MSG_MOVEMODINFO">12</constant>
+    <constant name="MSG_PLAYERHEALTH">11</constant>
+    <constant name="MSG_PLAYERINFO">10</constant>
     <constant name="MSG_CREATE_PROJECTILE">7</constant>
     <constant name="MSG_CONNECTINFO">6</constant>
     <constant name="MSG_UPDATE_MYROOM">5</constant>
-    <constant name="MSG_MOVE">4</constant>
     <constant name="MSG_PLAYERID">3</constant>
     <constant name="MSG_LEAVEGAME">2</constant>
     <constant name="MSG_JOINGAME">1</constant>
     <constant name="MSG_DEADPACKET">0</constant>
-    <constant name="KEY_SWAP">10</constant>
-    <constant name="KEY_SPECIAL">9</constant>
-    <constant name="KEY_ABILITY3">8</constant>
-    <constant name="KEY_ABILITY2">7</constant>
-    <constant name="KEY_ABILITY1">6</constant>
-    <constant name="KEY_SHOOT2">11</constant>
+    <constant name="KEY_SWAP">11</constant>
+    <constant name="KEY_SPECIAL">10</constant>
+    <constant name="KEY_ABILITY3">9</constant>
+    <constant name="KEY_ABILITY2">8</constant>
+    <constant name="KEY_ABILITY1">7</constant>
+    <constant name="KEY_SHOOT2">6</constant>
     <constant name="KEY_SHOOT">5</constant>
     <constant name="KEY_JUMP">4</constant>
     <constant name="KEY_DOWN">3</constant>

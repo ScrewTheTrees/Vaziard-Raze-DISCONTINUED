@@ -310,28 +310,6 @@ if instance_exists(obj_player)
         }
       }//WIth
 }//Exists
-//Obj_otherplayer is the player parent
-if instance_exists(obj_bossparent)
-{
-      with (obj_bossparent)
-      {
-      //Check all the four edges of the screen.
-      if x-global.padding<global.left_x  global.left_x=x-global.padding;
-
-      if y-global.padding<global.top_y  global.top_y=y-global.padding;
-
-      if x+global.padding>global.right_x  global.right_x=x+global.padding;
-
-      if y+global.padding>global.bottom_y  global.bottom_y=y+global.padding;
-
-      //Add player X and Y to the collective
-      global.camerax+=x;
-      global.cameray+=y;
-      
-      //One more
-      global.sel+=1;
-      }//WIth
-}//Exists
 else if instance_exists(obj_entityparent)
 {
       with (instance_nearest(obj_player.x,obj_player.y,obj_entityparent))

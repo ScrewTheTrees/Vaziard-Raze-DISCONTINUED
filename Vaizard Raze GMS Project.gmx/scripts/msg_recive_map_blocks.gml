@@ -5,7 +5,7 @@
     
     instance_create(xx,yy,block);
 
-
+    
 
 
 clearbuffer(0);

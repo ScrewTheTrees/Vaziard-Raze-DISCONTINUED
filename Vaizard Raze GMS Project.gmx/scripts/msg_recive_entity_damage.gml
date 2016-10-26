@@ -21,12 +21,3 @@ entity_hp-=damage; //Take damage
 
 }
 
-if global.playerid==0
-{
-writebyte(MSG_PLAYERINFO,0);
-writeushort(tempid,0);
-writeushort(weapon_sprite,0);
-writeushort(weapon_equipped,0);
-scr_send_client(SEND_OTHER,0);
-clearbuffer(0);
-}

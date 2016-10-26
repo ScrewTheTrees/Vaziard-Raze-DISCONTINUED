@@ -1,5 +1,5 @@
 var oo_m,oo,myfile;
-
+/*
 if FS_file_exists("EData\Data.vsave")==true
 {
 myfile=FS_file_text_open_read("EData\Data.vsave");

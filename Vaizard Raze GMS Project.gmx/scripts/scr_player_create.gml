@@ -1,3 +1,10 @@
+if (object_index==obj_player)
+    {
+    scr_entity_create(10000,10000,10000,TEAM_PLAYER);
+    }
+else scr_entity_create(10000,10000,10000,TEAM_ALLY);
+
+
 //Online stuff
 playerid=-1;//No ID
 client_ip="127.0.0.1"; //UDP IP adress
@@ -14,50 +21,27 @@ mapsent=false;
 
 
 //Reset the player movement variables
+
 scr_player_input_reset();
 scr_player_vars_reset();
 
-scr_player_create_health();
-
-//Maximum speed of any vspeed/hspeed/speed things
-max_speed=50;
-max_fallspeed=20;
-facedir=1;
-
-moving=0;
-moveair=0;
-isdead=false;
-
-//Gravitational things
-max_gravity=0.75;
-gravity_mod=0;     //Set to positive or negative to increase/decrease to fall faster/slower
-jumpspeed=16;
-jumpspeed_mod=0;   //Set to positive or negative to increase/decrease jump height/power
-walljumpspeed=14;
-walljumpupspeed=12;
-
-//Movement speed things
-movespeed=0;
-movespeed_mod=0;   //Set to positive or negative to increase/decrease movement speed
-max_movespeed=6;   //Actual moving speed of character
-movescanheight=20; //The height it scans up/down when checking for slope movement
-movescanintervall=2; // Height checking per step (how precise the checking is)
-
-
-stuck=false;         //If you are stuck
-
-movemodtimer=30;
 
 
 
-alarm[0]=30;
 
 
 weapon_equipped=WEP_NOONE;
 weapon_sprite=spr_noone;
+arms_sprite=spr_noone;
+weapon_animation_frame=0;
+weapon_animation_playing=false;
+weapon_animation_repeat=false;
+weapon_animation_arms_animate=false;
+
 
 
 color_legs=c_blue;
 color_torso=c_red;
+color_torso_extra=c_green;
 color_eyes=c_green;
 color_hair=c_maroon;

@@ -1,13 +1,21 @@
-﻿***Make stage generator (Mostly)
-***Make stage mission room
-***Make entrance
-***Make exit
-***Make exit pathfind
-***Draw exit pathfind
+﻿Implement first enemy.
+Refine enemy system.
+
+
+
+Create player health system
+Synchronize player health
+
 ***Make weapon sprite sync
 ***Make weapon switch system
 ***Make stage sync
 Make stage startup
+
+***Remake Weapon Variables
+***Seperate arm/weapon sprites
+***Add animation cycle for weapons
+
+
 
 
 Implement a few test weapons
@@ -19,8 +27,8 @@ Make mission terminal
 Create room for going to missions
 Synchronize mission data
 Synchronize Mission Teleporter
-Create player health system
-Synchronize player health
+
+
 
 
 

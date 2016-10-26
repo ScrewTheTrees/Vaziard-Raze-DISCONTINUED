@@ -1,6 +1,6 @@
 ///scr_save_data();
 
-
+/*
 if !FS_directory_exists("EData")
 FS_directory_create("EData")
 

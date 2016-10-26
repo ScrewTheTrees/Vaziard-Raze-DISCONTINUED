@@ -22,24 +22,22 @@ with (obj_otherplayer)
 {
     if inmission=true
     {
-        if ready==false or mapsent=true
+        if (ready==false or mapsent=true)
         {
             global.bad=true;
         }
-        else
+        else if hasmap==false
         {
             mapsent=true;
             msg_send_map_blocks();
+            msg_send_map_props();
         }
     }
 }
-    
+    scr_player_freeze();
     if global.bad=true mystep-=2; //Go back and check again
 break;
 
-case 40:
-    msg_send_map_props();
-break;
 
 }
 
