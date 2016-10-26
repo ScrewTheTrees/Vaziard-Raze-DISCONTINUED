@@ -106,14 +106,13 @@ alarm[1]=60;
             <kind>1</kind>
             <string>///send movement packets
 msg_send_playermove();
-msg_send_entity_move();
 alarm[0]=30;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>

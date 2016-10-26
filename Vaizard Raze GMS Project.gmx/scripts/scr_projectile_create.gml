@@ -18,3 +18,5 @@ destroy_outside=true; //Destroy when outside room
 
 hit_enemy = true; //If it should hit enemies
 hit_friendly = false; //If it should hit allies
+
+alarm[5]=2;

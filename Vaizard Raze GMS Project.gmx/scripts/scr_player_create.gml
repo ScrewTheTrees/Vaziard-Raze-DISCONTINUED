@@ -5,8 +5,10 @@ if (object_index==obj_player)
 else scr_entity_create(10000,10000,10000,TEAM_ALLY);
 
 
+
 //Online stuff
 playerid=-1;//No ID
+entityid=-1;
 client_ip="127.0.0.1"; //UDP IP adress
 client_port=global.udpport_client;   //UDP Port number
 client=-1; //No client

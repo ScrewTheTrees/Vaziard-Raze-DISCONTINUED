@@ -17,7 +17,7 @@ global.cutscene=false;  //In a cutscene?
 global.enter=0;         //Entrance point in a room
 global.playername="FaggotOrFriend";
 global.myroom=room_menu;//Room you are in
-global.entity_id=0;     //ID's that entities use
+global.entity_id=501;     //ID's that entities use
 
 global.mission=0;
 global.mission_stage=0;

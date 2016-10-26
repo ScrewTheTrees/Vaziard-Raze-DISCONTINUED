@@ -14,7 +14,4 @@ clearbuffer(0);
 
 pro=instance_create(xx,yy,entitytypee);
 pro.entityid=entityidd;
-pro.entity_max_health=readint(0);
-pro.entity_max_mana=readint(0);
-pro.entity_max_stamina=readint(0);
 

@@ -311,7 +311,7 @@ msg_send_changeroom_room(room_mission_type1,0,"");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(mouse_x,mouse_y,obj_enemy_dummy);
+            <string>instance_create(mouse_x,mouse_y,obj_enemy_kima_red);
 </string>
           </argument>
         </arguments>

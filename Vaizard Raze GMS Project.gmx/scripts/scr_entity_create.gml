@@ -7,7 +7,7 @@ entity_max_mana=argument1;
 entity_max_stamina=argument2;
 team=argument3;
 
-entity_health_regen=20;
+entity_health_regen=10;
 entity_mana_regen=50;
 entity_stamina_regen=100;
 

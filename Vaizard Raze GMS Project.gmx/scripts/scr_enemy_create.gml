@@ -5,6 +5,7 @@
     alarm[8] = irandom_range(360,640);
     max_movespeed = 1;
     facedir=-1;
+    movescaninterval=3;
     
     
     

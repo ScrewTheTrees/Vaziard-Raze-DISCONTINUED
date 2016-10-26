@@ -6,14 +6,14 @@ damage=readint(0);
 clearbuffer(0);
 
 
-obj_entityparent.tempid=tempid;
-obj_entityparent.damage=damage;
+ENTITY.tempid=tempid;
+ENTITY.damage=damage;
 
-with(obj_entityparent)
+with(ENTITY)
 {
 if entityid==tempid
 {
-entity_hp-=damage; //Take damage
+entity_health-=damage; //Take damage/healing
 
 }
 }//With

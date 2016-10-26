@@ -13,7 +13,6 @@ vvspeed=readfloat(0);
 ggravity=readfloat(0);
 xx=readint(0);
 yy=readint(0);
-
 clearbuffer(0);
 
 if global.playerid=0
@@ -35,7 +34,7 @@ writeint(xx,0);
 writeint(yy,0);
 
 if global.playerid==0 
-scr_send_client(SEND_ROOM_OTHER,send_room)
+    scr_send_client(SEND_ROOM_OTHER,send_room)
 
 clearbuffer(0);
 }
@@ -43,4 +42,5 @@ if send_room=global.myroom
 {
 proj=scr_projectile_spawn(xx,yy,proj_type,teamm,damage1,damage2,damage3,facedirr,dirr,colorr);
 scr_projectile_spawn_velocity(proj,hhspeed,vvspeed,ggravity);
+proj.alarm[5]=-1;
 }

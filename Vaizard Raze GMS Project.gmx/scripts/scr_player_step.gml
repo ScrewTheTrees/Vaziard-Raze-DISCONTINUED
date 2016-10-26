@@ -1,7 +1,7 @@
 //Reset that shit
 scr_player_physics();  
 
-
+entityid=playerid;
 
 //If this is the player it needs to accept the input
 if (object_index==obj_player)

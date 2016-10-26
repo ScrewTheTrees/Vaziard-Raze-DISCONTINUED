@@ -1,4 +1,4 @@
-///scr_entity_jump(HoldJump,PressJump,WallJumpR,WallJumpL,JumpSpeed,WallJumpSpeed,WallJumpSpeedUp,JumpSpeedMod)
+///scr_entity_jump()
 
 
 

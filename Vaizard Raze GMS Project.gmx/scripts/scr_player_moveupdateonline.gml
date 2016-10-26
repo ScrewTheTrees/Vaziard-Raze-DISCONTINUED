@@ -16,6 +16,5 @@
    {
    //Send the movement update NOW
    msg_send_playermove();
-   msg_send_entity_move();
    alarm[0]=1; 
    }

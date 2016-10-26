@@ -11,13 +11,9 @@ writebyte(team,0)
 writeint(x,0);
 writeint(y,0);
 
-writeint(entity_max_health,0);
-writeint(entity_max_mana,0);
-writeint(entity_max_stamina,0);
-
 
 
 if global.playerid=0
-scr_send_client(SEND_ROOM,global.myroom)
+    scr_send_client(SEND_ROOM,global.myroom)
 
 clearbuffer(0);

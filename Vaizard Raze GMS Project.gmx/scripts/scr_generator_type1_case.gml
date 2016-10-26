@@ -36,6 +36,7 @@ with (obj_otherplayer)
 }
     with (obj_player) scr_entity_freeze();
     if global.bad=true mystep-=2; //Go back and check again
+    else done=true;
 break;
 
 

@@ -1,6 +1,6 @@
 lastgroundmodule=-1;
 mystep=0;
-
+done=false;
 
 debuggrid=mp_grid_create(1,1,1,1,1,1);
 

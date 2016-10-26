@@ -7,7 +7,7 @@ tempid=readint(0);
 
 ENTITY.tempid=tempid;
 
-with(obj_entityparent)
+with(ENTITY)
 {
 if entityid==tempid
 {

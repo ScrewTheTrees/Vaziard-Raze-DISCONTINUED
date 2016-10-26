@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>ENTITY</parentName>
+  <parentName>obj_enemy_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -51,6 +51,10 @@ scr_enemy_create();
           <argument>
             <kind>1</kind>
             <string>//fire
+
+
+
+alarm[8]=irandom_range(720,1080);
 </string>
           </argument>
         </arguments>
@@ -126,6 +130,8 @@ event_inherited();
             <kind>1</kind>
             <string>draw_self();
 
+draw_text(x,y-140,entityid);
+draw_text(x,y-120,facedir);
 draw_text(x,y-100,entity_health);
 </string>
           </argument>
