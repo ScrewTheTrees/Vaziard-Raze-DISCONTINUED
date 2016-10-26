@@ -17,4 +17,4 @@ destroy_wall=true; //Destroy when hitting enemy
 destroy_outside=true; //Destroy when outside room
 
 hit_enemy = true; //If it should hit enemies
-hit_friendly = true; //If it should hit allies
+hit_friendly = false; //If it should hit allies

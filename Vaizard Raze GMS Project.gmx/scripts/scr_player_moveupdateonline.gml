@@ -15,6 +15,7 @@
    or keyboard_check_released(global.keybind[KEY_SPECIAL])
    {
    //Send the movement update NOW
-   msg_send_move();
+   msg_send_playermove();
+   msg_send_entity_move();
    alarm[0]=1; 
    }

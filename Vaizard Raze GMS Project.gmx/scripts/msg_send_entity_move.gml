@@ -2,7 +2,7 @@
 
 
 clearbuffer(0)
-writebyte(MSG_ENTITYMOVE,0)
+writebyte(MSG_ENTITY_MOVE,0)
 writeint(entityid,0)
 writeshort(x,0)
 writeshort(y,0)

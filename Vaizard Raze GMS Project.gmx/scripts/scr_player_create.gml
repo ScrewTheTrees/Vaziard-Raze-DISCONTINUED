@@ -22,8 +22,8 @@ mapsent=false;
 
 //Reset the player movement variables
 
-scr_player_input_reset();
-scr_player_vars_reset();
+scr_entity_input_reset();
+scr_entity_vars_reset();
 
 
 

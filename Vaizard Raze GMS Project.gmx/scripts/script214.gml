@@ -1,4 +1,4 @@
-if instance_exists(ENTITY)
+if instance_exists(obj_entityparent)
 {
 tempid=readint(0);
 damage=readint(0);

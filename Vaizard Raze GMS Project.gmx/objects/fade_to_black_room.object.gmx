@@ -50,7 +50,7 @@ mytext="";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_freeze();
+            <string>with (obj_player) scr_entity_freeze();
 
 
 alpha+=0.005;

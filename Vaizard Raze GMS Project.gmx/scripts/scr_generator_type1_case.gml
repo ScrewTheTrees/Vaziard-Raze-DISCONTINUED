@@ -34,7 +34,7 @@ with (obj_otherplayer)
         }
     }
 }
-    scr_player_freeze();
+    with (obj_player) scr_entity_freeze();
     if global.bad=true mystep-=2; //Go back and check again
 break;
 
@@ -42,4 +42,4 @@ break;
 }
 
 //Dont want him falling outside the map
-if !instance_exists(obj_entrance_stage) scr_player_freeze();
+if !instance_exists(obj_entrance_stage) with (obj_player) scr_entity_freeze();

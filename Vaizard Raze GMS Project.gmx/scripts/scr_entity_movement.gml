@@ -1,10 +1,5 @@
-///scr_entity_movement(Movespeed, Facedir ,Height to scan for slopes,  movescanintervall)
-var i, j, gg, movespeed, facedir, movescanheight, movespeed_run;
+///scr_entity_movement()
 
-movespeed=argument0;
-facedir=argument1;
-movescanheight=argument2+movespeed;
-movescanintervall=argument3;
 
 moving=0;
 
@@ -30,7 +25,7 @@ if (place_meeting(x,y+4,obj_solidparent)==true)
        y+=i; 
        x+=movespeed_run; 
        gg=true; 
-       facedir=-1
+       //facedir=-1
        vspeed=0;
        hspeed=0;
        gravity=0;
@@ -46,8 +41,10 @@ if (place_meeting(x,y+4,obj_solidparent)==true)
 movespeed_run=movespeed*facedir; //Turn the movement direction towards facedir
 
 if hspeed=0
-{
-if gg=false && !place_meeting(x+movespeed_run,y,obj_solidparent) {x+=movespeed_run }   //Full movement speed ahread!
-else if gg=false && !place_meeting(x+facedir,y,obj_solidparent) {x+=facedir};         //A small step against the wall to make better interpolation
-}//if movespeed
+    {
+    if gg=false && !place_meeting(x+movespeed_run,y,obj_solidparent) {x+=movespeed_run }   //Full movement speed ahread!
+    else if gg=false && !place_meeting(x+facedir,y,obj_solidparent) {x+=facedir};         //A small step against the wall to make better interpolation
+    }//if movespeed
 }//Hspeed
+
+

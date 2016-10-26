@@ -8,12 +8,13 @@ writebyte(MSG_ENTITY_CREATE,0)
 writeint(object_index,0);
 writeint(entityid,0);
 writebyte(team,0)
-
-writeint(entity_max_hp,0);
-writeint(entity_max_mp,0);
-writeint(entity_max_sp,0);
 writeint(x,0);
 writeint(y,0);
+
+writeint(entity_max_health,0);
+writeint(entity_max_mana,0);
+writeint(entity_max_stamina,0);
+
 
 
 if global.playerid=0

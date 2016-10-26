@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_entityparent</parentName>
+  <parentName>ENTITY</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="1">
+    <event eventtype="2" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -73,7 +73,7 @@
             <kind>1</kind>
             <string>draw_self();
 
-draw_text(x,y-100,entity_hp);
+draw_text(x,y-100,entity_health);
 </string>
           </argument>
         </arguments>

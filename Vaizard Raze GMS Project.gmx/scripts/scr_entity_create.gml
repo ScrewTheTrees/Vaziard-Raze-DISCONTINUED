@@ -2,9 +2,9 @@
 
 entityid=get_entity_id(); //Irrelevant for non hosts but yah know.
 
-entity_max_hp=argument0;
-entity_max_mp=argument1;
-entity_max_sp=argument2;
+entity_max_health=argument0;
+entity_max_mana=argument1;
+entity_max_stamina=argument2;
 team=argument3;
 
 entity_health_regen=20;
@@ -14,20 +14,23 @@ entity_stamina_regen=100;
 entity_bonus_health=0;
 entity_bonus_mana=0;
 entity_bonus_stamina=0;
-entity_hp=entity_max_hp;
-entity_mp=entity_max_mp;
-entity_sp=entity_max_sp;
 
-alarm[1]=2;
+entity_health=entity_max_health;
+entity_mana=entity_max_mana;
+entity_stamina=entity_max_stamina;
+
+
 
 //Maximum speed of any vspeed/hspeed/speed things
 max_speed=50;
 max_fallspeed=20;
 facedir=1;
 
+active = true;
 moving=0;
 moveair=0;
 isdead=false;
+canCollide=true;
 
 //Gravitational things
 max_gravity=0.75;
@@ -50,5 +53,10 @@ stuck=false;         //If you are stuck
 movemodtimer=30;
 
 
+scr_entity_step_stats();
+scr_entity_vars_reset();
+scr_entity_input_reset();
 
 alarm[0]=30;
+alarm[1]=2;
+alarm[3]=2;

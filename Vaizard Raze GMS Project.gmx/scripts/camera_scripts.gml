@@ -168,7 +168,7 @@ if instance_exists(obj_player)
       
 
 
-global.deadchars=0;
+global.deadchars=0.01;
 
 //Obj_otherplayer is the player parent
 if instance_exists(obj_playerparent)
@@ -310,9 +310,9 @@ if instance_exists(obj_player)
         }
       }//WIth
 }//Exists
-else if instance_exists(obj_entityparent)
+else if instance_exists(obj_enemy_parent)
 {
-      with (instance_nearest(obj_player.x,obj_player.y,obj_entityparent))
+      with (instance_nearest(obj_player.x,obj_player.y,obj_enemy_parent))
       {
       //Check all the four edges of the screen.
       if x-global.padding<global.left_x  global.left_x=x-global.padding;
