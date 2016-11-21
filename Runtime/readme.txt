@@ -1,6 +1,6 @@
 ﻿TCP ports for hosting: 17651
 UDP ports for hosting: 17651
-UDP ports for joining: 17652-1669
+UDP ports for joining: 17652-17669
 
 
 (Standard controls)
