@@ -1,0 +1,6 @@
+{
+  "name": "Vaziard-raze-discontinued",
+  "tagline": "Discontinued Version of my Vaizard Raze Project, i dont need it anymore so i will just post it here for those interested. It had some pretty major design faults that i am fixing in the next version.",
+  "body": "Old discontinued version, Had a bad system set in place and the 39dll commit was pretty trash, ive remade my engine to work... better, but it was rewritten from scratch.\r\n\r\nTo run you need Game Maker: Studio, preferable above 1.4 for maximum support, however there is a runnable .exe in the runtime directory.\r\n\r\nBe vary that the online does not work correctly, i managed to mess up the netcode by accident lately, you could probably get it to work if you really tried... its probably a minor bug.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
